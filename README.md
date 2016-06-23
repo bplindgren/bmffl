@@ -1,24 +1,10 @@
 ## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://travis-ci.org/bplindgren/bmffl.svg?branch=master)](https://travis-ci.org/bplindgren/bmffl)
 
-Things you may want to cover:
+[![Coverage Status](https://coveralls.io/repos/github/bplindgren/bmffl/badge.svg?branch=master)](https://coveralls.io/github/bplindgren/bmffl?branch=master)
 
-* Ruby version
+### Bowery Madness Fantasy Football League (BMFFL)
 
-* System dependencies
+An app that will allow owners and fans of the BMFFL to view stats of the current season and the league history
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
