@@ -13,5 +13,14 @@ RSpec.describe Game, :type => :model do
     it 'tests the first game' do
       expect(game.point_differential).to eq(6.5)
     end
+
+    it 'correctly determines the winner' do
+      expect(game.winner.owner).to eq(owner1)
+    end
+
+    it 'correctly determines the loser' do
+      expect(game.loser.owner).to eq(owner2)
+    end
   end
+
 end
