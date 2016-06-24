@@ -1,7 +1,7 @@
 require 'games_module.rb'
 
 class Owner < ApplicationRecord
-  prepend Games
+  include Games
   has_many :teams
   has_many :home_games, through: :teams, source: :home_games
   has_many :away_games, through: :teams, source: :away_games
