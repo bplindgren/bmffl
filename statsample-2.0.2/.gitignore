@@ -1,0 +1,15 @@
+Gemfile.lock
+doc.yaml
+*.swp
+*.rbc
+coverage
+*~
+agregar_adsense_a_doc.rb
+pkg
+doc
+.yardoc
+examples/images/*
+examples/*.html
+web/upload_task.rb
+.idea
+*.gem
