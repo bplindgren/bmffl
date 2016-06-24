@@ -1,7 +1,7 @@
 require 'games_module.rb'
 
 class Team < ApplicationRecord
-  prepend Games
+  include Games
   belongs_to :owner
   belongs_to :season
   has_many :leagues, through: :season
