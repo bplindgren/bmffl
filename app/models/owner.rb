@@ -40,9 +40,12 @@ class Owner < ApplicationRecord
     season_records
   end
 
-  # def vs(owner, game_type)
-  #   owner = Owner.find(owner)
-  #   matchups = games_by_type(game_type).where(away_team_id: owner.id, home_team_id: self.id || away_team_id: self.id, home_team_id: owner.id)
-  #   p matchups
+  # def vs(opponent, game_type)
+  #   opponent = Owner.find(opponent)
+  #   opponent_teams = opponent.teams
+  #   team_ids = []
+  #   opponent_teams.each do |team|
+  #     team_ids << team.id
+  #   end
   # end
 end

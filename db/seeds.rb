@@ -307,6 +307,7 @@ Game.create!(season_id: 3, week: 16, away_team_id: 29, away_score: 88.5, home_te
 Game.create!(season_id: 3, week: 16, away_team_id: 27, away_score: 114, home_team_id: 23, home_score: 84, game_type: "Super Bowl")
 Game.create!(season_id: 3, week: 16, away_team_id: 22, away_score: 76.5, home_team_id: 24, home_score: 58.5, game_type: "Consolation Game")
 Game.create!(season_id: 3, week: 16, away_team_id: 28, away_score: 102, home_team_id: 26, home_score: 80, game_type: "Consolation Game")
+
 Game.create!(season_id: 4, week: 1, away_team_id: 37, away_score: 68, home_team_id: 31, home_score: 85.5, game_type: "Regular Season")
 Game.create!(season_id: 4, week: 1, away_team_id: 36, away_score: 96, home_team_id: 40, home_score: 103.5, game_type: "Regular Season")
 Game.create!(season_id: 4, week: 1, away_team_id: 34, away_score: 77.5, home_team_id: 32, home_score: 101, game_type: "Regular Season")

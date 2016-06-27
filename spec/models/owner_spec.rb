@@ -34,6 +34,7 @@ RSpec.describe Owner, :type => :model do
 
     it 'tests the over_500 method' do
       expect(owner1.over_500("All")).to eq (2)
+      expect(owner2.over_500("All")).to eq (-1)
     end
 
     it 'tests the over_500_by_season' do
