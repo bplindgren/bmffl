@@ -9,17 +9,17 @@ RSpec.describe Game, :type => :model do
   let!(:away_team) { Team.create(season_id: season.id, name: "Westside Whales", owner_id: owner2.id, division: "Downstairs") }
   let!(:game) { Game.create!(season_id: season.id, week: 1, away_team_id: away_team.id, away_score: 100, home_team_id: home_team.id, home_score: 106.5, game_type: "Regular Season") }
 
-  context 'point_differential method' do
-    it 'tests the first game' do
-      expect(game.point_differential).to eq(6.5)
-    end
-
+  context 'tests the game model' do
     it 'correctly determines the winner' do
       expect(game.winner.owner).to eq(owner1)
     end
 
     it 'correctly determines the loser' do
       expect(game.loser.owner).to eq(owner2)
+    end
+
+    it 'tests the point_differential method' do
+      expect(game.point_differential).to eq(6.5)
     end
   end
 

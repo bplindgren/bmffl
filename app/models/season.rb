@@ -6,18 +6,19 @@ class Season < ApplicationRecord
 
   validates :year, :league_id, presence: true
 
-  def league_standings(game_type)
+
+  def standings(game_type, teams)
     order = teams.sort { |x,y| y.over_500(game_type) <=> x.over_500(game_type) }
   end
 
   def division_standings(game_type)
     upstairs_teams = teams.select { |team| team.division == "Upstairs" }
-    upstairs_standings = upstairs_teams.sort { |x,y| y.over_500(game_type) <=> x.over_500(game_type) }
+    upstairs_standings = standings(game_type, upstairs_teams)
 
     downstairs_teams = teams.select { |team| team.division == "Downstairs" }
-    downstairs_standings = downstairs_teams.sort { |x,y| y.over_500(game_type) <=> x.over_500(game_type) }
+    downstairs_standings = standings(game_type, downstairs_teams)
 
-    { upstairs: upstairs_standings, downstairs: downstairs_standings }
+    { :upstairs => upstairs_standings, :downstairs => downstairs_standings }
   end
 
   def champion
