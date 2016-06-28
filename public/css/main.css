@@ -1,0 +1,34 @@
+.border-black {
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.pad-top {
+  padding-top: 20px;
+}
+
+body {
+  background-color: #FFFAFA;
+}
+
+header {
+  /*height: 180px;*/
+  border-bottom: 3px solid black;
+  background-color: #00E500;
+  padding: none;
+}
+
+h1 {
+  font-size: 8em;
+  color: black;
+}
+
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+h1:hover {
+  text-decoration: none;
+  text-transform: none;
+}

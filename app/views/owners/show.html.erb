@@ -1,0 +1,8 @@
+<h2><%= @owner.first_name %> <%= @owner.last_name %></h2>
+<%= @stats %>
+
+<ul>
+<% @teams.each do |team| %>
+  <li><%= team.name %></li>
+<% end %>
+</ul>

@@ -1,0 +1,8 @@
+<h2>Here are the teams in the <%= @league.name %></h2>
+<ol>
+  <% @teams.each do |team| %>
+    <li><%= team.name %></li>
+  <% end %>
+</ol>
+
+<button class="btn btn-success" onclick="$(this).hide();">Click me!</button>

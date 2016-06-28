@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bmffl</title>
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
+    <head>
+        <title>BMFFL</title>
+        <%= csrf_meta_tags %>
+        <%= action_cable_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  </head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 
-  <body>
-    <%= yield %>
-  </body>
+        <!-- Optional theme -->
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
+
+        <!-- My CSS file -->
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+    </head>
+<!--
+link_to(body, url, html_options = {})
+  # url is a String; you can use URL helpers like
+  # posts_path -->
+
+    <body>
+        <div class="container pad-top">
+            <div class="row">
+                <div class="col-lg-12 border-black">
+                    <div class="row">
+                        <header class="col-lg-12">
+                            <h1><%= link_to "BMFFL", root_path %></h1>
+                            <nav>
+                                <li><%= link_to "Seasons", seasons_path %></li>
+                                <li><%= link_to "Owners", owners_path %></li>
+                                <li>Stats</li>
+                                <li>Bowery Times</li>
+                            </nav>
+                        </header>
+                    </div>
+                    <%= yield %>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- JavaScript files should be linked at the bottom of the page (and jquery MUST be about the javascript bootstrap)-->
+        <script src="/js/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
 </html>
