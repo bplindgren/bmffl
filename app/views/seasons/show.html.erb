@@ -1,4 +1,29 @@
-<h2><%= @season.year %></h2>
-<p><%= @season.standings("All", @season.teams) %></p>
-<h3><%= @season.champion.name %></h3>
+<h2>BMFFL <%= @season.year %> Season</h2>
+
+<h3>Final Standings:</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+      <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
+        <tr>
+          <th class="heading">Team Name</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Ties</th>
+        </tr>
+        <% @standings.each do |team| %>
+          <tr>
+            <th><%= (@standings.index(team) + 1) %></th>
+            <th><%= team.name %></th>
+            <th><%= team.team_stats("All")[:wins] %></th>
+            <th><%= team.team_stats("All")[:losses] %></th>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+<h3><%= @season.year %> BMFFL Chapion: <%= @season.champion.name %></h3>
 

@@ -1,10 +1,9 @@
 <h2>BMFFL Owners</h2>
 
-<ul>
+<ul class="ul-list">
 <% @owners.each do |owner| %>
   <li><%= link_to(owner) do %>
-    <%= owner.first_name %> <%= owner.last_name %> -
+    <%= owner.first_name %> <%= owner.last_name %>
   <% end %>
   </li>
-  (<%= owner.over_500("All") %>)
 <% end %>

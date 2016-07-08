@@ -1,8 +1,22 @@
 <h2><%= @owner.first_name %> <%= @owner.last_name %></h2>
-<%= @stats %>
 
-<ul>
-<% @teams.each do |team| %>
-  <li><%= team.name %></li>
-<% end %>
-</ul>
+<h3><%= @owner.first_name %>'s BMFFL stats: </h3>
+
+<table class="table table-striped pagination-centered">
+  <tr>
+    <th class="heading">Team Name</th>
+    <th>Wins</th>
+    <th>Losses</th>
+    <th>Ties</th>
+    <th>Point Differential</th>
+  </tr>
+  <% @owner_teams.each do |team| %>
+    <tr>
+      <th><%= team.name %></th>
+      <th><%= team.team_stats("All")[:wins] %></th>
+      <th><%= team.team_stats("All")[:losses] %></th>
+      <th><%= team.team_stats("All")[:ties] %></th>
+      <th><%= team.team_stats("All")[:point_diff] %></th>
+    </tr>
+  <% end %>
+</table>

@@ -6,6 +6,7 @@ class SeasonsController < ApplicationController
 
   def show
     @season = Season.find(params[:id])
+    @standings = @season.standings("All", @season.teams)
   end
 
 end
