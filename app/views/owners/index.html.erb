@@ -1,0 +1,7 @@
+<h2>BMFFL Owners</h2>
+
+<ul class="ul-list">
+<% @owners.each do |owner| %>
+  <li><%= link_to owner.first_name, owner_path(owner) %></li>
+<% end %>
+</ul>
