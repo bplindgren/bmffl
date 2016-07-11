@@ -1,0 +1,8 @@
+<h2>Here are the teams in the BMFFL</h2>
+<ol>
+  <% @teams.each do |team| %>
+    <li><%= link_to(team) do %>
+      <%= team.name %></li>
+  <% end %>
+  <% end %>
+</ol>
