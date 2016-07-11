@@ -1,8 +1,60 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/helpers/application_helper.rb": [
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/leagues_controller.rb": [
         1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/owners_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/seasons_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/teams_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/bradleylindgren/dbc/phase-3/bmffl/app/models/game.rb": [
@@ -17,18 +69,18 @@
         1,
         null,
         1,
-        236,
-        137,
-        99,
-        99,
+        244,
+        139,
+        105,
+        105,
         null,
         null,
         null,
         null,
         null,
         1,
-        56,
-        22,
+        58,
+        24,
         34,
         34,
         null,
@@ -37,7 +89,7 @@
         null,
         null,
         1,
-        118,
+        122,
         null,
         null,
         null
@@ -71,7 +123,7 @@
         null,
         null,
         1,
-        7,
+        8,
         null,
         null,
         1,
@@ -101,27 +153,27 @@
         1,
         null,
         1,
-        15,
-        15,
+        17,
+        17,
         null,
-        15,
-        47,
+        17,
+        51,
         0,
         0,
         null,
-        24,
-        24,
+        26,
+        26,
         null,
-        23,
-        23,
+        25,
+        25,
         null,
         null,
-        15,
+        17,
         null,
         null,
         1,
-        14,
-        14,
+        16,
+        16,
         null,
         null,
         1,
@@ -143,13 +195,13 @@
       "/Users/bradleylindgren/dbc/phase-3/bmffl/lib/games_module.rb": [
         1,
         1,
-        41,
+        43,
         null,
         null,
         1,
-        41,
+        43,
         null,
-        41,
+        43,
         null,
         0,
         null,
@@ -244,13 +296,6 @@
         0,
         0
       ],
-      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/application_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/bradleylindgren/dbc/phase-3/bmffl/app/jobs/application_job.rb": [
         0,
         0
@@ -262,6 +307,6 @@
         0
       ]
     },
-    "timestamp": 1466986697
+    "timestamp": 1468259530
   }
 }
