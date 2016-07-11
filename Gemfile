@@ -39,13 +39,15 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '3.5.0.beta4'
   gem 'factory_girl_rails', "~> 4.0"
+  # gem 'spring'
+  gem 'pry'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,0 +1,18 @@
+<h2>Page for <%= @team.name %>, <%= @team.season.year %></h2>
+
+  <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
+    <tr>
+      <th class="heading">Team Name</th>
+      <th>Away Team</th>
+      <th>Home Team</th>
+      <th>Winner</th>
+    </tr>
+    <% @games.each do |game| %>
+      <tr>
+        <th><%= (@games.index(game) + 1) %></th>
+        <th><%= game.away_team.name %></th>
+        <th><%= game.home_team.name %></th>
+        <th><%= game.winner.name %></th>
+      </tr>
+    <% end %>
+  </table>
