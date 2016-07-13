@@ -7,45 +7,42 @@
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-
         <!-- Optional theme -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
-
         <!-- My CSS file -->
         <link rel="stylesheet" type="text/css" href="/css/main.css">
     </head>
-<!--
-link_to(body, url, html_options = {})
-  # url is a String; you can use URL helpers like
-  # posts_path -->
 
     <body>
-        <div>
-            <div class="col-lg-12 container">
+        <div class="row">
+            <div class="col-lg-12">
                 <div class="row">
 
                     <header class="col-lg-12 black-bg">
-                        <div class="col-lg-2"><%= link_to (image_tag("logo.png")), root_path %></div>
-                        <ul class="col-lg-10 list-group" id="scoreboard">
-                            <% Game.all.reverse.first(5).each do |game| %>
-                                <li class="list-group-item">
-                                    <div><%= game.away_team.name %> - 0</div>
-                                    <div><%= game.home_team.name %> - 0</div>
-                                </li>
-                            <% end %>
-                        </ul>
+                        <div class="row">
+                            <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %></div>
+                                <ul class="col-lg-10 list-group" id="scoreboard">
+                                    <% Game.all.reverse.first(5).each do |game| %>
+                                        <li class="list-group-item col-lg-2 h125">
+                                            <div class="team-name"><%= game.away_team.name %> - 0</div>
+                                            <div class="team-name"><%= game.home_team.name %> - 0</div>
+                                        </li>
+                                    <% end %>
+                                </ul>
+                        </div>
                     </header>
 
-                    <nav class="navbar navbar-top black-bg col-lg-12 green">
+                    <nav class="navbar navbar-full black-bg col-lg-12">
                         <div class="row">
                             <ul class="nav navbar-nav">
-                                <li><%= link_to "Home", root_path %></a></li>
-                                <li><%= link_to "Seasons", seasons_path %></li>
-                                <li><%= link_to "Owners", owners_path %></li>
-                                <li><%= link_to "Teams", teams_path %></li>
-                                <li><%= link_to "Stats", root_path %></li>
-                                <li><%= link_to "Bowery Times", root_path %></li>
-                                <li><%= link_to "All-Time Records", records_path %></li>
+                                <li class="tab"><%= link_to "Seasons", seasons_path %></li>
+                                <li class="tab"><%= link_to "Owners", owners_path %></li>
+                                <li class="tab"><%= link_to "Teams", teams_path %></li>
+                                <li class="tab"><%= link_to "Stats", root_path %></li>
+                                <li class="tab"><%= link_to "Bowery Times", root_path %></li>
+                                <li class="tab"><%= link_to "All-Time Records", records_path %></li>
+                                <li class="user-tab"><%= link_to "Login", records_path %></li>
+                                <li class="user-tab"><%= link_to "Register", records_path %></li>
                             </ul>
                         </div>
                     </nav>
