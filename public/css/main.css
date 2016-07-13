@@ -53,11 +53,22 @@ table {
   font-weight: 1.5;
 }
 
-#scoreboard {
-  list-style-type: none;
-  float: right;
+#image {
+  float: left;
 }
 
 #scoreboard {
+  list-style-type: none;
+  display: inline;
+  padding-left: 40px;
+}
 
+ul.list-group:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.list-group-item {
+    float: left;
 }
