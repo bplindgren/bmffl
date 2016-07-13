@@ -4,7 +4,8 @@
 
 <table class="table table-striped pagination-centered">
   <tr>
-    <th class="heading">Team Name</th>
+    <th>Team Name</th>
+    <th>Season</th>
     <th>Wins</th>
     <th>Losses</th>
     <th>Ties</th>
@@ -13,10 +14,19 @@
   <% @owner_teams.each do |team| %>
     <tr>
       <th><%= team.name %></th>
+      <th><%= team.season.year %></th>
       <th><%= team.team_stats("All")[:wins] %></th>
       <th><%= team.team_stats("All")[:losses] %></th>
       <th><%= team.team_stats("All")[:ties] %></th>
       <th><%= team.team_stats("All")[:point_diff] %></th>
     </tr>
   <% end %>
+  <tr>
+    <th>Totals</th>
+    <th></th>
+    <th><%= @stats[:wins] %></th>
+    <th><%= @stats[:losses] %></th>
+    <th><%= @stats[:ties] %></th>
+    <th><%= @stats[:point_diff] %></th>
+  </tr>
 </table>

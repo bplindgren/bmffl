@@ -1,7 +1,7 @@
 /*.black-bg {
   border: 3px solid black;
-}*/
-
+}
+*/
 .pad-top {
   padding-top: 20px;
 }
@@ -31,9 +31,10 @@ h1:hover {
   text-transform: none;
 }
 
-.navbar {
+.nav {
   background-color: #00E500;
   font-weight: bold;
+  width: 100%;
 }
 
 a {
@@ -50,11 +51,12 @@ table {
 }
 
 .heading {
-  font-weight: 1.5;
+  font-size: 1.5em;
 }
 
-#image {
+.image {
   float: left;
+  height: 125px;
 }
 
 #scoreboard {
@@ -71,4 +73,33 @@ ul.list-group:after {
 
 .list-group-item {
     float: left;
+}
+
+.tab {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.user-tab {
+  padding-left: 10px;
+  padding-right: 10px;
+  float: right;
+  text-indent: right;
+}
+
+.h125 {
+  height: 125px;
+}
+
+.team-name {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.minus-top {
+  margin-top: -72px;
+}
+
+.loss {
+  color: red;
 }

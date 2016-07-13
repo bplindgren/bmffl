@@ -5,6 +5,6 @@ class TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
-    @games = @team.games
+    @games = @team.games.sort
   end
 end
