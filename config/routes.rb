@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :owners, only: [:index, :show]
   resources :teams, only: [:index, :show]
   resources :games, only: :show
+  resources :records, only: :index
 end
