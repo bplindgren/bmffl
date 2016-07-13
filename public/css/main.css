@@ -1,26 +1,24 @@
-.border-black {
+/*.black-bg {
   border: 3px solid black;
-  border-radius: 5px;
-}
+}*/
 
 .pad-top {
   padding-top: 20px;
 }
 
 body {
-  background-color: #FFFAFA;
+  background-color: #F6F6F6;
 }
 
 header {
-  /*height: 180px;*/
-  border-bottom: 3px solid black;
-  background-color: #00E500;
+  height: 125px;
   padding: none;
 }
 
 h1 {
-  font-size: 8em;
+  font-size: 5em;
   color: black;
+  padding-left: 15px;
 }
 
 h1 a {
@@ -31,6 +29,11 @@ h1 a {
 h1:hover {
   text-decoration: none;
   text-transform: none;
+}
+
+.navbar {
+  background-color: #00E500;
+  font-weight: bold;
 }
 
 a {
@@ -48,4 +51,24 @@ table {
 
 .heading {
   font-weight: 1.5;
+}
+
+#image {
+  float: left;
+}
+
+#scoreboard {
+  list-style-type: none;
+  display: inline;
+  padding-left: 40px;
+}
+
+ul.list-group:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.list-group-item {
+    float: left;
 }

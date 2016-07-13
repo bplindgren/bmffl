@@ -5,6 +5,7 @@ Season.create!(year: 2012, league_id: 1)
 Season.create!(year: 2013, league_id: 1)
 Season.create!(year: 2014, league_id: 1)
 Season.create!(year: 2015, league_id: 1)
+Season.create!(year: 2016, league_id: 1)
 
 Owner.create!(first_name: "Brian", last_name: "D")
 Owner.create!(first_name: "Nick", last_name: "D")
@@ -68,7 +69,16 @@ Team.create!(season_id: 5, name: "Ballz Tech", owner_id: 7, division: "Upstairs"
 Team.create!(season_id: 5, name: "Mr. Rodgers Neighborhood", owner_id: 8, division: "Downstairs")
 Team.create!(season_id: 5, name: "Mustache Madness", owner_id: 10, division: "Downstairs")
 Team.create!(season_id: 5, name: "Team R.F.W.F.G.B.", owner_id: 11, division: "Downstairs")
-
+Team.create!(season_id: 6, name: "Iowa HerkysHeroes47", owner_id: 1, division: "Upstairs")
+Team.create!(season_id: 6, name: "Westside Whales", owner_id: 2, division: "Downstairs")
+Team.create!(season_id: 6, name: "Play Ack-Shun Rollout", owner_id: 3, division: "Upstairs")
+Team.create!(season_id: 6, name: "The Ricky Stanzis", owner_id: 4, division: "Upstairs")
+Team.create!(season_id: 6, name: "Iowa Football", owner_id: 6, division: "Downstairs")
+Team.create!(season_id: 6, name: "Orange Crush", owner_id: 6, division: "Downstairs")
+Team.create!(season_id: 6, name: "Ballz Tech", owner_id: 7, division: "Upstairs")
+Team.create!(season_id: 6, name: "Mr. Rodgers Neighborhood", owner_id: 8, division: "Downstairs")
+Team.create!(season_id: 6, name: "Mustache Madness", owner_id: 10, division: "Downstairs")
+Team.create!(season_id: 6, name: "Team R.F.W.F.G.B.", owner_id: 11, division: "Downstairs")
 
 Game.create!(season_id: 1, week: 1, away_team_id: 4, away_score: 100, home_team_id: 2, home_score: 106.5, game_type: "Regular Season")
 Game.create!(season_id: 1, week: 1, away_team_id: 6, away_score: 66, home_team_id: 10, home_score: 77.5, game_type: "Regular Season")
@@ -466,6 +476,15 @@ Game.create!(season_id: 5, week: 16, away_team_id: 45, away_score: 73, home_team
 Game.create!(season_id: 5, week: 16, away_team_id: 49, away_score: 77, home_team_id: 50, home_score: 121, game_type: "Super Bowl")
 Game.create!(season_id: 5, week: 16, away_team_id: 44, away_score: 105, home_team_id: 46, home_score: 74, game_type: "Consolation Game")
 Game.create!(season_id: 5, week: 16, away_team_id: 48, away_score: 64, home_team_id: 43, home_score: 104.5, game_type: "Consolation Game")
+
+Game.create!(season_id: 6, week: 1, away_team_id: 57, away_score: 0, home_team_id: 54, home_score: 0, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 1, away_team_id: 56, away_score: 0, home_team_id: 60, home_score: 0, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 1, away_team_id: 51, away_score: 0, home_team_id: 53, home_score: 0, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 1, away_team_id: 52, away_score: 0, home_team_id: 59, home_score: 0, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 1, away_team_id: 55, away_score: 0, home_team_id: 58, home_score: 0, game_type: "Regular Season")
+
+
+
 
 # Orbit media
 

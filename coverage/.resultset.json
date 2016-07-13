@@ -1,6 +1,10 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/helpers/records_helper.rb": [
+        1,
+        null
+      ],
       "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/leagues_controller.rb": [
         1,
         null,
@@ -27,6 +31,13 @@
         1,
         0,
         0,
+        0,
+        null,
+        null
+      ],
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/records_controller.rb": [
+        1,
+        1,
         0,
         null,
         null
@@ -69,18 +80,18 @@
         1,
         null,
         1,
-        244,
+        246,
         139,
-        105,
-        105,
+        107,
+        107,
         null,
         null,
         null,
         null,
         null,
         1,
-        58,
-        24,
+        59,
+        25,
         34,
         34,
         null,
@@ -89,7 +100,7 @@
         null,
         null,
         1,
-        122,
+        123,
         null,
         null,
         null
@@ -157,15 +168,15 @@
         17,
         null,
         17,
-        51,
+        52,
         0,
         0,
         null,
         26,
         26,
         null,
-        25,
-        25,
+        26,
+        26,
         null,
         null,
         17,
@@ -201,7 +212,7 @@
         1,
         43,
         null,
-        43,
+        165,
         null,
         0,
         null,
@@ -210,6 +221,12 @@
         0,
         null,
         0,
+        null,
+        null,
+        null
+      ],
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/models/record.rb": [
+        1,
         null,
         null,
         null
@@ -307,6 +324,6 @@
         0
       ]
     },
-    "timestamp": 1468259530
+    "timestamp": 1468382481
   }
 }
