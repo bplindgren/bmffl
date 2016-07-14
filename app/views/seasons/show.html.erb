@@ -1,29 +1,31 @@
 <h2>BMFFL <%= @season.year %> Season</h2>
 
-<h3>Final Standings:</h3>
+<% if @champion %>
+  <h3><%= @season.year %> BMFFL Champion: <%= @champion.name %></h3>
+<% end %>
+
+<div id="standings-type">
+  <%= form_for @game_type, { :url => season_path, :method => 'GET' } do |f| %>
+    <%= f.label :game_type %>:
+    <%= f.text_field :game_type %><br /><br />
+
+    <%= f.submit "League" %>
+    <%= f.submit "Division" %>
+  <% end %>
+</div>
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
-      <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
-        <tr>
-          <th class="heading">Team Name</th>
-          <th>Wins</th>
-          <th>Losses</th>
-          <th>Ties</th>
-        </tr>
-        <% @standings.each do |team| %>
-          <tr>
-            <th><%= (@standings.index(team) + 1) %></th>
-            <th><%= team.name %></th>
-            <th><%= team.team_stats("All")[:wins] %></th>
-            <th><%= team.team_stats("All")[:losses] %></th>
-          </tr>
-        <% end %>
-      </table>
+    <div id="standings-table" class="col-lg-10">
+
+      <div id="full-league-standings-table">
+      </div>
+
+      <div id="division-standings-table">
+      </div>
+
+
     </div>
   </div>
 </div>
-<h3><%= @season.year %> BMFFL Chapion: <%= @season.champion.name %></h3>
 

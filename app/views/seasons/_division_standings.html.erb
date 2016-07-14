@@ -1,0 +1,22 @@
+<h3>BMFFL Division Standings</h3>
+<%= @division_standings.each do |division, teams| %>
+  <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
+    <h4><%= division.capitalize %></h4>
+    <tr>
+      <th class="heading">Place</th>
+      <th class="heading">Team Name</th>
+      <th class="heading">Wins</th>
+      <th class="heading">Losses</th>
+      <th class="heading">Ties</th>
+    </tr>
+    <% teams.each do |team| %>
+      <tr>
+        <th><%= (teams.index(team) + 1) %></th>
+        <th><%= team.name %></th>
+        <th><%= team.team_stats("All")[:wins] %></th>
+        <th><%= team.team_stats("All")[:losses] %></th>
+        <th><%= team.team_stats("All")[:ties] %></th>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

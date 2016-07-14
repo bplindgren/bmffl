@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160712200626) do
   create_table "seasons", force: :cascade do |t|
     t.integer  "year",       null: false
     t.integer  "league_id",  null: false
+    t.string   "completed?", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

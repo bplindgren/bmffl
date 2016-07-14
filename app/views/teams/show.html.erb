@@ -1,10 +1,11 @@
-<h2><%= @team.name %> - <%= @team.season.year %> Season</h2>
+<h2><%= @team.name %> - <%= @team.season.year %></h2>
 
   <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
     <tr>
       <th class="heading">Week</th>
       <th class="heading">Away Team</th>
       <th class="heading">Home Team</th>
+      <th class="heading">Game Type</th>
       <th class="heading">Result</th>
     </tr>
     <% @games.each do |game| %>
@@ -12,6 +13,7 @@
         <th><%= (@games.index(game) + 1) %></th>
         <th><%= game.away_team.name %></th>
         <th><%= game.home_team.name %></th>
+        <th><%= game.game_type %></th>
         <th>
 
           <% if game.winner == @team %>
@@ -33,4 +35,10 @@
         </th>
       </tr>
     <% end %>
+
   </table>
+
+  <h3>Final Stats:</h3>
+  <h4>Record: <%= @stats[:wins] %>-<%= @stats[:losses] %>-<%= @stats[:ties] %></h4>
+  <h4>Point Differential: <%= @stats[:point_diff] %></h4>
+  <h4>Standings: </h4>
