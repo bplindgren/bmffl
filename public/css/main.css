@@ -103,3 +103,7 @@ ul.list-group:after {
 .loss {
   color: red;
 }
+
+.tie {
+  color: blue;
+}

@@ -5,7 +5,7 @@ Season.create!(year: 2012, league_id: 1, completed?: true)
 Season.create!(year: 2013, league_id: 1, completed?: true)
 Season.create!(year: 2014, league_id: 1, completed?: true)
 Season.create!(year: 2015, league_id: 1, completed?: true)
-Season.create!(year: 2016, league_id: 1, completed?: false)
+Season.create!(year: 2016, league_id: 1, completed?: true)
 
 Owner.create!(first_name: "Brian", last_name: "D")
 Owner.create!(first_name: "Nick", last_name: "D")

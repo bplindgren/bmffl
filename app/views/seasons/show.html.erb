@@ -19,6 +19,25 @@
     <div id="standings-table" class="col-lg-10">
 
       <div id="full-league-standings-table">
+        <h3>BMFFL League Standings</h3>
+<table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
+  <tr>
+    <th class="heading">Place</th>
+    <th class="heading">Team Name</th>
+    <th class="heading">Wins</th>
+    <th class="heading">Losses</th>
+    <th class="heading">Ties</th>
+  </tr>
+  <% @standings.each do |team| %>
+    <tr>
+      <th><%= (@standings.index(team) + 1) %></th>
+      <th><%= team.name %></th>
+      <th><%= team.team_stats("All")[:wins] %></th>
+      <th><%= team.team_stats("All")[:losses] %></th>
+      <th><%= team.team_stats("All")[:ties] %></th>
+    </tr>
+  <% end %>
+</table>
       </div>
 
       <div id="division-standings-table">

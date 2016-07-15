@@ -11,25 +11,26 @@
     <% @games.each do |game| %>
       <tr>
         <th><%= (@games.index(game) + 1) %></th>
-        <th><%= game.away_team.name %></th>
-        <th><%= game.home_team.name %></th>
+        <th><%= link_to game.away_team.name, game.away_team %></th>
+        <th><%= link_to game.home_team.name, game.home_team %></th>
         <th><%= game.game_type %></th>
         <th>
 
           <% if game.winner == @team %>
             <% if game.home_team == @team %>
-              <%= 'W,' %> <%= game.home_score %> - <%= game.away_score %>
+              <div><%= 'W,' %> <%= game.home_score %> - <%= game.away_score %></div>
             <% elsif game.away_team == @team %>
-              <%= 'W,' %> <%= game.away_score %> - <%= game.home_score %>
+              <div><%= 'W,' %> <%= game.away_score %> - <%= game.home_score %></div>
             <% end %>
-          <% end %>
 
-          <% if game.loser == @team %>
+          <% elsif game.loser == @team %>
             <% if game.home_team == @team %>
               <div class="loss"><%= 'L,' %> <%= game.home_score %> - <%= game.away_score %></div>
             <% elsif game.away_team == @team %>
               <div class="loss"><%= 'L,' %> <%= game.away_score %> - <%= game.home_score %></div>
             <% end %>
+          <% else %>
+            <div class="tie"><%= 'T,' %> <%= game.home_score %> - <%= game.away_score %></div>
           <% end %>
 
         </th>

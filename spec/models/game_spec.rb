@@ -2,7 +2,7 @@ require_relative '../rails_helper'
 
 RSpec.describe Game, :type => :model do
   let!(:league) { League.create!(name: "BMFFL") }
-  let!(:season) { Season.create!(year: 2011, league_id: league.id) }
+  let!(:season) { Season.create!(year: 2011, league_id: league.id, completed?: true) }
   let!(:owner1) { Owner.create!(first_name: "Brian", last_name: "D") }
   let!(:owner2) { Owner.create!(first_name: "Nick", last_name: "D") }
   let!(:home_team) { Team.create!(season_id: season.id, name: "Iowa HerkysHeroes47", owner_id: owner1.id, division: "Upstairs") }

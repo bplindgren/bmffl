@@ -3,7 +3,7 @@ class CreateSeasons < ActiveRecord::Migration[5.0]
     create_table :seasons do |t|
       t.integer :year, { null: false }
       t.integer :league_id, { null: false }
-      t.string :completed?, { null: false }
+      t.boolean :completed?, { null: false }
 
       t.timestamps
     end
