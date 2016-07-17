@@ -27,28 +27,35 @@
                                 <ul class="col-lg-10 list-group" id="scoreboard">
                                     <% Game.all.reverse.first(5).each do |game| %>
                                         <li class="list-group-item scoreboard-top">
-                                            <div class="team-name col-lg-10"><%= game.away_team.abbr %>
-                                            <br /><%= game.home_team.abbr %></div>
-                                            <div class="team-score col-lg-10"><%= game.away_score %>
-                                            <br /><%= game.home_score %></div>
+                                            <p class="game-date">9/8 - 9/12</p>
+                                            <div class="team-name col-lg-10">
+                                                <p><%= game.away_team.abbr %></p>
+                                                <%= game.home_team.abbr %>
+                                            </div>
+                                            <div class="team-score col-lg-10">
+                                                <p><%= game.away_score %></p>
+                                                <%= game.home_score %>
+                                            </div>
                                         </li>
                                     <% end %>
                                 </ul>
                         </div>
                     </header>
 
-                    <nav class="navbar navbar-full black-bg col-lg-12">
-                        <div class="row">
-                            <ul class="nav navbar-nav">
-                                <li class="tab"><%= link_to "Seasons", seasons_path %></li>
-                                <li class="tab"><%= link_to "Owners", owners_path %></li>
-                                <li class="tab"><%= link_to "Teams", teams_path %></li>
-                                <li class="tab"><%= link_to "Stats", root_path %></li>
-                                <li class="tab"><%= link_to "Bowery Times", root_path %></li>
-                                <li class="user-tab"><%= link_to "Login", records_path %></li>
-                                <li class="user-tab"><%= link_to "Register", records_path %></li>
-                            </ul>
-                        </div>
+                    <nav class="navbar navbar-default col-lg-12" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="tab"><%= link_to "Owners", owners_path %></li>
+                                </ul>
+                            <li class="tab"><%= link_to "Owners", owners_path %></li>
+                            <li class="tab"><%= link_to "Teams", teams_path %></li>
+                            <li class="tab"><%= link_to "Head-To-Head", root_path %></li>
+                            <li class="tab"><%= link_to "Bowery Times", root_path %></li>
+                            <li class="user-tab"><%= link_to "Login", records_path %></li>
+                            <li class="user-tab"><%= link_to "Register", records_path %></li>
+                        </ul>
                     </nav>
 
                     <div class="container black-bg">
