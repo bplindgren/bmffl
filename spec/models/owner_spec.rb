@@ -11,14 +11,14 @@ RSpec.describe Owner, :type => :model do
   let!(:owner4) { Owner.create!(first_name: "Brian", last_name: "D") }
   let!(:owner5) { Owner.create!(first_name: "Nick", last_name: "D") }
 
-  let!(:team1) { Team.create!(season_id: season1.id, name: "The Ricky Stanzis", owner_id: owner1.id, division: "Upstairs") }
-  let!(:team2) { Team.create!(season_id: season1.id, name: "The Belt", owner_id: owner2.id, division: "Downstairs") }
-  let!(:team3) { Team.create!(season_id: season1.id, name: "Balls Tech", owner_id: owner3.id, division: "Upstairs") }
-  let!(:team4) { Team.create!(season_id: season1.id, name: "Iowa HerkysHeroes47", owner_id: owner4.id, division: "Upstairs") }
-  let!(:team5) { Team.create!(season_id: season2.id, name: "The Ricky Stanzis", owner_id: owner1.id, division: "Upstairs") }
-  let!(:team6) { Team.create!(season_id: season2.id, name: "Westside Whales", owner_id: owner5.id, division: "Downstairs") }
-  let!(:team7) { Team.create!(season_id: season2.id, name: "Balls Tech", owner_id: owner3.id, division: "Upstairs") }
-  let!(:team8) { Team.create!(season_id: season2.id, name: "Iowa HerkysHeroes47", owner_id: owner4.id, division: "Upstairs") }
+  let!(:team1) { Team.create!(season_id: season1.id, name: "The Ricky Stanzis", abbr: "RS", owner_id: owner1.id, division: "Upstairs") }
+  let!(:team2) { Team.create!(season_id: season1.id, name: "The Belt", abbr: "BELT", owner_id: owner2.id, division: "Downstairs") }
+  let!(:team3) { Team.create!(season_id: season1.id, name: "Balls Tech", abbr: "BT", owner_id: owner3.id, division: "Upstairs") }
+  let!(:team4) { Team.create!(season_id: season1.id, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: owner4.id, division: "Upstairs") }
+  let!(:team5) { Team.create!(season_id: season2.id, name: "The Ricky Stanzis", abbr: "RS", owner_id: owner1.id, division: "Upstairs") }
+  let!(:team6) { Team.create!(season_id: season2.id, name: "Westside Whales", abbr: "WW", owner_id: owner5.id, division: "Downstairs") }
+  let!(:team7) { Team.create!(season_id: season2.id, name: "Balls Tech", abbr: "BT", owner_id: owner3.id, division: "Upstairs") }
+  let!(:team8) { Team.create!(season_id: season2.id, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: owner4.id, division: "Upstairs") }
 
   let!(:game1) { Game.create!(season_id: season1.id, week: 5, away_team_id: team2.id, away_score: 77, home_team_id: team1.id, home_score: 84, game_type: "Regular Season") }
   let!(:game2) { Game.create!(season_id: season1.id, week: 8, away_team_id: team3.id, away_score: 67.5, home_team_id: team1.id, home_score: 89, game_type: "Regular Season") }

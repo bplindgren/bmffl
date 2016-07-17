@@ -11,6 +11,7 @@
         1,
         0,
         0,
+        0,
         null,
         null,
         null
@@ -24,9 +25,6 @@
       ],
       "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/owners_controller.rb": [
         1,
-        1,
-        1,
-        null,
         null,
         1,
         0,
@@ -44,10 +42,6 @@
       ],
       "/Users/bradleylindgren/dbc/phase-3/bmffl/app/controllers/seasons_controller.rb": [
         1,
-        null,
-        1,
-        1,
-        null,
         null,
         1,
         0,
@@ -339,6 +333,6 @@
         0
       ]
     },
-    "timestamp": 1468532715
+    "timestamp": 1468773633
   }
 }
