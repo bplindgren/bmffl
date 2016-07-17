@@ -20,27 +20,50 @@
 
                     <header class="col-lg-12 black-bg">
                         <div class="row">
-                            <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %></div>
+
+                            <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %>
+                            </div>
+
                                 <ul class="col-lg-10 list-group" id="scoreboard">
                                     <% Game.all.reverse.first(5).each do |game| %>
-                                        <li class="list-group-item col-lg-2 h125">
-                                            <div class="team-name"><%= game.away_team.name %> - 0</div>
-                                            <div class="team-name"><%= game.home_team.name %> - 0</div>
+                                        <li class="list-group-item scoreboard-top">
+                                            <p class="game-date">9/8 - 9/12</p>
+                                            <div class="team-name col-lg-10">
+                                                <p><%= game.away_team.abbr %></p>
+                                                <%= game.home_team.abbr %>
+                                            </div>
+                                            <div class="team-score col-lg-10">
+                                                <p><%= game.away_score %></p>
+                                                <%= game.home_score %>
+                                            </div>
                                         </li>
                                     <% end %>
                                 </ul>
                         </div>
                     </header>
 
-                    <nav class="navbar navbar-full black-bg col-lg-12">
-                        <div class="row">
+                    <nav class="navbar navbar-default col-lg-12" role="navigation">
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
-                                <li class="tab"><%= link_to "Seasons", seasons_path %></li>
-                                <li class="tab"><%= link_to "Owners", owners_path %></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <% League.first.seasons.each do |season| %>
+                                            <li class="tab"><%= link_to season.year, season %></li>
+                                        <% end %>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Owners <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <% League.first.owners.each do |owner| %>
+                                            <li class="tab"><%= link_to owner.first_name + ' ' + owner.last_name, owner %></li>
+                                        <% end %>
+                                    </ul>
+                                </li>
                                 <li class="tab"><%= link_to "Teams", teams_path %></li>
-                                <li class="tab"><%= link_to "Stats", root_path %></li>
+                                <li class="tab"><%= link_to "Head-To-Head", root_path %></li>
                                 <li class="tab"><%= link_to "Bowery Times", root_path %></li>
-                                <li class="tab"><%= link_to "All-Time Records", records_path %></li>
                                 <li class="user-tab"><%= link_to "Login", records_path %></li>
                                 <li class="user-tab"><%= link_to "Register", records_path %></li>
                             </ul>

@@ -2,17 +2,17 @@ require 'rails_helper'
 
 RSpec.describe Season, :type => :model do
   let!(:league) { League.create!(name: "BMFFL") }
-  let!(:season) { Season.create!(year: 2011, league_id: league.id) }
+  let!(:season) { Season.create!(year: 2011, league_id: league.id, completed?: true) }
 
   let!(:owner1) { Owner.create!(first_name: "Kyle", last_name: "P") }
   let!(:owner2) { Owner.create!(first_name: "Nick", last_name: "D") }
   let!(:owner3) { Owner.create!(first_name: "Brad", last_name: "L") }
   let!(:owner4) { Owner.create!(first_name: "Brian", last_name: "D") }
 
-  let!(:team1) { Team.create!(season_id: season.id, name: "The Green Bay Belts", owner_id: owner1.id, division: "Downstairs") }
-  let!(:team2) { Team.create!(season_id: season.id, name: "Westside Whales", owner_id: owner2.id, division: "Downstairs") }
-  let!(:team3) { Team.create!(season_id: season.id, name: "The Ricky Stanzis", owner_id: owner3.id, division: "Upstairs") }
-  let!(:team4) { Team.create!(season_id: season.id, name: "Iowa HerkysHeroes47", owner_id: owner4.id, division: "Upstairs") }
+  let!(:team1) { Team.create!(season_id: season.id, name: "The Green Bay Belts", abbr: "GBB", owner_id: owner1.id, division: "Downstairs") }
+  let!(:team2) { Team.create!(season_id: season.id, name: "Westside Whales", abbr: "WW", owner_id: owner2.id, division: "Downstairs") }
+  let!(:team3) { Team.create!(season_id: season.id, name: "The Ricky Stanzis", abbr: "RS", owner_id: owner3.id, division: "Upstairs") }
+  let!(:team4) { Team.create!(season_id: season.id, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: owner4.id, division: "Upstairs") }
 
   let!(:game1) { Game.create!(season_id: season.id, week: 16, away_team_id: team1.id, away_score: 99, home_team_id: team2.id, home_score: 86.5, game_type: "Super Bowl") }
   let!(:game2) { Game.create!(season_id: season.id, week: 12, away_team_id: team1.id, away_score: 109, home_team_id: team4.id, home_score: 86.5, game_type: "Regular Season") }

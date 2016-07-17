@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   root 'leagues#show', :id => 1
 
   resources :leagues, only: :show
-  resources :seasons, only: [:index, :show]
-  resources :owners, only: [:index, :show]
+  resources :seasons, only: :show
+  resources :owners, only: :show
   resources :teams, only: [:index, :show]
   resources :games, only: :show
   resources :records, only: :index

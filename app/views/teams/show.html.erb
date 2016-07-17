@@ -1,36 +1,45 @@
-<h2><%= @team.name %> - <%= @team.season.year %> Season</h2>
+<h2><%= @team.name %> - <%= @team.season.year %></h2>
 
   <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
     <tr>
       <th class="heading">Week</th>
       <th class="heading">Away Team</th>
       <th class="heading">Home Team</th>
+      <th class="heading">Game Type</th>
       <th class="heading">Result</th>
     </tr>
     <% @games.each do |game| %>
       <tr>
         <th><%= (@games.index(game) + 1) %></th>
-        <th><%= game.away_team.name %></th>
-        <th><%= game.home_team.name %></th>
+        <th><%= link_to game.away_team.name, game.away_team %></th>
+        <th><%= link_to game.home_team.name, game.home_team %></th>
+        <th><%= game.game_type %></th>
         <th>
 
           <% if game.winner == @team %>
             <% if game.home_team == @team %>
-              <%= 'W,' %> <%= game.home_score %> - <%= game.away_score %>
+              <div><%= 'W,' %> <%= game.home_score %> - <%= game.away_score %></div>
             <% elsif game.away_team == @team %>
-              <%= 'W,' %> <%= game.away_score %> - <%= game.home_score %>
+              <div><%= 'W,' %> <%= game.away_score %> - <%= game.home_score %></div>
             <% end %>
-          <% end %>
 
-          <% if game.loser == @team %>
+          <% elsif game.loser == @team %>
             <% if game.home_team == @team %>
               <div class="loss"><%= 'L,' %> <%= game.home_score %> - <%= game.away_score %></div>
             <% elsif game.away_team == @team %>
               <div class="loss"><%= 'L,' %> <%= game.away_score %> - <%= game.home_score %></div>
             <% end %>
+          <% else %>
+            <div class="tie"><%= 'T,' %> <%= game.home_score %> - <%= game.away_score %></div>
           <% end %>
 
         </th>
       </tr>
     <% end %>
+
   </table>
+
+  <h3>Final Stats:</h3>
+  <h4>Record: <%= @stats[:wins] %>-<%= @stats[:losses] %>-<%= @stats[:ties] %></h4>
+  <h4>Point Differential: <%= @stats[:point_diff] %></h4>
+  <h4>Standings: </h4>

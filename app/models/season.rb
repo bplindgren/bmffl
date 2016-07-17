@@ -4,7 +4,7 @@ class Season < ApplicationRecord
   has_many :owners, through: :teams
   belongs_to :league
 
-  validates :year, :league_id, presence: true
+  validates :year, :league_id, :completed?, presence: true
 
 
   def standings(game_type, teams)
@@ -23,6 +23,10 @@ class Season < ApplicationRecord
 
   def champion
     super_bowl = games.select { |game| game.game_type == "Super Bowl" }
-    super_bowl[0].winner
+    if super_bowl.length == 0
+      return nil
+    else
+      super_bowl[0].winner
+    end
   end
 end
