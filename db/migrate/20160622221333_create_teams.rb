@@ -3,6 +3,7 @@ class CreateTeams < ActiveRecord::Migration[5.0]
     create_table :teams do |t|
       t.integer :season_id, { null: false }
       t.string :name, { null: false }
+      t.string :abbr, { null: false }
       t.integer :owner_id, { null: false }
       t.string :division, { null: false }
 

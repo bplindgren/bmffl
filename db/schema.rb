@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160712200626) do
   create_table "teams", force: :cascade do |t|
     t.integer  "season_id",  null: false
     t.string   "name",       null: false
+    t.string   "abbr",       null: false
     t.integer  "owner_id",   null: false
     t.string   "division",   null: false
     t.datetime "created_at", null: false
