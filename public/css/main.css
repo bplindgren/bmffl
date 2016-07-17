@@ -71,6 +71,7 @@ a {
 
 table {
   margin-top: 20px;
+
 }
 
 .heading {
@@ -143,7 +144,6 @@ ul.list-group:after {
   margin: 0px;
   font-weight: bold;
   font-size: 1.2em;
-  /*border: 2px solid black;*/
   float: left;
   width: 60%;
 }
@@ -155,3 +155,39 @@ ul.list-group:after {
   /*border: 2px solid black;*/
 }
 
+#polls {
+  list-style-type: none;
+}
+
+.polls-right {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.team-name-polls {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 1.2em;
+  float: left;
+}
+
+footer {
+  margin-top: 20px;
+  color: black;
+  background-color: #00E500;
+  padding: 5px 0px 5px 0px;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+#team-list {
+  padding-top: 20px;
+  -moz-column-count: 3;
+  -moz-column-gap: 55px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 55px;
+  column-count: 3;
+  column-gap: 55px;
+}

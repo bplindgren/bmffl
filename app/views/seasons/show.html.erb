@@ -1,23 +1,11 @@
 <h2>BMFFL <%= @season.year %> Season</h2>
 
-
-<div id="standings-type">
-  <%= form_for @game_type, { :url => season_path, :method => 'GET' } do |f| %>
-    <%= f.label :game_type %>:
-    <%= f.text_field :game_type %><br /><br />
-
-    <%= f.submit "League" %>
-    <%= f.submit "Division" %>
-  <% end %>
-</div>
-
-<br />
 <div class="container">
   <div class="row">
     <div id="standings-table" class="col-lg-10">
 
       <div id="full-league-standings-table">
-        <h3>BMFFL League Standings</h3>
+        <h3>League Standings</h3>
 
         <table class="table table-striped pagination-centered">
           <tr>

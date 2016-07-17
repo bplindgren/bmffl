@@ -35,9 +35,39 @@ Now, let's look at a couple of examples of ELITE players.
 I'll include players from a few different sports. These
 players can be from the past or the present. </p>
 
+<p> ELITE: Derek Jeter, Peyton Manning, Patrick Kane,
+Michael Jordan, Tiger Woods, Anthony Rizzo</p>
+<p>Not ELITE: Derrick Rose, the Michigan punter, Augie
+Ojeda</p>
+<p>Now for each of the three athletes that we've been
+talking about for the past couple weeks:</p>
+
+<ol>
+  <li>Joe Flacco - ELITE. Joe has some great career numbers,
+  is a champion, and looks damn good out there.</li>
+  <li>Adam Woodbury - ELITE. Guy records some really
+  high stats (personal fouls), guy is a champion (won an
+  NCAA tournament game last year), and the guy looks
+  great out there. And he invented the eye poke of the
+  opponent that has the ball.</li>
+  <li>Jay Cutler - ELITE. Did you guys see that fourth quarter
+  game winning drive on Monday night?</li>
+
 </div>
+<%= @standings %>
+
 <div class="col-lg-4">
-  <h3>Polls</h3>
+  <h3>Who you got this week?</h3>
+  <ul class="list-group" id="polls">
+    <% Game.all.reverse.first(5).each do |game| %>
+        <li class="list-group-item polls-right">
+            <div class="team-name-polls">
+                <p><%= game.away_team.name %> (0-0-0)</p>
+                <p><%= game.home_team.name %> (0-0-0)</p>
+            </div>
+        </li>
+    <% end %>
+</ul>
 </div>
 
 <!-- <button class="btn btn-success" onclick="$(this).hide();">Click me!</button> -->

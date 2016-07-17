@@ -14,9 +14,9 @@
 
   <div>
     <%= label_tag("Password:") %>
-    <%= text_field_tag 'user[password]' %>
+    <%= password_field(:user, :password) %>
   </div>
 
   <div>
-    <%= submit_tag("Submit") %>
+    <%= submit_tag("Create Account") %>
   </div>

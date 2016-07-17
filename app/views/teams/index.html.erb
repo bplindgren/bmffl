@@ -1,8 +1,8 @@
-<h2>Here are the teams in the BMFFL</h2>
-<ol>
+<h2>All teams in BMFFL league history</h2>
+<ol id="team-list">
   <% @teams.each do |team| %>
     <li><%= link_to(team) do %>
-      <%= team.name %></li>
+      <%= team.name %> (<%= team.owner.first_name %> <%= team.owner.last_name %>, <%= team.season.year %>)</li>
   <% end %>
   <% end %>
 </ol>
