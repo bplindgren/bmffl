@@ -42,8 +42,9 @@
                         </div>
                     </header>
 
-                    <nav class="navbar navbar-default col-lg-12" role="navigation">
+                    <nav class="navbar col-lg-12" role="navigation">
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
+
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <b class="caret"></b></a>
@@ -64,9 +65,16 @@
                                 <li class="tab"><%= link_to "Teams", teams_path %></li>
                                 <li class="tab"><%= link_to "Head-To-Head", root_path %></li>
                                 <li class="tab"><%= link_to "Bowery Times", root_path %></li>
-                                <li class="user-tab"><%= link_to "Login", records_path %></li>
-                                <li class="user-tab"><%= link_to "Register", records_path %></li>
+
+                                <% if current_user %>
+                                    <li class="user-tab"><%= link_to current_user.username, user_path(current_user) %></li>
+                                    <li class="user-tab"><%= link_to "Logout", records_path %></li>
+                                <% else %>
+                                    <li class="user-tab"><%= link_to "Login", new_session_path %></li>
+                                    <li class="tab"><%= link_to "Register", new_user_path %></li>
+                                <% end %>
                             </ul>
+
                         </div>
                     </nav>
 

@@ -56,7 +56,7 @@ h1:hover {
   float:none;
 }
 
-nav li {
+li {
   color: black;
 }
 
@@ -89,19 +89,21 @@ ul.list-group:after {
 }
 
 .list-group-item {
-    float: left;
+  float: left;
 }
 
 .tab {
   padding-left: 10px;
   padding-right: 10px;
+  color: #000000;
 }
 
 .user-tab {
-  padding-left: 10px;
+  padding-left: 200px;
   padding-right: 10px;
   float: right;
   text-indent: right;
+  color: black;
 }
 
 .h125 {

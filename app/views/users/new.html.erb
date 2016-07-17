@@ -1,0 +1,22 @@
+<h3>Welcome to the Official Website of the BMFFL</h3>
+<h4>Enter a username and password below to create an account!</h4>
+
+<%= form_tag(controller: "users", action: "create", method: "post") %>
+  <div>
+    <%= label_tag("Username:") %>
+    <%= text_field_tag 'user[username]' %>
+  </div>
+
+  <div>
+    <%= label_tag("Email:") %>
+    <%= text_field_tag 'user[email]' %>
+  </div>
+
+  <div>
+    <%= label_tag("Password:") %>
+    <%= text_field_tag 'user[password]' %>
+  </div>
+
+  <div>
+    <%= submit_tag("Submit") %>
+  </div>

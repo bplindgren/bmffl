@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # mount ActionCable.server => '/cable'
   root 'leagues#show', :id => 1
 
+  resources :users, only: [:new, :create, :show]
+  resources :session, only: [:new, :create, :logout]
   resources :leagues, only: :show
   resources :seasons, only: :show
   resources :owners, only: :show
