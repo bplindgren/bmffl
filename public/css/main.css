@@ -38,15 +38,26 @@ h1:hover {
 }*/
 
 .navbar .navbar-nav {
-  background-color: #00E500;
-  font-weight: bold;
   display: inline-block;
   float: none;
   vertical-align: top;
+  font-weight: bold;
+  background-color: #00E500;
+  color: black;
 }
 
 .navbar .navbar-collapse {
   text-align: center;
+  background-color: #00E500;
+}
+
+.navbar-nav>li {
+  display: inline-block;
+  float:none;
+}
+
+nav li {
+  color: black;
 }
 
 a {
@@ -112,16 +123,17 @@ ul.list-group:after {
 #scoreboard {
   list-style-type: none;
   display: inline;
-  padding-left: 100px;
+  padding-left: 80px;
 }
 
 .scoreboard-top {
-  width: 175px;
+  width: 20%;
   height: 125px;
 }
 
 .game-date {
   float: left;
+  width: 100%;
   padding: 0px 0px 0px 14px;
 }
 
@@ -136,7 +148,7 @@ ul.list-group:after {
 
 .team-score {
   float: right;
-  width: 40px;
+  width: 40%;
   font-size: 1.2em;
   /*border: 2px solid black;*/
 }
