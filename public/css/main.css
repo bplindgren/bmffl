@@ -210,6 +210,7 @@ ul.list-group:after {
 }
 #header {
   background: #ededed;
+  margin-bottom: -20px;
 }
 #content {
   padding-bottom: 100px; /* Height of the footer element */
