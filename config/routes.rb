@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :teams, only: [:index, :show]
   resources :games, only: :show
   resources :records, only: :index
+  resources :votes, only: :create
 
   get 'session/logout' => "session#logout"
   get 'application/bowerytimes'=> "application#bowerytimes"
