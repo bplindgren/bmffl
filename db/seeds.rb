@@ -397,6 +397,7 @@ Game.create!(season_id: 4, week: 16, away_team_id: 31, away_score: 48.5, home_te
 Game.create!(season_id: 4, week: 16, away_team_id: 34, away_score: 80, home_team_id: 36, home_score: 101.5, game_type: "Super Bowl")
 Game.create!(season_id: 4, week: 16, away_team_id: 40, away_score: 82, home_team_id: 38, home_score: 91.5, game_type: "Consolation Game")
 Game.create!(season_id: 4, week: 16, away_team_id: 32, away_score: 91, home_team_id: 39, home_score: 85.5, game_type: "Consolation Game")
+
 Game.create!(season_id: 5, week: 1, away_team_id: 47, away_score: 82, home_team_id: 44, home_score: 108, game_type: "Regular Season")
 Game.create!(season_id: 5, week: 1, away_team_id: 46, away_score: 53, home_team_id: 50, home_score: 103.5, game_type: "Regular Season")
 Game.create!(season_id: 5, week: 1, away_team_id: 41, away_score: 117.5, home_team_id: 43, home_score: 77.5, game_type: "Regular Season")
@@ -404,7 +405,7 @@ Game.create!(season_id: 5, week: 1, away_team_id: 42, away_score: 74, home_team_
 Game.create!(season_id: 5, week: 1, away_team_id: 45, away_score: 77.5, home_team_id: 48, home_score: 101, game_type: "Regular Season")
 Game.create!(season_id: 5, week: 2, away_team_id: 44, away_score: 65, home_team_id: 46, home_score: 90.5, game_type: "Regular Season")
 Game.create!(season_id: 5, week: 2, away_team_id: 43, away_score: 69, home_team_id: 47, home_score: 97, game_type: "Regular Season")
-Game.create!(season_id: 5, week: 2, away_team_id: 49, away_score: 81.7, home_team_id: 48, home_score: 71, game_type: "Regular Season")
+Game.create!(season_id: 5, week: 2, away_team_id: 49, away_score: 81.5, home_team_id: 48, home_score: 71, game_type: "Regular Season")
 Game.create!(season_id: 5, week: 2, away_team_id: 50, away_score: 46, home_team_id: 42, home_score: 69, game_type: "Regular Season")
 Game.create!(season_id: 5, week: 2, away_team_id: 45, away_score: 88, home_team_id: 41, home_score: 77.5, game_type: "Regular Season")
 Game.create!(season_id: 5, week: 3, away_team_id: 47, away_score: 130, home_team_id: 44, home_score: 76.5, game_type: "Regular Season")

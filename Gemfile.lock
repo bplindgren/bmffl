@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 1.1)
     arel (7.0.0)
     awesome_print (1.6.1)
+    bcrypt (3.1.11)
     builder (3.2.2)
     byebug (9.0.5)
     clbustos-rtf (0.4.2)
@@ -238,6 +239,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   byebug
   coffee-rails (~> 4.1.0)
   coveralls
