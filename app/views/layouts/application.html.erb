@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>BMFFL</title>
         <%= csrf_meta_tags %>
         <%= action_cable_meta_tag %>
@@ -13,76 +14,164 @@
         <link rel="stylesheet" type="text/css" href="/css/main.css">
     </head>
 
+
     <body>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    <header class="col-lg-12 black-bg">
-                        <div class="row">
+        <div id="wrapper">
+            <div id="header">
+                <div id="header" class="col-lg-12 black-bg">
+                    <div class="row">
 
-                            <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %>
-                            </div>
-
-                            <ul class="col-lg-10 list-group" id="scoreboard">
-                                <% Game.all.reverse.first(5).each do |game| %>
-                                    <li class="list-group-item scoreboard-top">
-                                        <p class="game-date">9/8 - 9/12</p>
-                                        <div class="team-name col-lg-10">
-                                            <p><%= game.away_team.abbr %></p>
-                                            <p><%= game.home_team.abbr %></p>
-                                        </div>
-                                        <div class="team-score col-lg-10">
-                                            <p><%= game.away_score %></p>
-                                            <p><%= game.home_score %></p>
-                                        </div>
-                                    </li>
-                                <% end %>
-                            </ul>
+                        <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %>
                         </div>
-                    </header>
-                    <nav class="navbar col-lg-12" role="navigation">
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
 
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <% League.first.seasons.each do |season| %>
-                                            <li class="tab"><%= link_to season.year, season %></li>
-                                        <% end %>
-                                    </ul>
+                        <ul class="col-lg-10 list-group" id="scoreboard">
+                            <% Game.all.reverse.first(5).each do |game| %>
+                                <li class="list-group-item scoreboard-top">
+                                    <p class="game-date">9/8 - 9/12</p>
+                                    <div class="team-name col-lg-10">
+                                        <p><%= game.away_team.abbr %></p>
+                                        <p><%= game.home_team.abbr %></p>
+                                    </div>
+                                    <div class="team-score col-lg-10">
+                                        <p><%= game.away_score %></p>
+                                        <p><%= game.home_score %></p>
+                                    </div>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Owners <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <% League.first.owners.each do |owner| %>
-                                            <li class="tab"><%= link_to owner.first_name + ' ' + owner.last_name, owner %></li>
-                                        <% end %>
-                                    </ul>
-                                </li>
-                                <li class="tab"><%= link_to "Teams", teams_path %></li>
-                                <li class="tab"><%= link_to "Head-To-Head", root_path %></li>
-                                <li class="tab"><%= link_to "Bowery Times", root_path %></li>
-
-                                <% if current_user %>
-                                    <li class="user-tab"><%= link_to current_user.username, user_path(current_user) %></li>
-                                    <li class="tab"><%= link_to "Logout", session_logout_path %></li>
-                                <% else %>
-                                    <li class="user-tab"><%= link_to "Login", new_session_path %></li>
-                                    <li class="tab"><%= link_to "Register", new_user_path %></li>
-                                <% end %>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="container black-bg">
-                        <%= yield %>
+                            <% end %>
+                        </ul>
                     </div>
                 </div>
-                <footer>
-                    <p class="footer-text">© 2016 BMFFL Advanced Media, LP. All rights reserved.</p>
-                    <p class="footer-text">817 Bowery St.</p>
-                    <p class="footer-text">Iowa City, Iowa, 52240</p>
-                </footer>
+            </div>
+
+            <div id="content">
+                <nav class="navbar col-lg-12" role="navigation">
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <% League.first.seasons.each do |season| %>
+                                        <li class="tab"><%= link_to season.year, season %></li>
+                                    <% end %>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Owners <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <% League.first.owners.each do |owner| %>
+                                        <li class="tab"><%= link_to owner.first_name + ' ' + owner.last_name, owner %></li>
+                                    <% end %>
+                                </ul>
+                            </li>
+                            <li class="tab"><%= link_to "Teams", teams_path %></li>
+                            <li class="tab"><%= link_to "Head-To-Head", root_path %></li>
+                            <li class="tab"><%= link_to "Bowery Times", root_path %></li>
+
+                            <% if current_user %>
+                                <li class="user-tab"><%= link_to current_user.username, user_path(current_user) %></li>
+                                <li class="tab"><%= link_to "Logout", session_logout_path %></li>
+                            <% else %>
+                                <li class="user-tab"><%= link_to "Login", new_session_path %></li>
+                                <li class="tab"><%= link_to "Register", new_user_path %></li>
+                            <% end %>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container black-bg">
+                    <%= yield %>
+                </div>
+            </div>
+
+            <div id="footer">
+                <p class="footer-text">© 2016 BMFFL Advanced Media, LP. All rights reserved.</p>
+                <p class="footer-text">817 Bowery St.</p>
+                <p class="footer-text">Iowa City, Iowa, 52240</p>
+            </div>
+        </div>
+
+    </body>
+
+    <body>
+        <div id="wrapper">
+            <div class="row">
+                <div class="col-lg-12 page-wrap">
+                    <div class="row">
+
+                        <div id="header" class="col-lg-12 black-bg">
+                            <div class="row">
+
+                                <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %>
+                                </div>
+
+                                <ul class="col-lg-10 list-group" id="scoreboard">
+                                    <% Game.all.reverse.first(5).each do |game| %>
+                                        <li class="list-group-item scoreboard-top">
+                                            <p class="game-date">9/8 - 9/12</p>
+                                            <div class="team-name col-lg-10">
+                                                <p><%= game.away_team.abbr %></p>
+                                                <p><%= game.home_team.abbr %></p>
+                                            </div>
+                                            <div class="team-score col-lg-10">
+                                                <p><%= game.away_score %></p>
+                                                <p><%= game.home_score %></p>
+                                            </div>
+                                        </li>
+                                    <% end %>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="content">
+                            <nav class="navbar col-lg-12" role="navigation">
+                                <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <% League.first.seasons.each do |season| %>
+                                                    <li class="tab"><%= link_to season.year, season %></li>
+                                                <% end %>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Owners <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <% League.first.owners.each do |owner| %>
+                                                    <li class="tab"><%= link_to owner.first_name + ' ' + owner.last_name, owner %></li>
+                                                <% end %>
+                                            </ul>
+                                        </li>
+                                        <li class="tab"><%= link_to "Teams", teams_path %></li>
+                                        <li class="tab"><%= link_to "Head-To-Head", root_path %></li>
+                                        <li class="tab"><%= link_to "Bowery Times", root_path %></li>
+
+                                        <% if current_user %>
+                                            <li class="user-tab"><%= link_to current_user.username, user_path(current_user) %></li>
+                                            <li class="tab"><%= link_to "Logout", session_logout_path %></li>
+                                        <% else %>
+                                            <li class="user-tab"><%= link_to "Login", new_session_path %></li>
+                                            <li class="tab"><%= link_to "Register", new_user_path %></li>
+                                        <% end %>
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <div class="container black-bg">
+                                <%= yield %>
+                            </div>
+                        </div>
+
+                        <div id="footer">
+                            <p class="footer-text">© 2016 BMFFL Advanced Media, LP. All rights reserved.</p>
+                            <p class="footer-text">817 Bowery St.</p>
+                            <p class="footer-text">Iowa City, Iowa, 52240</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
 
