@@ -156,7 +156,6 @@
         0,
         0,
         0,
-        0,
         null,
         0,
         null,
@@ -182,10 +181,10 @@
         1,
         null,
         1,
-        244,
+        236,
         139,
-        105,
-        105,
+        97,
+        97,
         null,
         null,
         null,
@@ -193,16 +192,16 @@
         null,
         1,
         58,
-        24,
-        34,
-        34,
+        23,
+        35,
+        35,
         null,
         null,
         null,
         null,
         null,
         1,
-        122,
+        118,
         null,
         null,
         null
@@ -270,12 +269,12 @@
         17,
         null,
         17,
-        51,
+        47,
         0,
         0,
         null,
-        26,
-        26,
+        22,
+        22,
         null,
         25,
         25,
@@ -314,7 +313,7 @@
         1,
         43,
         null,
-        164,
+        160,
         null,
         0,
         null,
@@ -399,24 +398,6 @@
         null,
         null
       ],
-      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/models/user.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/models/vote.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
       "/Users/bradleylindgren/dbc/phase-3/bmffl/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -448,8 +429,26 @@
         0,
         0,
         0
+      ],
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/models/user.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/bradleylindgren/dbc/phase-3/bmffl/app/models/vote.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1468854048
+    "timestamp": 1468879133
   }
 }

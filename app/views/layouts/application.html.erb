@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>BMFFL</title>
         <%= csrf_meta_tags %>
         <%= action_cable_meta_tag %>
@@ -13,11 +14,12 @@
         <link rel="stylesheet" type="text/css" href="/css/main.css">
     </head>
 
+
     <body>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    <header class="col-lg-12 black-bg">
+        <div id="wrapper">
+            <div class="row">
+                <div id="header">
+                    <div id="header" class="col-lg-12 black-bg">
                         <div class="row">
 
                             <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %>
@@ -39,7 +41,12 @@
                                 <% end %>
                             </ul>
                         </div>
-                    </header>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="content">
                     <nav class="navbar col-lg-12" role="navigation">
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
 
@@ -74,24 +81,21 @@
                             </ul>
                         </div>
                     </nav>
+
                     <div class="container black-bg">
                         <%= yield %>
                     </div>
                 </div>
-                <footer>
-                    <p class="footer-text">© 2016 BMFFL Advanced Media, LP. All rights reserved.</p>
-                    <p class="footer-text">817 Bowery St.</p>
-                    <p class="footer-text">Iowa City, Iowa, 52240</p>
-                </footer>
+            </div>
+
+            <div id="footer">
+                <p class="footer-text">© 2016 BMFFL Advanced Media, LP. All rights reserved.</p>
+                <p class="footer-text">817 Bowery St.</p>
+                <p class="footer-text">Iowa City, Iowa, 52240</p>
             </div>
         </div>
 
-
-        <!-- JavaScript files should be linked at the bottom of the page (and jquery MUST be about the javascript bootstrap)-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-        <!-- // <script src="/js/jquery.min.js/1.9.1"></script> -->
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="/js/bootstrap.min.js"></script>
     </body>
+
+
 </html>
