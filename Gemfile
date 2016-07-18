@@ -32,8 +32,6 @@ gem 'statsample'
 gem 'simplecov', :require => false, :group => :test
 gem 'coveralls', require: false
 
-gem 'bcrypt'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
