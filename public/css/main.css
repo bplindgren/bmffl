@@ -177,10 +177,6 @@ footer {
   color: black;
   background-color: #00E500;
   padding: 5px 0px 5px 0px;
-  position: static;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .footer-text {
@@ -195,17 +191,4 @@ footer {
   -webkit-column-gap: 55px;
   column-count: 3;
   column-gap: 55px;
-}
-
-* {
-  margin: 0;
-}
-html, body {
-  height: 100%;
-}
-.wrapper {
-  min-height: 100%;
-  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
-}
-.footer, .push {/* .push must be the same height as .footer */
 }

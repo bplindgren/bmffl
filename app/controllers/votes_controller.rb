@@ -1,7 +1,6 @@
 class VotesController < ApplicationController
   def create
-    p params
-    @vote = Vote.create(vote_params)
+    @vote = Vote.new(vote_params)
     if @vote.save
       p "success"
       redirect_to :root

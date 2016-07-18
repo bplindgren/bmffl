@@ -65,14 +65,16 @@
       <li class="list-group-item polls-right">
         <div class="team-name-polls">
           <% if current_user %>
-            <%= form_tag(votes_path, method: :create) %>
-              <p><%= radio_button_tag 'vote[team_id]', game.away_team.id, disabled: true %>
+            <% @game_id = game.id %>
+            <%= form_tag(votes_path, method: :create, remote: true) do %>
+              <p><%= radio_button_tag 'vote[team_id]', game.away_team.id %>
               <%= game.away_team.name %> (0-0-0)</p>
-              <p><%= radio_button_tag 'vote[team_id]', game.home_team.id, disabled: true %>
+              <p><%= radio_button_tag 'vote[team_id]', game.home_team.id %>
               <%= game.home_team.name %> (0-0-0)</p>
               <%= hidden_field_tag('vote[game_id]', game.id) %>
               <%= hidden_field_tag('vote[voter_id]', session[:user_id]) %>
               <%= submit_tag 'Vote!' %>
+              <% end %>
           <% else %>
             <p><%= game.away_team.name %> (0-0-0)</p>
             <p><%= game.home_team.name %> (0-0-0)</p>
