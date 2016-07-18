@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>BMFFL</title>
@@ -14,33 +14,30 @@
         <link rel="stylesheet" type="text/css" href="/css/main.css">
     </head>
 
-
     <body>
         <div id="wrapper">
             <div class="row">
-                <div id="header">
-                    <div id="header" class="col-lg-12 black-bg">
-                        <div class="row">
+                <div id="header" class="col-lg-12 black-bg">
+                    <div class="row">
 
-                            <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %>
-                            </div>
-
-                            <ul class="col-lg-10 list-group" id="scoreboard">
-                                <% Game.all.reverse.first(5).each do |game| %>
-                                    <li class="list-group-item scoreboard-top">
-                                        <p class="game-date">9/8 - 9/12</p>
-                                        <div class="team-name col-lg-10">
-                                            <p><%= game.away_team.abbr %></p>
-                                            <p><%= game.home_team.abbr %></p>
-                                        </div>
-                                        <div class="team-score col-lg-10">
-                                            <p><%= game.away_score %></p>
-                                            <p><%= game.home_score %></p>
-                                        </div>
-                                    </li>
-                                <% end %>
-                            </ul>
+                        <div class="col-lg-2 image"><%= link_to (image_tag("logo.png")), root_path %>
                         </div>
+
+                        <ul class="col-lg-10 list-group" id="scoreboard">
+                            <% Game.all.reverse.first(5).each do |game| %>
+                                <li class="list-group-item scoreboard-top">
+                                    <p class="game-date">9/8 - 9/12</p>
+                                    <div class="team-name col-lg-10">
+                                        <p><%= game.away_team.abbr %></p>
+                                        <p><%= game.home_team.abbr %></p>
+                                    </div>
+                                    <div class="team-score col-lg-10">
+                                        <p><%= game.away_score %></p>
+                                        <p><%= game.home_score %></p>
+                                    </div>
+                                </li>
+                            <% end %>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -49,7 +46,6 @@
                 <div id="content">
                     <nav class="navbar col-lg-12" role="navigation">
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
-
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <b class="caret"></b></a>
@@ -62,7 +58,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Owners <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <% League.first.owners.each do |owner| %>
+                                        <% League.first.owners.sort.each do |owner| %>
                                             <li class="tab"><%= link_to owner.first_name + ' ' + owner.last_name, owner %></li>
                                         <% end %>
                                     </ul>
@@ -97,5 +93,11 @@
 
     </body>
 
+    <!-- JavaScript files should be linked at the bottom of the page (and jquery MUST be about the javascript bootstrap)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- // <script src="/js/jquery.min.js/1.9.1"></script> -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
 
 </html>
