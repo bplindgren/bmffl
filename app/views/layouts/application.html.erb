@@ -64,8 +64,9 @@
                                     </ul>
                                 </li>
                                 <li class="tab"><%= link_to "Teams", teams_path %></li>
-                                <li class="tab"><%= link_to "Head-To-Head", root_path %></li>
-                                <li class="tab"><%= link_to "Bowery Times", root_path %></li>
+                                <li class="tab"><%= link_to "Head-To-Head", application_headtohead_path %></li>
+                                <li class="tab"><%= link_to "Bowery Times", bowerytimes_path %></li>
+                                <li class="tab"><%= link_to "Contact", application_contact_path %></li>
 
                                 <% if current_user %>
                                     <li class="user-tab"><%= link_to current_user.username, user_path(current_user) %></li>

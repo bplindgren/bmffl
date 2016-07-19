@@ -55,6 +55,7 @@ h1:hover {
   font-weight: bold;
   background-color: #00E500;
   color: black;
+  padding-right: 60px;
 }
 
 .navbar .navbar-collapse {
@@ -111,7 +112,7 @@ ul.list-group:after {
 }
 
 .user-tab {
-  padding-left: 200px;
+  padding-left: 180px;
   padding-right: 10px;
   float: right;
   text-indent: right;
@@ -221,4 +222,16 @@ ul.list-group:after {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+#contact {
+  padding: 0px 100px 0px 100px;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.no-pad {
+  margin-bottom: 0px;
 }
