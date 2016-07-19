@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.beta2', '< 5.1'
 gem 'dotenv-rails'
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -44,13 +42,15 @@ group :development, :test do
   gem 'factory_girl_rails', "~> 4.0"
   # gem 'spring'
   gem 'pry'
+  gem 'pg', '~> 0.18'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-
+  # Use postgresql as the database for Active Record
+  gem 'pg', '~> 0.18'
 end
 
 
