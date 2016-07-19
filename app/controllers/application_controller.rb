@@ -14,4 +14,12 @@ class ApplicationController < ActionController::Base
     session
   end
 
+  def headtohead
+    render "headtohead"
+  end
+
+  def contact
+    render "contact"
+  end
+
 end

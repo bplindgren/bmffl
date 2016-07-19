@@ -1,0 +1,2 @@
+class Bowerytimes < ApplicationRecord
+end
