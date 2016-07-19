@@ -1,18 +1,13 @@
-<h3>Welcome to the Official Website of the BMFFL</h3>
-<h4>Enter your username and password below to sign in!</h4>
+<div class="col-lg-4"></div>
 
-<%= form_tag(controller: "session", action: "create", method: "post") do %>
-  <div>
-    <%= label_tag("Email:") %>
-    <%= text_field_tag 'user[email]' %>
-  </div>
+<div class="col-lg-4">
+  <h3>Login to your account!</h3>
 
-  <div>
-    <%= label_tag("Password:") %>
-    <%= password_field(:user, :password) %>
-  </div>
+  <%= bootstrap_form_tag url: '/session' do |f| %>
+    <%= f.email_field :email %>
+    <%= f.password_field :password %>
+    <%= f.submit "Login" %>
+  <% end %>
+</div>
 
-  <div>
-    <%= submit_tag("Login") %>
-  </div>
-<% end %>
+<div class="col-lg-4"></div>

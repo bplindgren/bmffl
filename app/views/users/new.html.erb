@@ -1,22 +1,22 @@
-<h3>Welcome to the Official Website of the BMFFL</h3>
-<h4>Enter a username and password below to create an account!</h4>
+<div class="col-lg-4"></div>
 
-<%= form_tag(controller: "users", action: "create", method: "post") %>
-  <div>
-    <%= label_tag("Username:") %>
-    <%= text_field_tag 'user[username]' %>
-  </div>
+<div class="col-lg-4">
+  <h3>Create your account!</h3>
 
-  <div>
-    <%= label_tag("Email:") %>
-    <%= text_field_tag 'user[email]' %>
-  </div>
+  <% if @user.errors %>
+    <ul class="errors-list">
+      <% @user.errors.each do |attr, msg| %>
+        <li class="red"><%= "#{attr} #{msg}" if @user.errors[attr].first == msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
-  <div>
-    <%= label_tag("Password:") %>
-    <%= password_field(:user, :password) %>
-  </div>
+  <%= bootstrap_form_for(@user) do |f| %>
+    <%= f.text_field :username, placeholder: "must be 6 characters" %>
+    <%= f.email_field :email, placeholder: "must be valid email" %>
+    <%= f.password_field :password, placeholder: "must be between 6-20 characters" %>
+    <%= f.submit "Create Account!" %>
+  <% end %>
+</div>
 
-  <div>
-    <%= submit_tag("Create Account") %>
-  </div>
+<div class="col-lg-4"></div>

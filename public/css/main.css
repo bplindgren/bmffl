@@ -3,6 +3,10 @@
 }
 */
 
+/*
+ *= require rails_bootstrap_forms
+ */
+
 .pad-top {
   padding-top: 20px;
 }
@@ -234,4 +238,8 @@ ul.list-group:after {
 
 .no-pad {
   margin-bottom: 0px;
+}
+
+.red {
+  color: red;
 }
