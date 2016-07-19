@@ -18,7 +18,7 @@
           <% @standings.each do |team| %>
             <tr>
               <th><%= (@standings.index(team) + 1) %></th>
-              <th><%= team.name %></th>
+              <th><%= link_to team.name, team %></th>
               <th><%= team.team_stats("All")[:wins] %></th>
               <th><%= team.team_stats("All")[:losses] %></th>
               <th><%= team.team_stats("All")[:ties] %></th>
