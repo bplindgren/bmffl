@@ -21,43 +21,30 @@
 
 <div class="col-lg-3"></div>
 
-<% if @games %>
-  <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
-    <tr>
-      <th class="heading">Week</th>
-      <th class="heading">Away Team</th>
-      <th class="heading">Home Team</th>
-      <th class="heading">Game Type</th>
-      <th class="heading">Result</th>
-    </tr>
-    <% @games.each do |game| %>
+<div class="h2h-results">
+  <% if @games %>
+    <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
       <tr>
-        <th><%= (@games.index(game) + 1) %></th>
-        <th><%= link_to game.away_team.name, game.away_team %></th>
-        <th><%= link_to game.home_team.name, game.home_team %></th>
-        <th><%= game.game_type %></th>
-        <th>
-
-          <% if game.winner == @team %>
-            <% if game.home_team == @team %>
-              <div><%= 'W,' %> <%= game.home_score %> - <%= game.away_score %></div>
-            <% elsif game.away_team == @team %>
-              <div><%= 'W,' %> <%= game.away_score %> - <%= game.home_score %></div>
-            <% end %>
-
-          <% elsif game.loser == @team %>
-            <% if game.home_team == @team %>
-              <div class="loss"><%= 'L,' %> <%= game.home_score %> - <%= game.away_score %></div>
-            <% elsif game.away_team == @team %>
-              <div class="loss"><%= 'L,' %> <%= game.away_score %> - <%= game.home_score %></div>
-            <% end %>
-          <% else %>
-            <div class="tie"><%= 'T,' %> <%= game.home_score %> - <%= game.away_score %></div>
-          <% end %>
-
-        </th>
+        <th class="heading">Season</th>
+        <th class="heading">Week</th>
+        <th class="heading">Winner</th>
+        <th class="heading">Loser</th>
+        <th class="heading">Game Type</th>
+        <th class="heading">Final Score</th>
       </tr>
-    <% end %>
+      <% @games.each do |game| %>
+        <% @scores = [game.home_score, game.away_score].sort %>
 
-  </table>
-<% end %>
+        <tr>
+          <th><%= (game.season_id) %></th>
+          <th><%= (game.week) %></th>
+          <th><%= link_to game.winner.name, game.winner %></th>
+          <th><%= link_to game.loser.name, game.loser %></th>
+          <th><%= game.game_type %></th>
+          <th><%= @scores[1] %> - <%= @scores[0] %></th>
+        </tr>
+      <% end %>
+
+    </table>
+  <% end %>
+</div>

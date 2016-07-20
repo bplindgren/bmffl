@@ -255,3 +255,11 @@ ul.list-group:after {
 .games-table {
 
 }
+
+.h2h-results {
+  margin-top: 20px
+}
+
+.green {
+  color: #00E500;
+}

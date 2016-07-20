@@ -20,15 +20,11 @@ class ApplicationController < ActionController::Base
   end
 
   def headtoheadresult
-    p params
-    owner1 = Owner.find(params[:owner_1])
-    p owner1
-    owner2 = Owner.find(params[:owner_2])
-    p owner2
-    # @result = Game.where('home_team_owner = owner1')
+    @owner1 = Owner.find(params[:owner_1])
+    @owner2 = Owner.find(params[:owner_2])
     @games = []
     Game.all.each do |game|
-      if game.home_team_owner == owner1 && game.away_team_owner == owner2 || game.home_team_owner == owner2 && game.away_team_owner == owner1
+      if game.home_team_owner == @owner1 && game.away_team_owner == @owner2 || game.home_team_owner == @owner2 && game.away_team_owner == @owner1
         @games.push(game)
       end
     end
