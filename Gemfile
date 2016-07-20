@@ -28,6 +28,8 @@ gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bcrypt'
 
+gem 'bootstrap_form'
+
 gem 'statsample'
 gem 'simplecov', :require => false, :group => :test
 gem 'coveralls', require: false

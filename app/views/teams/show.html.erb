@@ -10,7 +10,7 @@
     </tr>
     <% @games.each do |game| %>
       <tr>
-        <th><%= (@games.index(game) + 1) %></th>
+        <th><%= game.week %></th>
         <th><%= link_to game.away_team.name, game.away_team %></th>
         <th><%= link_to game.home_team.name, game.home_team %></th>
         <th><%= game.game_type %></th>

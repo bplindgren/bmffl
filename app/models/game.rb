@@ -3,7 +3,7 @@ class Game < ApplicationRecord
   belongs_to :away_team, foreign_key: :away_team_id, class_name: 'Team'
   belongs_to :home_team, foreign_key: :home_team_id, class_name: 'Team'
   has_one :away_team_owner, through: :away_team, source: :owner
-  has_one :home_team_owner, through: :home_team, source: :owners
+  has_one :home_team_owner, through: :home_team, source: :owner
   has_one :league, through: :season
 
   validates :season_id, :week, :away_team_id, :home_team_id, :game_type, presence: true

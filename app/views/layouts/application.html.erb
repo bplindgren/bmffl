@@ -5,6 +5,7 @@
         <title>BMFFL</title>
         <%= csrf_meta_tags %>
         <%= action_cable_meta_tag %>
+        <%= favicon_link_tag 'football.jpeg' %>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -24,7 +25,7 @@
                         </div>
 
                         <ul class="col-lg-10 list-group" id="scoreboard">
-                            <% Game.all.reverse.first(5).each do |game| %>
+                            <% Game.all.last(5).each do |game| %>
                                 <li class="list-group-item scoreboard-top">
                                     <p class="game-date">9/8 - 9/12</p>
                                     <div class="team-name col-lg-10">

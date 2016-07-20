@@ -41,6 +41,7 @@ GEM
     arel (7.0.0)
     awesome_print (1.7.0)
     bcrypt (3.1.11)
+    bootstrap_form (2.4.0)
     builder (3.2.2)
     byebug (9.0.5)
     clbustos-rtf (0.4.2)
@@ -237,6 +238,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  bootstrap_form
   byebug
   coffee-rails (~> 4.1.0)
   coveralls
