@@ -1,36 +1,44 @@
-<h2>BMFFL <%= @season.year %> Season</h2>
+<table>
+  <tr>
+    <th class="center large">BMFFL <%= @season.year %> Season</th>
+  </tr>
+</table>
 
-<div class="container">
-  <div class="row">
-    <div id="standings-table" class="col-lg-10">
+<table class="responstable">
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Team Name</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Ties</th>
+      <th>Points For</th>
+      <th>Points Against</th>
+      <th>Point Differential</th>
+    </tr>
+  </thead>
 
-      <div id="full-league-standings-table">
-        <h3>League Standings</h3>
-
-        <table class="table table-striped pagination-centered">
-          <tr>
-            <th class="heading">Place</th>
-            <th class="heading">Team Name</th>
-            <th class="heading">Wins</th>
-            <th class="heading">Losses</th>
-            <th class="heading">Ties</th>
-          </tr>
-          <% @standings.each do |team| %>
-            <tr>
-              <th><%= (@standings.index(team) + 1) %></th>
-              <th><%= link_to team.name, team %></th>
-              <th><%= team.team_stats("All")[:wins] %></th>
-              <th><%= team.team_stats("All")[:losses] %></th>
-              <th><%= team.team_stats("All")[:ties] %></th>
-            </tr>
-          <% end %>
-        </table>
-      </div>
-
-    <% if @champion %>
-      <h3><%= @season.year %> BMFFL Champion: <%= @champion.name %></h3>
+  <tbody>
+    <% @standings.each do |team| %>
+      <tr>
+      <td><%= (@standings.index(team) + 1) %></td>
+      <td><%= link_to team.name, team %></td>
+      <td><%= team.team_stats("All")[:wins] %></td>
+      <td><%= team.team_stats("All")[:losses] %></td>
+      <td><%= team.team_stats("All")[:ties] %></td>
+      <td><%= team.team_stats("All")[:points_for] %></td>
+      <td><%= team.team_stats("All")[:points_against] %></td>
+      <td><%= team.team_stats("All")[:point_diff] %></td>
+      </tr>
     <% end %>
+  </tbody>
+</table>
 
-  </div>
-</div>
 
+<% if @champion %>
+  <table>
+    <tr>
+      <th class="center large"><%= @season.year %> BMFFL Champion: <%= @champion.name %></th>
+    </tr>
+  </table>
+<% end %>

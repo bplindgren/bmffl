@@ -2,24 +2,21 @@
   <h3 class="center">Choose two owners and see Head-to-Head results</h3>
 </div>
 
-<div class="col-lg-3"></div>
+<div class="col-lg-2"></div>
 
-<div class="col-lg-6">
-
+<div class="col-lg-8">
   <div class="teams-form">
-    <%= bootstrap_form_tag url: '/application/headtoheadresult' do |f| %>
+    <%= bootstrap_form_tag url: "/application/headtoheadresult", :html => {:class => "form-inline"} do |f| %>
       <%= f.collection_select :owner_1, Owner.all, :id, :full_name, { :include_blank => true } %>
       <%= f.collection_select :owner_2, Owner.all, :id, :full_name, { :include_blank => true } %>
-      <%= f.submit "View Head-to-Head Results" %>
+      <%= f.submit "View Head-to-Head Results", class: "btn btn-primary" %>
     <% end %>
   </div>
-
-  <div class="games-table">
-  </div>
-
 </div>
 
-<div class="col-lg-3"></div>
+<div class="col-lg-2"></div>
+
+
 
 <div class="h2h-results">
   <% if @games %>
@@ -36,7 +33,7 @@
         <% @scores = [game.home_score, game.away_score].sort %>
 
         <tr>
-          <th><%= (game.season_id) %></th>
+          <th><%= (game.season.year) %></th>
           <th><%= (game.week) %></th>
           <th><%= link_to game.winner.name, game.winner %></th>
           <th><%= link_to game.loser.name, game.loser %></th>
@@ -44,7 +41,6 @@
           <th><%= @scores[1] %> - <%= @scores[0] %></th>
         </tr>
       <% end %>
-
     </table>
   <% end %>
 </div>

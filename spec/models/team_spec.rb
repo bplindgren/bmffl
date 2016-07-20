@@ -22,7 +22,7 @@ RSpec.describe Team, :type => :model do
 
   context 'gets team info' do
     it 'tests team_stats method' do
-      expect(team1.team_stats("All")).to eq( {:wins => 2, :losses => 1, :ties => 0, :point_diff => -18 } )
+      expect(team1.team_stats("All")).to eq( {:wins => 2, :losses => 1, :ties => 0, :points_for => 222.0, :points_against => 240.0, :point_diff => -18 } )
     end
 
     it 'tests the over_500 method' do

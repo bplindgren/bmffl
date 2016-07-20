@@ -1,32 +1,48 @@
-<h2><%= @owner.first_name %> <%= @owner.last_name %></h2>
-
-<h3><%= @owner.first_name %>'s BMFFL stats: </h3>
-
-<table class="table table-striped pagination-centered">
+<table>
   <tr>
-    <th>Team Name</th>
-    <th>Season</th>
-    <th>Wins</th>
-    <th>Losses</th>
-    <th>Ties</th>
-    <th>Point Differential</th>
-  </tr>
-  <% @owner_teams.each do |team| %>
-    <tr>
-      <th><%= link_to team.name, team %></th>
-      <th><%= team.season.year %></th>
-      <th><%= team.team_stats("All")[:wins] %></th>
-      <th><%= team.team_stats("All")[:losses] %></th>
-      <th><%= team.team_stats("All")[:ties] %></th>
-      <th><%= team.team_stats("All")[:point_diff] %></th>
-    </tr>
-  <% end %>
-  <tr>
-    <th>Totals</th>
-    <th></th>
-    <th><%= @stats[:wins] %></th>
-    <th><%= @stats[:losses] %></th>
-    <th><%= @stats[:ties] %></th>
-    <th><%= @stats[:point_diff] %></th>
+    <th class="center large"><%= @owner.first_name %> <%= @owner.last_name %>'s BMFFL stats: </th>
   </tr>
 </table>
+
+<table class="responstable">
+  <thead>
+    <tr>
+      <th>Team Name</th>
+      <th>Season</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Ties</th>
+      <th>Points For</th>
+      <th>Points Against</th>
+      <th>Point Differential</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @owner_teams.each do |team| %>
+      <tr>
+        <td><%= link_to team.name, team %></td>
+        <td><%= team.season.year %></td>
+        <td><%= team.team_stats("All")[:wins] %></td>
+        <td><%= team.team_stats("All")[:losses] %></td>
+        <td><%= team.team_stats("All")[:ties] %></td>
+        <td><%= team.team_stats("All")[:points_for] %></td>
+        <td><%= team.team_stats("All")[:points_against] %></td>
+        <td><%= team.team_stats("All")[:point_diff] %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <th>Totals</th>
+      <th></th>
+      <th><%= @stats[:wins] %></th>
+      <th><%= @stats[:losses] %></th>
+      <th><%= @stats[:ties] %></th>
+      <th><%= @stats[:points_for] %></th>
+      <th><%= @stats[:points_against] %></th>
+      <th><%= @stats[:point_diff] %></th>
+    </tr>
+  </tbody>
+</table>
+
+
+
