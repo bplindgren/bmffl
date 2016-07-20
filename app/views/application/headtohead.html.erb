@@ -4,11 +4,11 @@
 
 <div class="col-lg-2"></div>
 
-<div class="col-lg-8">
+<div class="col-lg-8 center">
   <div class="teams-form">
     <%= bootstrap_form_tag url: "/application/headtoheadresult", :html => {:class => "form-inline"} do |f| %>
-      <%= f.collection_select :owner_1, Owner.all, :id, :full_name, { :include_blank => true } %>
-      <%= f.collection_select :owner_2, Owner.all, :id, :full_name, { :include_blank => true } %>
+      <%= f.collection_select :owner_1, Owner.all, :id, :full_name, {:include_blank=> true}, {:style => "width:150px" } %>
+      <%= f.collection_select :owner_2, Owner.all, :id, :full_name, { :include_blank => true }, {:style => "width:150px" } %>
       <%= f.submit "View Head-to-Head Results", class: "btn btn-primary" %>
     <% end %>
   </div>
@@ -16,31 +16,31 @@
 
 <div class="col-lg-2"></div>
 
-
-
 <div class="h2h-results">
   <% if @games %>
-    <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
-      <tr>
-        <th class="heading">Season</th>
-        <th class="heading">Week</th>
-        <th class="heading">Winner</th>
-        <th class="heading">Loser</th>
-        <th class="heading">Game Type</th>
-        <th class="heading">Final Score</th>
-      </tr>
-      <% @games.each do |game| %>
-        <% @scores = [game.home_score, game.away_score].sort %>
-
+    <table>
+      <thead>
         <tr>
-          <th><%= (game.season.year) %></th>
-          <th><%= (game.week) %></th>
-          <th><%= link_to game.winner.name, game.winner %></th>
-          <th><%= link_to game.loser.name, game.loser %></th>
-          <th><%= game.game_type %></th>
-          <th><%= @scores[1] %> - <%= @scores[0] %></th>
+          <th>Season</th>
+          <th>Week</th>
+          <th>Winning Team</th>
+          <th>Losing Team</th>
+          <th>Final Score</th>
         </tr>
-      <% end %>
+      </thead>
+
+      <tbody>
+        <% @games.each do |game| %>
+        <% scores = [game.home_score, game.away_score].sort.reverse %>
+          <tr>
+            <td><%= game.season.year %></td>
+            <td><%= game.week %></td>
+            <td><%= link_to game.winner.name, game.winner %></td>
+            <td><%= link_to game.loser.name, game.loser %></td>
+            <td><%= scores[0] %> - <%= scores[1] %></td>
+          </tr>
+        <% end %>
+      </tbody>
     </table>
   <% end %>
 </div>
