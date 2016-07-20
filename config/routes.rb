@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   get 'session/logout' => "session#logout"
   get 'application/session_viewer' => "application#session_viewer"
-  get 'application/headtohead' => "application#headtohead"
   get 'application/contact' => "application#contact"
+  get 'application/headtohead' => "application#headtohead"
+  post 'application/headtoheadresult' => "application#headtoheadresult"
 end

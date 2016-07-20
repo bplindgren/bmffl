@@ -10,6 +10,10 @@ class Owner < ApplicationRecord
 
   validates :first_name, :last_name, presence: true
 
+  def full_name
+    first_name + ' ' + last_name
+  end
+
   def owner_stats(game_type)
     games = games_by_type(game_type)
     stats = {:wins => 0, :losses => 0, :ties => 0, :point_diff => 0}
