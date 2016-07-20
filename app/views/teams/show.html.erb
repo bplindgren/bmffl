@@ -1,21 +1,27 @@
-<h2><%= @team.name %> - <%= @team.season.year %></h2>
+<table>
+  <tr>
+    <th class="center large"><%= @team.name %> - <%= @team.season.year %></th>
+  </tr>
+</table>
 
-  <table class="table table-striped pagination-centered"> <!-- striped, bordered, hover, condensed -->
+<table>
+  <thead>
     <tr>
-      <th class="heading">Week</th>
-      <th class="heading">Away Team</th>
-      <th class="heading">Home Team</th>
-      <th class="heading">Game Type</th>
-      <th class="heading">Result</th>
+      <th>Week</th>
+      <th>Away Team</th>
+      <th>Home Team</th>
+      <th>Game Type</th>
+      <th>Result</th>
     </tr>
+  </thead>
+  <tbody>
     <% @games.each do |game| %>
       <tr>
-        <th><%= game.week %></th>
-        <th><%= link_to game.away_team.name, game.away_team %></th>
-        <th><%= link_to game.home_team.name, game.home_team %></th>
-        <th><%= game.game_type %></th>
-        <th>
-
+        <td><%= game.week %></td>
+        <td><%= link_to game.away_team.name, game.away_team %></td>
+        <td><%= link_to game.home_team.name, game.home_team %></td>
+        <td><%= game.game_type %></td>
+        <td>
           <% if game.winner == @team %>
             <% if game.home_team == @team %>
               <div><%= 'W,' %> <%= game.home_score %> - <%= game.away_score %></div>
@@ -32,13 +38,35 @@
           <% else %>
             <div class="tie"><%= 'T,' %> <%= game.home_score %> - <%= game.away_score %></div>
           <% end %>
-
-        </th>
+        </td>
       </tr>
     <% end %>
+  </tbody>
+</table>
 
-  </table>
+<table class="responstable">
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Ties</th>
+      <th>Points For</th>
+      <th>Points Against</th>
+      <th>Point Differential</th>
+    </tr>
+  </thead>
 
-  <h3>Final Stats:</h3>
-  <h4>Record: <%= @stats[:wins] %>-<%= @stats[:losses] %>-<%= @stats[:ties] %></h4>
-  <h4>Point Differential: <%= @stats[:point_diff] %></h4>
+  <tbody>
+    <tr>
+      <td><%= @team.owner.first_name %> <%= @team.owner.last_name %></td>
+      <td><%= @stats[:wins] %></td>
+      <td><%= @stats[:losses] %></td>
+      <td><%= @stats[:ties] %></td>
+      <td><%= @stats[:points_for] %></td>
+      <td><%= @stats[:points_against] %></td>
+      <td><%= @stats[:point_diff] %></td>
+    </tr>
+  </tbody>
+</table>
+
