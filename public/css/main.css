@@ -1,7 +1,7 @@
 /*.black-bg {
   border: 3px solid black;
-}
-*/
+}*/
+
 
 /*
  *= require rails_bootstrap_forms
@@ -133,6 +133,8 @@ ul.list-group:after {
 #scoreboard {
   list-style-type: none;
   display: inline;
+  padding: 0px;
+  margin: 0px;
 }
 
 .scoreboard-top {

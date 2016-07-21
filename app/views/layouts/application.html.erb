@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 image"><%= link_to (image_tag("logo.jpg")), root_path %></div>
                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 black-bg" id="scoreboard">
                             <ul class="list-group">
                                 <% Game.all.last(5).each do |game| %>
                                     <li class="list-group-item scoreboard-top">
@@ -70,7 +70,7 @@
                                     <li class="tab"><%= link_to "Bowery Times", bowerytimes_path %></li>
                                     <li class="tab"><%= link_to "Contact", application_contact_path %></li>
                                 </ul>
-                                <ul class="nav navbar-nav flo">
+                                <ul class="nav navbar-nav">
                                     <% if current_user %>
                                         <li class="tab"><%= link_to current_user.username, user_path(current_user) %></li>
                                         <li class="tab"><%= link_to "Logout", session_logout_path %></li>
