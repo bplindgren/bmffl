@@ -16,7 +16,7 @@ class Owner < ApplicationRecord
 
   def owner_stats(game_type)
     games = games_by_type(game_type)
-    stats = {:wins => 0, :losses => 0, :ties => 0, :points_for => 0, :points_against => 0, :point_diff => 0}
+    stats = {:wins => 0, :losses => 0, :ties => 0, :points_for => 0, :points_against => 0, :point_diff => 0, :ppg => 0, :papg => 0, :ppg_diff => 0, :wp => 0.000}
 
     games.each do |game|
       scores = [game.home_score, game.away_score].sort.reverse
@@ -35,6 +35,7 @@ class Owner < ApplicationRecord
       stats[:point_diff] = stats[:points_for] - stats[:points_against]
       stats[:ppg] = stats[:points_for] / games.count
       stats[:papg] = stats[:points_against] / games.count
+      stats[:ppg_diff] = stats[:ppg] - stats[:papg]
       stats[:wp] = stats[:wins].to_f / games.count
     end
     stats

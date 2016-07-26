@@ -31,7 +31,7 @@ class League < ApplicationRecord
   end
 
 
-  def sort_by(stat, game_type)
+  def sort_owners_by(stat, game_type)
     stats_hash = {}
     owners.each do |owner|
       stats_hash[owner.full_name] = owner.owner_stats(game_type)[stat].round(2)
@@ -39,6 +39,15 @@ class League < ApplicationRecord
     p stats_hash
     order = stats_hash.sort_by { |k, v| v }.reverse
   end
+
+  # def sort_teams_by(stat, game_type)
+  #   stats_hash = {}
+  #   teams.each do |team|
+  #     stats_hash[team.name] = team.team_stats(game_type)[stat].round(2)
+  #   end
+  #   p stats_hash
+  #   order = stats_hash.sort_by { |k, v| v }.reverse
+  # end
 
   def avg_point_differential
     total = 0
