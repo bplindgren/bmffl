@@ -30,6 +30,16 @@ class League < ApplicationRecord
     (total_points / (games.count * 2)).round(1)
   end
 
+
+  def sort_by(stat, game_type)
+    stats_hash = {}
+    owners.each do |owner|
+      stats_hash[owner.full_name] = owner.owner_stats(game_type)[stat].round(2)
+    end
+    p stats_hash
+    order = stats_hash.sort_by { |k, v| v }.reverse
+  end
+
   def avg_point_differential
     total = 0
     games.each { |game| total += (game.away_score - game.home_score).abs }

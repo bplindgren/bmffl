@@ -33,6 +33,9 @@ class Owner < ApplicationRecord
         stats[:points_against] += scores[0]
       end
       stats[:point_diff] = stats[:points_for] - stats[:points_against]
+      stats[:ppg] = stats[:points_for] / games.count
+      stats[:papg] = stats[:points_against] / games.count
+      stats[:wp] = stats[:wins].to_f / games.count
     end
     stats
   end
