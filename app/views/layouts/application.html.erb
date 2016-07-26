@@ -53,7 +53,7 @@
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <% League.first.seasons.each do |season| %>
-                                                <li class="tab"><%= link_to season.year, season %></li>
+                                                <li class="user-tab"><%= link_to season.year, season %></li>
                                             <% end %>
                                         </ul>
                                     </li>
@@ -69,8 +69,6 @@
                                     <li class="tab"><%= link_to "Head-To-Head", application_headtohead_path %></li>
                                     <li class="tab"><%= link_to "Bowery Times", bowerytimes_path %></li>
                                     <li class="tab"><%= link_to "Contact", application_contact_path %></li>
-                                </ul>
-                                <ul class="nav navbar-nav">
                                     <% if current_user %>
                                         <li class="tab"><%= link_to current_user.username, user_path(current_user) %></li>
                                         <li class="tab"><%= link_to "Logout", session_logout_path %></li>
