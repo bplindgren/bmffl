@@ -70,8 +70,9 @@
           <% if current_user %>
             <%= form_tag(votes_path, method: :create, remote: true) do %>
               <% if voted_on? %>
-                <p><%= game.away_team.name %> (<%= @away_team_stats[:wins] %>-<%= @away_team_stats[:losses] %>-<%= @away_team_stats[:ties] %>) - <%= game.votes.select { |vote| vote.team_id == game.away_team.id }.count %></p>
-                <p><%= game.home_team.name %> (<%= @home_team_stats[:wins] %>-<%= @home_team_stats[:losses] %>-<%= @home_team_stats[:ties] %>) - <%= game.votes.select { |vote| vote.team_id == game.home_team.id }.count %></p>
+                <p><%= game.away_team.name %> (<%= @away_team_stats[:wins] %>-<%= @away_team_stats[:losses] %>-<%= @away_team_stats[:ties] %>)</p>
+                <p><%= game.home_team.name %> (<%= @home_team_stats[:wins] %>-<%= @home_team_stats[:losses] %>-<%= @home_team_stats[:ties] %>)</p>
+                <h6><%= game.away_team.name %>: <%= game.votes.select { |vote| vote.team_id == game.away_team.id }.count %> - <%= game.home_team.name %>: <%= game.votes.select { |vote| vote.team_id == game.home_team.id }.count %></h6>
               <% else %>
                 <p><%= radio_button_tag 'vote[team_id]', game.away_team.id %>
                 <%= game.away_team.name %> (0-0-0)</p>
@@ -83,8 +84,8 @@
               <% end %>
             <% end %>
           <% else %>
-            <p><%= game.away_team.name %> (0-0-0) <%= game.votes.select { |vote| vote.team_id == game.away_team.id }.count %></p>
-            <p><%= game.home_team.name %> (0-0-0) <%= game.votes.select { |vote| vote.team_id == game.home_team.id }.count %></p>
+            <p><%= game.away_team.name %> (<%= @away_team_stats[:wins] %>-<%= @away_team_stats[:losses] %>-<%= @away_team_stats[:ties] %>)</p>
+            <p><%= game.home_team.name %> (<%= @home_team_stats[:wins] %>-<%= @home_team_stats[:losses] %>-<%= @home_team_stats[:ties] %>)</p>
           <% end %>
         </div>
       </li>
