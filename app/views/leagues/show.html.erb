@@ -1,4 +1,4 @@
-<div class="col-lg-8">
+<div class="col-lg-8 col-md-8">
   <h3>News Articles</h3>
 
   <h4>What Makes a Player ELITE?</h4>
@@ -58,26 +58,34 @@
 </div>
 <%= @standings %>
 
-<div class="col-lg-4">
+<div class="col-lg-4 col-md-4">
   <h3>Who you got this week?</h3>
   <ul class="list-group" id="polls">
     <% Game.all.reverse.first(5).each do |game| %>
+      <% @game = game %>
+      <% @home_team_stats = game.home_team.team_stats("All") %>
+      <% @away_team_stats = game.away_team.team_stats("All") %>
       <li class="list-group-item polls-right">
         <div class="team-name-polls">
           <% if current_user %>
-            <% @game_id = game.id %>
             <%= form_tag(votes_path, method: :create, remote: true) do %>
-              <p><%= radio_button_tag 'vote[team_id]', game.away_team.id %>
-              <%= game.away_team.name %> (0-0-0)</p>
-              <p><%= radio_button_tag 'vote[team_id]', game.home_team.id %>
-              <%= game.home_team.name %> (0-0-0)</p>
-              <%= hidden_field_tag('vote[game_id]', game.id) %>
-              <%= hidden_field_tag('vote[voter_id]', session[:user_id]) %>
-              <%= submit_tag 'Vote!' %>
+              <% if voted_on? %>
+                <p><%= game.away_team.name %> (<%= @away_team_stats[:wins] %>-<%= @away_team_stats[:losses] %>-<%= @away_team_stats[:ties] %>)</p>
+                <p><%= game.home_team.name %> (<%= @home_team_stats[:wins] %>-<%= @home_team_stats[:losses] %>-<%= @home_team_stats[:ties] %>)</p>
+                <h6><%= game.away_team.name %>: <%= game.votes.select { |vote| vote.team_id == game.away_team.id }.count %> - <%= game.home_team.name %>: <%= game.votes.select { |vote| vote.team_id == game.home_team.id }.count %></h6>
+              <% else %>
+                <p><%= radio_button_tag 'vote[team_id]', game.away_team.id %>
+                <%= game.away_team.name %> (0-0-0)</p>
+                <p><%= radio_button_tag 'vote[team_id]', game.home_team.id %>
+                <%= game.home_team.name %> (0-0-0)</p>
+                <%= hidden_field_tag('vote[game_id]', game.id) %>
+                <%= hidden_field_tag('vote[voter_id]', session[:user_id]) %>
+                <%= submit_tag 'Vote!' %>
               <% end %>
+            <% end %>
           <% else %>
-            <p><%= game.away_team.name %> (0-0-0)</p>
-            <p><%= game.home_team.name %> (0-0-0)</p>
+            <p><%= game.away_team.name %> (<%= @away_team_stats[:wins] %>-<%= @away_team_stats[:losses] %>-<%= @away_team_stats[:ties] %>)</p>
+            <p><%= game.home_team.name %> (<%= @home_team_stats[:wins] %>-<%= @home_team_stats[:losses] %>-<%= @home_team_stats[:ties] %>)</p>
           <% end %>
         </div>
       </li>

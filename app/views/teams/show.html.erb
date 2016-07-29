@@ -4,6 +4,32 @@
   </tr>
 </table>
 
+<table class="responstable">
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Ties</th>
+      <th>Points For</th>
+      <th>Points Against</th>
+      <th>Point Differential</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @team.owner.first_name %> <%= @team.owner.last_name %></td>
+      <td><%= @stats[:wins] %></td>
+      <td><%= @stats[:losses] %></td>
+      <td><%= @stats[:ties] %></td>
+      <td><%= @stats[:points_for] %></td>
+      <td><%= @stats[:points_against] %></td>
+      <td><%= @stats[:point_diff] %></td>
+    </tr>
+  </tbody>
+</table>
+
 <table>
   <thead>
     <tr>
@@ -43,30 +69,3 @@
     <% end %>
   </tbody>
 </table>
-
-<table class="responstable">
-  <thead>
-    <tr>
-      <th>Owner</th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Ties</th>
-      <th>Points For</th>
-      <th>Points Against</th>
-      <th>Point Differential</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td><%= @team.owner.first_name %> <%= @team.owner.last_name %></td>
-      <td><%= @stats[:wins] %></td>
-      <td><%= @stats[:losses] %></td>
-      <td><%= @stats[:ties] %></td>
-      <td><%= @stats[:points_for] %></td>
-      <td><%= @stats[:points_against] %></td>
-      <td><%= @stats[:point_diff] %></td>
-    </tr>
-  </tbody>
-</table>
-

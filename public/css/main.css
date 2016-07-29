@@ -11,7 +11,6 @@
   padding-top: 20px;
 }
 
-
 html {
   margin:0;
   padding:0;
@@ -27,38 +26,67 @@ body {
   font-size: 1.25em;
 }
 
-#wrapper {
-  /*width: 1232px;*/
-  margin-left:auto;
-  margin-right:auto;
-  overflow:hidden;
+.green {
+  background-color: #00E500;
 }
 
 #wrapper {
+  margin-left:auto;
+  margin-right:auto;
+  overflow:hidden;
   min-height: 100%;
   position: relative;
 }
 
-.navbar .navbar-nav {
+.navbar {
   display: inline-block;
-  float: left;
-  vertical-align: top;
   font-weight: bold;
   background-color: #00E500;
   color: black;
-  padding-left: 60px;
 }
 
-
-
-.navbar .navbar-collapse {
+/*.navbar .navbar-collapse {
   text-align: center;
   background-color: #00E500;
 }
 
-.navbar-nav>li {
+.navbar-nav > li {
   display: inline-block;
   float:none;
+}*/
+
+.navbar-brand-centered {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 160px;
+  text-align: center;
+  background-color: #00E500;
+  color: black;
+}
+
+
+.navbar>.container .navbar-brand-centered,
+.navbar>.container-fluid .navbar-brand-centered {
+  margin-left: -80px;
+  background-color: #00E500;
+  color: black;
+}
+
+
+@media screen and (min-width:768px){
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 160px;
+        text-align: center;
+        background-color: #eee;
+    }
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+    }
 }
 
 li {
@@ -106,12 +134,12 @@ ul.list-group:after {
   color: #000000;
 }
 
-.user-tab {
-  padding-left: 180px;
-  padding-right: 10px;
-  float: right;
-  text-indent: right;
-  color: black;
+.tab-right {
+  padding-right: 15px;
+}
+
+.tab-left {
+  padding-left: 15px;
 }
 
 .h125 {
@@ -198,6 +226,7 @@ ul.list-group:after {
   -webkit-column-gap: 55px;
   column-count: 3;
   column-gap: 55px;
+  padding-bottom: 20px;
 }
 
 #header {
@@ -205,6 +234,7 @@ ul.list-group:after {
   margin-bottom: -20px;
   padding-right: -20px;
 }
+
 #content {
   padding-bottom: 100px; /* Height of the footer element */
 }
@@ -348,7 +378,7 @@ td {
   border-left: 1px solid #e8e8e8;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #e8e8e8;
-  padding: 10px 15px;
+  padding: 5px 15px;
   position: relative;
   transition: all 300ms;
 }
