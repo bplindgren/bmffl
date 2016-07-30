@@ -20,15 +20,22 @@ class ApplicationController < ActionController::Base
   end
 
   def headtoheadresult
-    @owner1 = Owner.find(params[:owner_1])
-    @owner2 = Owner.find(params[:owner_2])
-    @games = []
-    Game.all.each do |game|
-      if game.home_team_owner == @owner1 && game.away_team_owner == @owner2 || game.home_team_owner == @owner2 && game.away_team_owner == @owner1
-        @games.push(game)
-      end
-    end
-    render "headtohead"
+    p params
+    # @owner1 = Owner.find(params[:owner_1])
+    # @owner2 = Owner.find(params[:owner_2])
+    # @games = []
+    # @tally = { :owner1 => 0, :owner2 => 0, :ties => 0 }
+    # Game.all.each do |game|
+    #   if game.home_team_owner == @owner1 && game.away_team_owner == @owner2 || game.home_team_owner == @owner2 && game.away_team_owner == @owner1
+    #     @games.push(game)
+    #     if game.winner
+    #       game.winner.owner.id == @owner1.id ? @tally[:owner1] += 1 : @tally[:owner2] += 1
+    #     else
+    #       @tally[:ties] += 1
+    #     end
+    #   end
+    # end
+    # render "headtohead"
   end
 
   def contact

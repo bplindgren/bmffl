@@ -7,8 +7,11 @@
 <div class="col-lg-8 center">
   <div class="teams-form">
     <%= bootstrap_form_tag url: "/application/headtoheadresult", :html => {:class => "form-inline"} do |f| %>
-      <%= f.collection_select :owner_1, Owner.all, :id, :full_name, {:include_blank=> true}, {:style => "width:150px" } %>
-      <%= f.collection_select :owner_2, Owner.all, :id, :full_name, { :include_blank => true }, {:style => "width:150px" } %>
+      <span class="padding-r-20">
+      <%= f.collection_select :owner_1, Owner.all, :id, :full_name, {:include_blank=> true}, {:style => "width:150px" } %></span>
+      <span class="padding-r-20">
+      <%= f.collection_select :owner_2, Owner.all, :id, :full_name, { :include_blank => true }, {:style => "width:150px" } %></span>
+      <%= f.collection_select :game_type, Game::TYPE, { :include_blank => true } %></span>
       <%= f.submit "View Head-to-Head Results", class: "btn btn-primary" %>
     <% end %>
   </div>
@@ -16,7 +19,7 @@
 
 <div class="col-lg-2"></div>
 
-<div class="h2h-results">
+<div id="h2h-results">
   <% if @games %>
     <table>
       <thead>
@@ -35,12 +38,34 @@
           <tr>
             <td><%= game.season.year %></td>
             <td><%= game.week %></td>
-            <td><%= link_to game.winner.name, game.winner %></td>
-            <td><%= link_to game.loser.name, game.loser %></td>
+            <% if game.winner %>
+              <td><%= link_to game.winner.name, game.winner %><span class="small"> (<%= game.winner.owner.full_name %>)</span></td>
+              <td><%= link_to game.loser.name, game.loser %><span class="small"> (<%= game.loser.owner.full_name %>)</span></td>
+            <% else %>
+              <td><%= link_to game.away_team.name, game.away_team %><span class="small"> (<%= game.away_team.owner.full_name %>) - TIE</span></td>
+              <td><%= link_to game.home_team.name, game.home_team %><span class="small"> (<%= game.home_team.owner.full_name %>) - TIE</span></td>
+            <% end %>
             <td><%= scores[0] %> - <%= scores[1] %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
   <% end %>
+</div>
+
+<div class="col-lg-2"></div>
+
+<div id="h2h-tally">
+  <% if @games %>
+    <% if @tally[:owner1] == @tally[:owner2] %>
+      <h4>Series is tied <%= @tally[:owner1] %>-<%= @tally[:owner2] %>-<%= @tally[:ties] %></h4>
+    <% else %>
+      <% if @tally[:owner1] > @tally[:owner2] %>
+        <h4><%= @owner1.full_name %> leads the series <%= @tally[:owner1] %>-<%= @tally[:owner2] %>-<%= @tally[:ties] %></h4>
+      <% else %>
+        <h4><%= @owner2.full_name %> leads the series <%= @tally[:owner2] %>-<%= @tally[:owner1] %>-<%= @tally[:ties] %></h4>
+      <% end %>
+    <% end %>
+  <% end %>
+
 </div>

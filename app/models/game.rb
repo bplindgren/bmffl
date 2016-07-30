@@ -9,6 +9,8 @@ class Game < ApplicationRecord
 
   validates :season_id, :week, :away_team_id, :home_team_id, :game_type, presence: true
 
+  TYPE = ["All", "Regular Season", "Regular Season & Playoffs", "Playoffs"]
+
   def winner
     if away_score > home_score
       Team.find(away_team_id)

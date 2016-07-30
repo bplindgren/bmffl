@@ -275,9 +275,13 @@ ul.list-group:after {
 
 }
 
-.h2h-results {
+#h2h-results {
   margin-top: 20px;
   padding-top: 20px;
+}
+
+#h2h-tally {
+
 }
 
 .green {
@@ -307,8 +311,16 @@ ul.list-group:after {
     margin-left:40px;
 }
 
-.c-s {
-  width: 150px;
+.small {
+  font-style: italic;
+}
+
+.padding-r-20 {
+  padding-right: 20px;
+}
+
+.control-label {
+  padding-right: 5px;
 }
 
 
