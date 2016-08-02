@@ -1,9 +1,5 @@
-module Games
-  def games
-    home_games + away_games
-  end
-
-  def self.games_by_type(game_type)
+module ApplicationHelper
+  def self.filter_games(game_type)
     case game_type
     when "All"
       games.select { |game| game.home_score > 0 }
