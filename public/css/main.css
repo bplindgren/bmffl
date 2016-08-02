@@ -1,7 +1,7 @@
 /*.black-bg {
   border: 3px solid black;
-}*/
-
+}
+*/
 
 /*
  *= require rails_bootstrap_forms
@@ -275,9 +275,13 @@ ul.list-group:after {
 
 }
 
-.h2h-results {
+#h2h-results {
   margin-top: 20px;
   padding-top: 20px;
+}
+
+.tally {
+  text-align: center;
 }
 
 .green {
@@ -307,8 +311,30 @@ ul.list-group:after {
     margin-left:40px;
 }
 
-.c-s {
-  width: 150px;
+.small {
+  font-style: italic;
+}
+
+.padding-r-20 {
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.pad-l-40 {
+  padding-left: 40px;
+}
+
+.pad-r-10 {
+  padding-right: 10px;
+}
+
+.control-label {
+  padding-right: 5px;
+}
+
+.series-result {
+  text-align: center;
+  color: red;
 }
 
 
