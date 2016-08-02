@@ -3,7 +3,7 @@ module Games
     home_games + away_games
   end
 
-  def self.games_by_type(game_type)
+  def games_by_type(game_type)
     case game_type
     when "All"
       games.select { |game| game.home_score > 0 }

@@ -8,9 +8,9 @@
   <div class="teams-form">
     <%= bootstrap_form_tag url: "/application/headtoheadresult", :html => {:class => "form-inline"} do |f| %>
       <span class="padding-r-20">
-      <%= f.collection_select :owner_1, Owner.all, :id, :full_name, {:include_blank=> false, :required => true}, {:style => "width:180px"} %></span>
+      <%= f.collection_select :owner_1, Owner.all, :id, :full_name, {:include_blank => true}, {:style => "width:180px", :required => true} %></span>
       <span class="padding-r-20">
-      <%= f.collection_select :owner_2, Owner.all, :id, :full_name, {:include_blank => false, :required => true}, {:style => "width:180px"} %></span><br /><br />
+      <%= f.collection_select :owner_2, Owner.all, :id, :full_name, {:include_blank => true}, {:style => "width:180px", :required => true} %></span><br /><br />
       <span class="padding-r-20">
       <%= f.select( :game_type, Game::TYPE ) %></span>
       <span class="padding-r-20 pad-l-40"><%= f.submit "View Head-to-Head Results", class: "btn btn-primary" %></span>
@@ -48,7 +48,7 @@
               <td><%= link_to game.away_team.name, game.away_team %><span class="small"> (<%= game.away_team.owner.full_name %>) - TIE</span></td>
               <td><%= link_to game.home_team.name, game.home_team %><span class="small"> (<%= game.home_team.owner.full_name %>) - TIE</span></td>
             <% end %>
-            <td><%= scores[0] %> - <%= scores[1] %></td>
+            <td class="pad-r-10"><%= scores[0] %> - <%= scores[1] %></td>
             <td><%= game.game_type %></td>
           </tr>
         <% end %>
@@ -57,17 +57,15 @@
   <% end %>
 </div>
 
-<div class="col-lg-2"></div>
-
-<div id="h2h-tally">
+<div class="series-result">
   <% if @h2h_games %>
     <% if @tally[:owner1] == @tally[:owner2] %>
-      <h4>Series is tied <%= @tally[:owner1] %>-<%= @tally[:owner2] %>-<%= @tally[:ties] %></h4>
+      <h3>Series is tied <%= @tally[:owner1] %>-<%= @tally[:owner2] %>-<%= @tally[:ties] %></h3>
     <% else %>
       <% if @tally[:owner1] > @tally[:owner2] %>
-        <h4><%= @owner1.full_name %> leads the series <%= @tally[:owner1] %>-<%= @tally[:owner2] %>-<%= @tally[:ties] %></h4>
+        <h3><%= @owner1.full_name %> leads the series <%= @tally[:owner1] %>-<%= @tally[:owner2] %>-<%= @tally[:ties] %></h3>
       <% else %>
-        <h4><%= @owner2.full_name %> leads the series <%= @tally[:owner2] %>-<%= @tally[:owner1] %>-<%= @tally[:ties] %></h4>
+        <h3><%= @owner2.full_name %> leads the series <%= @tally[:owner2] %>-<%= @tally[:owner1] %>-<%= @tally[:ties] %></h3>
       <% end %>
     <% end %>
   <% end %>

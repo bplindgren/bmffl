@@ -1,7 +1,7 @@
 /*.black-bg {
   border: 3px solid black;
-}*/
-
+}
+*/
 
 /*
  *= require rails_bootstrap_forms
@@ -280,8 +280,8 @@ ul.list-group:after {
   padding-top: 20px;
 }
 
-#h2h-tally {
-
+.tally {
+  text-align: center;
 }
 
 .green {
@@ -324,8 +324,17 @@ ul.list-group:after {
   padding-left: 40px;
 }
 
+.pad-r-10 {
+  padding-right: 10px;
+}
+
 .control-label {
   padding-right: 5px;
+}
+
+.series-result {
+  text-align: center;
+  color: red;
 }
 
 

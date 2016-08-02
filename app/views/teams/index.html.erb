@@ -3,6 +3,6 @@
   <% @teams.each do |team| %>
     <li><%= link_to(team) do %>
       <%= team.name %> (<%= team.owner.first_name %> <%= team.owner.last_name %>, <%= team.season.year %>)</li>
-  <% end %>
+    <% end %>
   <% end %>
 </ol>
