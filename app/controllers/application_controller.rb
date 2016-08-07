@@ -38,6 +38,10 @@ class ApplicationController < ActionController::Base
     render "headtohead"
   end
 
+  def alltimestats
+    @league_stats = League::ALL_TIME_STATS
+  end
+
   def contact
     render "contact"
   end

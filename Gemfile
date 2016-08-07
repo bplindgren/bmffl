@@ -30,7 +30,7 @@ gem 'bcrypt'
 
 gem 'bootstrap_form'
 
-gem 'statsample'
+# gem 'statsample'
 gem 'simplecov', :require => false, :group => :test
 gem 'coveralls', require: false
 
