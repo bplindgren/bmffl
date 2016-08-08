@@ -1,7 +1,6 @@
 /*.black-bg {
   border: 3px solid black;
-}
-*/
+}*/
 
 /*
  *= require rails_bootstrap_forms
@@ -38,22 +37,18 @@ body {
   position: relative;
 }
 
+.image {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+
 .navbar {
   display: inline-block;
   font-weight: bold;
   background-color: #00E500;
   color: black;
 }
-
-/*.navbar .navbar-collapse {
-  text-align: center;
-  background-color: #00E500;
-}
-
-.navbar-nav > li {
-  display: inline-block;
-  float:none;
-}*/
 
 .navbar-brand-centered {
   position: absolute;
@@ -112,15 +107,12 @@ table {
 }
 
 .image {
-  float: left;
-  height: 125px;
   width: 15%;
 }
 
 ul.list-group:after {
   clear: both;
   display: block;
-  content: "";
 }
 
 
@@ -159,21 +151,21 @@ ul.list-group:after {
 }
 
 #scoreboard {
-  list-style-type: none;
   display: inline;
-  padding: 0px;
-  margin: 0px;
+  height: 127px;
+  width: 100%;
 }
 
 .scoreboard-top {
-  width: 19%;
-  height: 125px;
+  width: 20%;
+  height: 127px;
 }
 
 .game-date {
   float: left;
   width: 100%;
-  padding: 0px 0px 0px 14px;
+  padding-left: 14px;
+  padding-top: 5px;
 }
 
 .team-name {
@@ -336,14 +328,6 @@ ul.list-group:after {
   text-align: center;
   color: red;
 }
-
-
-/*body {
-  background: #fafafa url(http://jackrugile.com/images/misc/noise-diagonal.png);
-  color: #444;
-  font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
-  text-shadow: 0 1px 0 #fff;
-}*/
 
 strong {
   font-weight: bold;
