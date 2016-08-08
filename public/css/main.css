@@ -1,7 +1,7 @@
 /*.black-bg {
   border: 3px solid black;
-}*/
-
+}
+*/
 /*
  *= require rails_bootstrap_forms
  */
@@ -38,9 +38,7 @@ body {
 }
 
 .image {
-  max-width: 100%;
-  height: auto;
-  width: auto\9;
+  height: 50px;
 }
 
 .navbar {
@@ -127,11 +125,11 @@ ul.list-group:after {
 }
 
 .tab-right {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .tab-left {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .h125 {
@@ -152,20 +150,19 @@ ul.list-group:after {
 
 #scoreboard {
   display: inline;
-  height: 127px;
+  height: 110px;
   width: 100%;
 }
 
 .scoreboard-top {
   width: 20%;
-  height: 127px;
+  height: 110px;
 }
 
 .game-date {
   float: left;
   width: 100%;
   padding-left: 14px;
-  padding-top: 5px;
 }
 
 .team-name {
@@ -349,7 +346,7 @@ table {
 }
 
 th {
-  background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+  background: linear-gradient(#777, #444);
   border-left: 1px solid #555;
   border-right: 1px solid #777;
   border-top: 1px solid #555;
@@ -402,12 +399,8 @@ td:last-child {
   box-shadow: inset -1px 0 0 #fff;
 }
 
-tr {
-  background: url(http://jackrugile.com/images/misc/noise-diagonal.png);
-}
-
 tr:nth-child(odd) td {
-  background: #f1f1f1 url(http://jackrugile.com/images/misc/noise-diagonal.png);
+  background: #f1f1f1;
 }
 
 tr:last-of-type td {

@@ -2963,6 +2963,7 @@ select[multiple].input-lg {
   .form-inline .has-feedback .form-control-feedback {
     top: 0;
   }
+
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox,
@@ -2995,6 +2996,7 @@ select[multiple].input-lg {
     padding-top: 11px;
     font-size: 18px;
   }
+
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
@@ -4201,6 +4203,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+  .tab {
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #000000;
+}
   .navbar-collapse.collapse {
     display: block !important;
     height: auto !important;
