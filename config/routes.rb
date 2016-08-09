@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   get 'application/contact' => "application#contact"
   get 'application/headtohead' => "application#headtohead"
   post 'application/headtoheadresult' => "application#headtoheadresult"
+  get 'application/alltimestats' => "application#alltimestats"
 end

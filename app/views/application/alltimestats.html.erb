@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <th class="center large">BMFFL All-Time Stats</th>
+  </tr>
+</table>
+
+<table class="responstable">
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Ties</th>
+      <th>Winning %</th>
+      <th>Points For</th>
+      <th>Points Against</th>
+      <th>Point Differential</th>
+      <th>PPG</th>
+      <th>PAPG</th>
+      <th>PPG-PAPG</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @league_stats.each do |owner, stats| %>
+      <tr>
+        <td><%= link_to owner, owner %></td>
+        <td><%= stats[:wins] %></td>
+        <td><%= stats[:losses] %></td>
+        <td><%= stats[:ties] %></td>
+        <td><%= stats[:wp].round(2)%></td>
+        <td><%= stats[:points_for] %></td>
+        <td><%= stats[:points_against] %></td>
+        <td><%= stats[:point_diff] %></td>
+        <td><%= stats[:ppg].round(2) %></td>
+        <td><%= stats[:papg].round(2) %></td>
+        <td><%= stats[:ppg_diff].round(2) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

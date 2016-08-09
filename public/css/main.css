@@ -1,7 +1,10 @@
-/*.black-bg {
+.black-bg {
   border: 3px solid black;
 }
-*/
+
+.red-bg {
+  border: 3px solid red;
+}
 
 /*
  *= require rails_bootstrap_forms
@@ -26,6 +29,10 @@ body {
   font-size: 1.25em;
 }
 
+.img {
+  margin: 0;
+}
+
 .green {
   background-color: #00E500;
 }
@@ -33,7 +40,7 @@ body {
 #wrapper {
   margin-left:auto;
   margin-right:auto;
-  overflow:hidden;
+  overflow:scroll;
   min-height: 100%;
   position: relative;
 }
@@ -44,27 +51,6 @@ body {
   background-color: #00E500;
   color: black;
 }
-
-/*.navbar .navbar-collapse {
-  text-align: center;
-  background-color: #00E500;
-}
-
-.navbar-nav > li {
-  display: inline-block;
-  float:none;
-}*/
-
-.navbar-brand-centered {
-  position: absolute;
-  left: 50%;
-  display: block;
-  width: 160px;
-  text-align: center;
-  background-color: #00E500;
-  color: black;
-}
-
 
 .navbar>.container .navbar-brand-centered,
 .navbar>.container-fluid .navbar-brand-centered {
@@ -112,15 +98,12 @@ table {
 }
 
 .image {
-  float: left;
-  height: 125px;
   width: 15%;
 }
 
 ul.list-group:after {
   clear: both;
   display: block;
-  content: "";
 }
 
 
@@ -129,17 +112,17 @@ ul.list-group:after {
 }
 
 .tab {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
   color: #000000;
 }
 
 .tab-right {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .tab-left {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .h125 {
@@ -159,21 +142,22 @@ ul.list-group:after {
 }
 
 #scoreboard {
-  list-style-type: none;
   display: inline;
-  padding: 0px;
-  margin: 0px;
+  height: 110px;
+  width: 100%;
+  overflow: scroll;
+  margin-bottom: 20px;
 }
 
 .scoreboard-top {
-  width: 19%;
-  height: 125px;
+  width: 20%;
+  height: 110px;
 }
 
 .game-date {
   float: left;
   width: 100%;
-  padding: 0px 0px 0px 14px;
+  padding-left: 14px;
 }
 
 .team-name {
@@ -188,7 +172,6 @@ ul.list-group:after {
   float: right;
   width: 40%;
   font-size: 1.2em;
-  /*border: 2px solid black;*/
 }
 
 #polls {
@@ -269,10 +252,7 @@ ul.list-group:after {
 
 .teams-form {
   margin: auto;
-}
-
-.games-table {
-
+  padding-top: 80px;
 }
 
 #h2h-results {
@@ -337,13 +317,9 @@ ul.list-group:after {
   color: red;
 }
 
-
-/*body {
-  background: #fafafa url(http://jackrugile.com/images/misc/noise-diagonal.png);
-  color: #444;
-  font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
-  text-shadow: 0 1px 0 #fff;
-}*/
+.row {
+  height: 50px;
+}
 
 strong {
   font-weight: bold;
@@ -365,7 +341,7 @@ table {
 }
 
 th {
-  background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+  background: linear-gradient(#777, #444);
   border-left: 1px solid #555;
   border-right: 1px solid #777;
   border-top: 1px solid #555;
@@ -418,12 +394,8 @@ td:last-child {
   box-shadow: inset -1px 0 0 #fff;
 }
 
-tr {
-  background: url(http://jackrugile.com/images/misc/noise-diagonal.png);
-}
-
 tr:nth-child(odd) td {
-  background: #f1f1f1 url(http://jackrugile.com/images/misc/noise-diagonal.png);
+  background: #f1f1f1;
 }
 
 tr:last-of-type td {
@@ -437,13 +409,3 @@ tr:last-of-type td:first-child {
 tr:last-of-type td:last-child {
   box-shadow: inset -1px -1px 0 #fff;
 }
-
-/*tbody:hover td {
-  color: transparent;
-  text-shadow: 0 0 3px #aaa;
-}
-
-tbody:hover tr:hover td {
-  color: #444;
-  text-shadow: 0 1px 0 #fff;
-}*/
