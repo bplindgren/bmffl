@@ -17,86 +17,76 @@
 
     <body>
         <div id="wrapper">
-            <div class="row">
-                <div id="header" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="scoreboard">
-                            <ul class="list-group">
-                                <% Game.all.last(5).each do |game| %>
-                                    <li class="list-group-item scoreboard-top">
-                                        <p class="game-date">9/8 - 9/12</p>
-                                        <div class="team-name col-lg-10">
-                                            <p><%= game.away_team.abbr %></p>
-                                            <p><%= game.home_team.abbr %></p>
-                                        </div>
-                                        <div class="team-score col-lg-10">
-                                            <p><%= game.away_score %></p>
-                                            <p><%= game.home_score %></p>
-                                        </div>
-                                    </li>
-                                <% end %>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <header>
+                <ul class="list-group">
+                    <% Game.all.last(5).each do |game| %>
+                        <li class="list-group-item scoreboard">
+                            <p class="game-date">9/8 - 9/12</p>
+                            <div class="team-name col-lg-10">
+                                <p><%= game.away_team.abbr %></p>
+                                <p><%= game.home_team.abbr %></p>
+                            </div>
+                            <div class="team-score col-lg-2">
+                                <p><%= game.away_score %></p>
+                                <p><%= game.home_score %></p>
+                            </div>
+                        </li>
+                    <% end %>
+                </ul>
 
-            <div id="content">
-                <div class="row">
-                    <nav class="navbar navbar-default col-lg-12 col-md-12 col-sm-12 col-xs-12" role="navigation">
-                      <div class="green">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="green">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="navbar-brand-centered">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="tab"><%= link_to "Home", root_path %></li>
+                                <li class="dropdown tab-left">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <% League.first.seasons.each do |season| %>
+                                            <li class="tab"><%= link_to season.year, season %></li>
+                                        <% end %>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Owners <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <% League.first.owners.sort.each do |owner| %>
+                                            <li class="tab"><%= link_to owner.first_name + ' ' + owner.last_name, owner %></li>
+                                        <% end %>
+                                    </ul>
+                                </li>
+                                <li class="tab"><%= link_to "Teams", teams_path %></li>
+                                <li class="tab"><%= link_to "Head-To-Head", application_headtohead_path %></li>
+                                <li class="tab"><%= link_to "All-Time Stats", application_alltimestats_path %></li>
+                                <li class="tab"><%= link_to "Contact", application_contact_path %></li>
+                            </ul>
 
-                          <ul class="nav navbar-nav">
-                            <li class="tab"><%= link_to "Home", root_path %></li>
-                            <li class="dropdown tab-left">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seasons <span class="caret"></span></a>
-                              <ul class="dropdown-menu" role="menu">
-                                <% League.first.seasons.each do |season| %>
-                                  <li class="tab"><%= link_to season.year, season %></li>
+                            <ul class="nav navbar-nav navbar-right">
+                                <% if current_user %>
+                                    <li class="tab"><%= link_to current_user.username, user_path(current_user) %></li>
+                                    <li class="tab"><%= link_to "Logout", session_logout_path %></li>
+                                <% else %>
+                                    <li class="tab"><%= link_to "Login", new_session_path %></li>
+                                    <li class="tab-right"><%= link_to "Register", new_user_path %></li>
                                 <% end %>
-                              </ul>
-                            </li>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Owners <span class="caret"></span></a>
-                              <ul class="dropdown-menu" role="menu">
-                                <% League.first.owners.sort.each do |owner| %>
-                                  <li class="tab"><%= link_to owner.first_name + ' ' + owner.last_name, owner %></li>
-                                <% end %>
-                              </ul>
-                            </li>
-                            <li class="tab"><%= link_to "Teams", teams_path %></li>
-                            <li class="tab"><%= link_to "Head-To-Head", application_headtohead_path %></li>
-                            <li class="tab"><%= link_to "All-Time Stats", application_alltimestats_path %></li>
-                            <li class="tab"><%= link_to "Contact", application_contact_path %></li>
-                          </ul>
+                            </ul>
+                        </div><!-- /.collapse navbar-collapse -->
+                    </div><!-- /.green -->
+                </nav>
+            </header>
 
-                          <ul class="nav navbar-nav navbar-right">
-                            <% if current_user %>
-                                <li class="tab"><%= link_to current_user.username, user_path(current_user) %></li>
-                                <li class="tab"><%= link_to "Logout", session_logout_path %></li>
-                            <% else %>
-                                <li class="tab"><%= link_to "Login", new_session_path %></li>
-                                <li class="tab"><%= link_to "Register", new_user_path %></li>
-                            <% end %>
-                          </ul>
-
-                        </div><!-- /.navbar-collapse -->
-                      </div><!-- /.container-fluid -->
-                    </nav>
-                </div>
-
+            <div id="content">
                 <div class="container">
                     <%= yield %>
                 </div>
@@ -108,7 +98,6 @@
                 <p class="footer-text">Iowa City, Iowa, 52240</p>
             </div>
         </div>
-
     </body>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>

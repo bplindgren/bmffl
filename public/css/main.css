@@ -1,8 +1,8 @@
-.black-bg {
+.black-b {
   border: 3px solid black;
 }
 
-.red-bg {
+.red-b {
   border: 3px solid red;
 }
 
@@ -40,7 +40,6 @@ body {
 #wrapper {
   margin-left:auto;
   margin-right:auto;
-  overflow:scroll;
   min-height: 100%;
   position: relative;
 }
@@ -50,6 +49,7 @@ body {
   font-weight: bold;
   background-color: #00E500;
   color: black;
+  width: 100%;
 }
 
 .navbar>.container .navbar-brand-centered,
@@ -106,7 +106,6 @@ ul.list-group:after {
   display: block;
 }
 
-
 .list-group-item {
   float: right;
 }
@@ -118,7 +117,7 @@ ul.list-group:after {
 }
 
 .tab-right {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .tab-left {
@@ -141,17 +140,22 @@ ul.list-group:after {
   color: blue;
 }
 
-#scoreboard {
-  display: inline;
-  height: 110px;
-  width: 100%;
-  overflow: scroll;
-  margin-bottom: 20px;
+.scoreboard {
+  width: 20%;
+  height: 120px;
+  border: 1px solid gray;
 }
 
-.scoreboard-top {
-  width: 20%;
-  height: 110px;
+@media (max-width: 640px) {
+  .list-group-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .list-group-item {
+    width: 100%;
+  }
 }
 
 .game-date {
@@ -212,14 +216,17 @@ ul.list-group:after {
   padding-bottom: 20px;
 }
 
-#header {
-  background: #ededed;
+header {
   margin-bottom: -20px;
-  padding-right: -20px;
+  margin-top: -20px;
+}
+
+nav {
+  margin: 0;
 }
 
 #content {
-  padding-bottom: 100px; /* Height of the footer element */
+  padding-bottom: 120px; /* Height of the footer element */
 }
 
 #footer {
