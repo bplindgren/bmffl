@@ -1,22 +1,24 @@
-<div class="col-lg-4"></div>
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div>
 
-<div class="col-lg-4">
-  <h3>Create your account!</h3>
+  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8">
+    <h3>Create your account!</h3>
 
-  <% if @user.errors %>
-    <ul class="errors-list">
-      <% @user.errors.each do |attr, msg| %>
-        <li class="red"><%= "#{attr} #{msg}" if @user.errors[attr].first == msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
+    <% if @user.errors %>
+      <ul class="errors-list">
+        <% @user.errors.each do |attr, msg| %>
+          <li class="red"><%= "#{attr} #{msg}" %></li>
+        <% end %>
+      </ul>
+    <% end %>
 
-  <%= bootstrap_form_for(@user) do |f| %>
-    <%= f.text_field :username, placeholder: "must be 6 characters" %>
-    <%= f.email_field :email, placeholder: "must be valid email" %>
-    <%= f.password_field :password, placeholder: "must be between 6-20 characters" %>
-    <%= f.submit "Create Account!" %>
-  <% end %>
+    <%= bootstrap_form_for(@user) do |f| %>
+      <%= f.text_field :username, { placeholder: "must be 6 characters", :class => 'form-field' } %>
+      <%= f.email_field :email, { placeholder: "must be valid email", :class => 'form-field' }  %>
+      <%= f.password_field :password, { placeholder: "must be between 6-20 characters", :class => 'form-field' }  %>
+      <%= f.submit "Create Account!", { :class => 'btn btn-primary' }  %>
+    <% end %>
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div>
 </div>
-
-<div class="col-lg-4"></div>

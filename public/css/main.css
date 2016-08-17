@@ -259,7 +259,6 @@ nav {
 
 .teams-form {
   margin: auto;
-  padding-top: 80px;
 }
 
 #h2h-results {
@@ -315,6 +314,10 @@ nav {
   padding-right: 10px;
 }
 
+.pad-t-20 {
+  padding-top: 20px;
+}
+
 .control-label {
   padding-right: 5px;
 }
@@ -326,6 +329,10 @@ nav {
 
 .row {
   height: 50px;
+}
+
+.form-field {
+  width: 360px;
 }
 
 strong {
