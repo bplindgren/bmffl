@@ -198,6 +198,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bootstrap_form
+  bundler
   byebug
   coffee-rails (~> 4.1.0)
   coveralls

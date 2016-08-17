@@ -28,6 +28,8 @@ gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bcrypt'
 
+gem 'bundler'
+
 gem 'bootstrap_form'
 
 # gem 'statsample'
