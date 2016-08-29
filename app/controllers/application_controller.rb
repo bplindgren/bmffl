@@ -36,6 +36,11 @@ class ApplicationController < ActionController::Base
 
   def alltimestats
     @league_stats = League::ALL_TIME_STATS
+
+    if request.xhr?
+      p 'ajax'
+    end
+
   end
 
   def contact

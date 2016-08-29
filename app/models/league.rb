@@ -38,8 +38,6 @@ class League < ApplicationRecord
     owners.each do |owner|
       stats_hash[owner.full_name] = owner.owner_stats(game_type)
     end
-    p stats_hash
-    # order = stats_hash.sort_by { |k, v| v }.reverse
   end
 
   # def sort_teams_by(stat, game_type)
