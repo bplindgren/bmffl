@@ -1,0 +1,5 @@
+<% if logged_in? %>
+  <h5>%= session[:user_id] %></h5>
+<% else %>
+  <h5><%= "Nobody is logged_in" %></h5>
+<% end %>

@@ -60,7 +60,11 @@
 </div>
 
 <div class="col-lg-4 col-md-4">
-  <h3>Who you got this week?</h3>
+  <h3>BMFFL Polls</h3>
+  <% if !logged_in?  %>
+    <h5 class="gray">Register or Login to Vote!</h5>
+  <% end %>
+
   <ul class="list-group" id="polls">
     <% Game.all.reverse.first(5).each do |game| %>
       <% @game = game %>

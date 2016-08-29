@@ -10,10 +10,6 @@ class ApplicationController < ActionController::Base
     rescue ActiveRecord::RecordNotFound
   end
 
-  def session_viewer
-    session
-  end
-
   def headtohead
     @result = nil
     render "headtohead"
@@ -44,6 +40,10 @@ class ApplicationController < ActionController::Base
 
   def contact
     render "contact"
+  end
+
+  def session_viewer
+    render "session_viewer"
   end
 
 end
