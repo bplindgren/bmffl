@@ -7,12 +7,13 @@ $(document).ready(function() {
 
     var $request = $.ajax({
       url: $route,
-      data: { stat: $stat }
-    });
-
-    $request.done(function(event) {
-      // $('#alltimestats').empty();
-      // $('#alltimestats').append(partial);
+      data: { stat: $stat },
+      success: function(data) {
+        console.log('success');
+      },
+      complete: function (xhr, status) {
+        console.log(xhr.status); // 200
+      }
     });
   });
 });

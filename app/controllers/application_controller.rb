@@ -19,7 +19,23 @@ class ApplicationController < ActionController::Base
   def headtoheadresult
     # if request.xhr?
     respond_to do |format|
-      format.js
+      format.js {
+        @owner1 = Owner.find(params[:owner_1])
+        @owner2 = Owner.find(params[:owner_2])
+        @tally = { :owner1 => 0, :owner2 => 0, :ties => 0 }
+        @h2h_games = []
+        @filtered_games = Game.games_by_type(params[:game_type])
+        @filtered_games.each do |game|
+          if game.home_team_owner == @owner1 && game.away_team_owner == @owner2 || game.home_team_owner == @owner2 && game.away_team_owner == @owner1
+            @h2h_games.push(game)
+            if game.winner
+              game.winner.owner.id == @owner1.id ? @tally[:owner1] += 1 : @tally[:owner2] += 1
+            else
+              @tally[:ties] += 1
+            end
+          end
+        end
+        }
       format.html { render "headtohead" }
     # else
     #   render "headtohead"
@@ -29,15 +45,13 @@ class ApplicationController < ActionController::Base
   def alltimestats
     @league_stats = League::ALL_TIME_STATS
 
-    # if request.xhr?
-    #   stat = params["stat"].to_sym
-    #   @sorted = League.first.sort_all_time_stats(stat, "All")
-    #   render :partial => "sorted", :locals => { :table_array => @sorted }, :layout => false
-    # end
     respond_to do |format|
-      format.js
+      format.js {
+        stat = params["stat"].to_sym
+        @sorted = League.first.sort_all_time_stats(stat, "All")
+        }
       format.html { render 'alltimestats' }
-    #   format.html { @league_stats = League::ALL_TIME_STATS }
+
     end
   end
 
