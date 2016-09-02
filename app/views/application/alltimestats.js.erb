@@ -1,1 +1,4 @@
-$('#alltimestats').append("<%= j render 'sorted', :locals => { :table_array => @sorted }, :layout => false %>");
+<% stat = params[:stat].to_sym %>
+<% @sorted = League.first.sort_all_time_stats(stat, "All") %>
+
+$('#alltimestats').html('<%= j (render :partial => 'sorted', :locals => { :table_array => @sorted }, :layout => false) %>');

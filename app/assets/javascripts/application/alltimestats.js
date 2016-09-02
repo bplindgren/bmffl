@@ -10,12 +10,9 @@ $(document).ready(function() {
       data: { stat: $stat }
     });
 
-    $request.done(function(partial) {
-      $('#alltimestats').empty();
-      $('#alltimestats').append(partial);
+    $request.done(function(event) {
+      // $('#alltimestats').empty();
+      // $('#alltimestats').append(partial);
     });
-
-
   });
-
 });
