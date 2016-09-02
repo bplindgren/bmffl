@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  respond_to :html, :js
   protect_from_forgery with: :null_session
 
   helper_method :current_user
@@ -38,9 +39,10 @@ class ApplicationController < ActionController::Base
     @league_stats = League::ALL_TIME_STATS
 
     if request.xhr?
-      p 'ajax'
+      stat = params["stat"].to_sym
+      @sorted = League.first.sort_all_time_stats(stat, "All")
+      render :partial => "sorted", :locals => { :table_array => @sorted }, :layout => false
     end
-
   end
 
   def contact

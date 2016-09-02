@@ -7,35 +7,22 @@
 <table class="responstable">
   <thead>
     <tr>
-      <th><%= link_to Owner, application_alltimestats_path, { :class => 'white alltime-sort', :remote => true } %></th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Ties</th>
-      <th>Winning %</th>
-      <th>Points For</th>
-      <th>Points Against</th>
-      <th>Point Differential</th>
-      <th>PPG</th>
-      <th>PAPG</th>
-      <th>PPG-PAPG</th>
+      <th><%= link_to 'Owner', application_alltimestats_path, { :class => 'white alltime-sort', :id => "owner", :remote => true } %></th>
+      <th><%= link_to 'Games Played', application_alltimestats_path, { :class => 'white alltime-sort', :id => "games_played", :remote => true } %></th>
+      <th><%= link_to 'Wins', application_alltimestats_path, { :class => 'white alltime-sort', :id => "wins", :remote => true } %></th>
+      <th><%= link_to 'Losses', application_alltimestats_path, { :class => 'white alltime-sort', :id => "losses", :remote => true } %></th>
+      <th><%= link_to 'Ties', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ties", :remote => true } %></th>
+      <th><%= link_to 'Winning %', application_alltimestats_path, { :class => 'white alltime-sort', :id => "wp", :remote => true } %></th>
+      <th><%= link_to 'Points For', application_alltimestats_path, { :class => 'white alltime-sort', :id => "points_for", :remote => true } %></th>
+      <th><%= link_to 'Points Against', application_alltimestats_path, { :class => 'white alltime-sort', :id => "points_against", :remote => true } %></th>
+      <th><%= link_to 'Point Differential', application_alltimestats_path, { :class => 'white alltime-sort', :id => "point_diff", :remote => true } %></th>
+      <th><%= link_to 'PPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ppg", :remote => true } %></th>
+      <th><%= link_to 'PAPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "papg", :remote => true } %></th>
+      <th><%= link_to 'PPG-PAPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ppg_diff", :remote => true } %></th>
     </tr>
   </thead>
 
-  <tbody>
-    <% @league_stats.each do |owner, stats| %>
-      <tr>
-        <td><%= link_to owner, owner %></td>
-        <td><%= stats[:wins] %></td>
-        <td><%= stats[:losses] %></td>
-        <td><%= stats[:ties] %></td>
-        <td><%= stats[:wp].round(2)%></td>
-        <td><%= stats[:points_for] %></td>
-        <td><%= stats[:points_against] %></td>
-        <td><%= stats[:point_diff] %></td>
-        <td><%= stats[:ppg].round(2) %></td>
-        <td><%= stats[:papg].round(2) %></td>
-        <td><%= stats[:ppg_diff].round(2) %></td>
-      </tr>
-    <% end %>
+  <tbody id="alltimestats">
+    <%= render :partial => "sorted", :locals => { :table_array => @league_stats }, :layout => false %>
   </tbody>
 </table>

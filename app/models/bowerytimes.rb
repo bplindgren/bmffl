@@ -1,2 +1,0 @@
-class Bowerytimes < ApplicationRecord
-end

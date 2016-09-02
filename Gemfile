@@ -38,6 +38,8 @@ gem 'coveralls', require: false
 
 gem 'nokogiri'
 
+gem 'responders'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
