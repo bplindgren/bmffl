@@ -1,1 +1,1 @@
-$('#alltimestats').append("<%= j render _sorted.html.erb %>");
+$('#alltimestats').append("<%= j render 'sorted', :locals => { :table_array => @sorted }, :layout => false %>");

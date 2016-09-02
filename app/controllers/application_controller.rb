@@ -43,6 +43,13 @@ class ApplicationController < ActionController::Base
       @sorted = League.first.sort_all_time_stats(stat, "All")
       render :partial => "sorted", :locals => { :table_array => @sorted }, :layout => false
     end
+    # respond_to do |format|
+    #   format.js { stat = params["stat"].to_sym
+    #               @sorted = League.first.sort_all_time_stats(stat, "All")
+    #               render 'alltimestats.js.erb'
+    #             }
+    #   format.html { @league_stats = League::ALL_TIME_STATS }
+    # end
   end
 
   def contact

@@ -13,6 +13,7 @@ $(document).ready(function() {
     $request.done(function(partial) {
       $('#alltimestats').empty();
       $('#alltimestats').append(partial);
+      $(this).addClass('sort-field');
     });
 
 
