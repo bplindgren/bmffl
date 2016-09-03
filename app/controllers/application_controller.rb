@@ -17,7 +17,6 @@ class ApplicationController < ActionController::Base
   end
 
   def headtoheadresult
-    # if request.xhr?
     respond_to do |format|
       format.js {
         @owner1 = Owner.find(params[:owner_1])
@@ -37,8 +36,6 @@ class ApplicationController < ActionController::Base
         end
         }
       format.html { render "headtohead" }
-    # else
-    #   render "headtohead"
     end
   end
 
