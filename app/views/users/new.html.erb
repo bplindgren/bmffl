@@ -13,9 +13,10 @@
     <% end %>
 
     <%= bootstrap_form_for(@user) do |f| %>
-      <%= f.text_field :username, { placeholder: "must be 6 characters", :class => 'form-field' } %>
-      <%= f.email_field :email, { placeholder: "must be valid email", :class => 'form-field' }  %>
-      <%= f.password_field :password, { placeholder: "must be between 6-20 characters", :class => 'form-field' }  %>
+      <%= f.text_field :username, { :placeholder => "must be 6 characters", :class => 'form-field' } %>
+      <%= f.email_field :email, { :placeholder => "must be valid email", :class => 'form-field' }  %>
+      <%= f.password_field :password, { :placeholder => "must be between 6-20 characters", :class => 'form-field' }  %>
+      <%= f.hidden_field :account_type, :value => "fan" %>
       <%= f.submit "Create Account!", { :class => 'btn btn-primary' }  %>
     <% end %>
   </div>

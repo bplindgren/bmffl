@@ -29,7 +29,7 @@ RSpec.describe Owner, :type => :model do
 
   context 'tests the owner model' do
     it 'tests the owner_stats method' do
-      expect(owner1.owner_stats("All")).to eq( {:wins => 4, :losses => 2, :ties => 0, :points_against => 464.5, :points_for => 473.5, :point_diff => 9.0, :ppg => 78.91666666666667, :papg => 77.41666666666667, :ppg_diff => 1.5, :wp => 0.6666666666666666 } )
+      expect(owner1.owner_stats("All")).to eq( {:games_played => 6, :wins => 4, :losses => 2, :ties => 0, :points_against => 464.5, :points_for => 473.5, :point_diff => 9.0, :ppg => 78.92, :papg => 77.42, :ppg_diff => 1.5, :wp => 0.667 } )
     end
 
     it 'tests the over_500 method' do

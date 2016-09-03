@@ -1,0 +1,2 @@
+$('#h2h-result').empty();
+$('#h2h-result').append("<%= j render :partial => 'h2hresult', :locals => { :h2h_games => @h2h_games, :tally => @tally, :owner1 => @owner1, :owner2 => @owner2 }, :layout => false %>");

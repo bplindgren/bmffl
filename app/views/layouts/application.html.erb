@@ -7,6 +7,8 @@
         <%= action_cable_meta_tag %>
         <%= favicon_link_tag 'football.jpeg' %>
 
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
         <!-- Optional theme -->
@@ -103,6 +105,5 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="/js/application.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-
 
 </html>
