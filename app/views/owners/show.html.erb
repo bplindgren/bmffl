@@ -22,7 +22,7 @@
     <% @owner_teams.each do |team| %>
       <tr>
         <td><%= link_to team.name, team %></td>
-        <td><%= team.season.year %></td>
+        <td><%= link_to team.season.year, team.season %></td>
         <td><%= team.team_stats("All")[:wins] %></td>
         <td><%= team.team_stats("All")[:losses] %></td>
         <td><%= team.team_stats("All")[:ties] %></td>

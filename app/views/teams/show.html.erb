@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <th class="center large"><%= @team.name %> - <%= @team.season.year %></th>
+    <th class="large team-name"><%= @team.name %> - <%= @team.season.year %></th>
   </tr>
 </table>
 
@@ -19,7 +19,7 @@
 
   <tbody>
     <tr>
-      <td><%= @team.owner.first_name %> <%= @team.owner.last_name %></td>
+      <td><%= link_to @team.owner.full_name, @team.owner %></td>
       <td><%= @stats[:wins] %></td>
       <td><%= @stats[:losses] %></td>
       <td><%= @stats[:ties] %></td>
@@ -48,21 +48,23 @@
         <td><%= link_to game.home_team.name, game.home_team %></td>
         <td><%= game.game_type %></td>
         <td>
-          <% if game.winner == @team %>
-            <% if game.home_team == @team %>
-              <div><%= 'W,' %> <%= game.home_score %> - <%= game.away_score %></div>
-            <% elsif game.away_team == @team %>
-              <div><%= 'W,' %> <%= game.away_score %> - <%= game.home_score %></div>
-            <% end %>
+          <% if game.completed? == true %>
+            <% if game.winner == @team %>
+              <% if game.home_team == @team %>
+                <div><%= 'W,' %> <%= game.home_score %> - <%= game.away_score %></div>
+              <% elsif game.away_team == @team %>
+                <div><%= 'W,' %> <%= game.away_score %> - <%= game.home_score %></div>
+              <% end %>
 
-          <% elsif game.loser == @team %>
-            <% if game.home_team == @team %>
-              <div class="loss"><%= 'L,' %> <%= game.home_score %> - <%= game.away_score %></div>
-            <% elsif game.away_team == @team %>
-              <div class="loss"><%= 'L,' %> <%= game.away_score %> - <%= game.home_score %></div>
+            <% elsif game.loser == @team %>
+              <% if game.home_team == @team %>
+                <div class="loss"><%= 'L,' %> <%= game.home_score %> - <%= game.away_score %></div>
+              <% elsif game.away_team == @team %>
+                <div class="loss"><%= 'L,' %> <%= game.away_score %> - <%= game.home_score %></div>
+              <% end %>
+            <% else %>
+              <div class="tie"><%= 'T,' %> <%= game.home_score %> - <%= game.away_score %></div>
             <% end %>
-          <% else %>
-            <div class="tie"><%= 'T,' %> <%= game.home_score %> - <%= game.away_score %></div>
           <% end %>
         </td>
       </tr>
