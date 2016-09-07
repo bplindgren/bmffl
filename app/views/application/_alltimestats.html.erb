@@ -2,17 +2,17 @@
   <% name_array = stats[:name].split() %>
   <% owner = Owner.find_by(:first_name => name_array[0], :last_name => name_array[1]) %>
   <tr>
-    <td><%= link_to stats[:name], owner %></td>
-    <td><%= stats[:games_played] %></td>
-    <td><%= stats[:wins] %></td>
-    <td><%= stats[:losses] %></td>
-    <td><%= stats[:ties] %></td>
-    <td><%= stats[:wp] %></td>
-    <td><%= stats[:points_for] %></td>
-    <td><%= stats[:points_against] %></td>
-    <td><%= stats[:point_diff] %></td>
-    <td><%= stats[:ppg] %></td>
-    <td><%= stats[:papg] %></td>
-    <td><%= stats[:ppg_diff] %></td>
+    <td class="center"><%= link_to stats[:name], owner %></td>
+    <td class="center"><%= stats[:games_played] %></td>
+    <td class="center"><%= stats[:wins] %></td>
+    <td class="center"><%= stats[:losses] %></td>
+    <td class="center"><%= stats[:ties] %></td>
+    <td class="center"><%= stats[:wp] %></td>
+    <td class="center"><%= stats[:points_for] %></td>
+    <td class="center"><%= stats[:points_against] %></td>
+    <td class="center"><%= stats[:point_diff] %></td>
+    <td class="center"><%= stats[:ppg] %></td>
+    <td class="center"><%= stats[:papg] %></td>
+    <td class="center"><%= stats[:ppg_diff] %></td>
   </tr>
 <% end %>

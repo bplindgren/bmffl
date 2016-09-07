@@ -8,24 +8,24 @@
   <thead>
     <tr>
       <th>Owner</th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Ties</th>
-      <th>Points For</th>
-      <th>Points Against</th>
-      <th>Point Differential</th>
+      <th class="center">Wins</th>
+      <th class="center">Losses</th>
+      <th class="center">Ties</th>
+      <th class="center">Points For</th>
+      <th class="center">Points Against</th>
+      <th class="center">Point Differential</th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
       <td><%= link_to @team.owner.full_name, @team.owner %></td>
-      <td><%= @stats[:wins] %></td>
-      <td><%= @stats[:losses] %></td>
-      <td><%= @stats[:ties] %></td>
-      <td><%= @stats[:points_for] %></td>
-      <td><%= @stats[:points_against] %></td>
-      <td><%= @stats[:point_diff] %></td>
+      <td class="center"><%= @stats[:wins] %></td>
+      <td class="center"><%= @stats[:losses] %></td>
+      <td class="center"><%= @stats[:ties] %></td>
+      <td class="center"><%= @stats[:points_for] %></td>
+      <td class="center"><%= @stats[:points_against] %></td>
+      <td class="center"><%= @stats[:point_diff] %></td>
     </tr>
   </tbody>
 </table>
