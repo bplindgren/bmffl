@@ -1,2 +1,2 @@
 $('#alltimestats').empty();
-$('#alltimestats').append("<%= j (render :partial => 'alltimestats', :locals => { :table_array => @sorted }, :layout => false) %>");
+$('#alltimestats').append("<%= j render :partial => 'alltimestats', :locals => { :table_array => @sorted }, :layout => false %>");

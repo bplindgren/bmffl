@@ -1,24 +1,24 @@
-<table>
+<table class="alltimestats-table">
   <tr>
     <th class="center large">BMFFL All-Time Stats</th>
   </tr>
 </table>
 
-<table class="responstable">
+<table class="responstable alltimestats-table">
   <thead>
     <tr>
-      <th><%= link_to 'Owner', application_alltimestats_path, { :class => 'white alltime-sort', :id => "owner", :remote => true } %></th>
-      <th><%= link_to 'Games Played', application_alltimestats_path, { :class => 'white alltime-sort', :id => "games_played", :remote => true } %></th>
-      <th><%= link_to 'Wins', application_alltimestats_path, { :class => 'white alltime-sort', :id => "wins", :remote => true } %></th>
-      <th><%= link_to 'Losses', application_alltimestats_path, { :class => 'white alltime-sort', :id => "losses", :remote => true } %></th>
-      <th><%= link_to 'Ties', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ties", :remote => true } %></th>
-      <th><%= link_to 'Winning %', application_alltimestats_path, { :class => 'white alltime-sort', :id => "wp", :remote => true } %></th>
-      <th><%= link_to 'Points For', application_alltimestats_path, { :class => 'white alltime-sort', :id => "points_for", :remote => true } %></th>
-      <th><%= link_to 'Points Against', application_alltimestats_path, { :class => 'white alltime-sort', :id => "points_against", :remote => true } %></th>
-      <th><%= link_to 'Point Differential', application_alltimestats_path, { :class => 'white alltime-sort', :id => "point_diff", :remote => true } %></th>
-      <th><%= link_to 'PPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ppg", :remote => true } %></th>
-      <th><%= link_to 'PAPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "papg", :remote => true } %></th>
-      <th><%= link_to 'PPG-PAPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ppg_diff", :remote => true } %></th>
+      <th class="th-owner center"><%= link_to 'Owner', application_alltimestats_path, { :class => 'white alltime-sort', :id => "owner", :remote => true } %></th>
+      <th class="th-games-played center"><%= link_to 'Games', application_alltimestats_path, { :class => 'white alltime-sort', :id => "games_played", :remote => true } %></th>
+      <th class="center"><%= link_to 'Wins', application_alltimestats_path, { :class => 'white alltime-sort', :id => "wins", :remote => true } %></th>
+      <th class="center"><%= link_to 'Losses', application_alltimestats_path, { :class => 'white alltime-sort', :id => "losses", :remote => true } %></th>
+      <th class="center"><%= link_to 'Ties', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ties", :remote => true } %></th>
+      <th class="th-wp center"><%= link_to 'Winning %', application_alltimestats_path, { :class => 'white alltime-sort', :id => "wp", :remote => true } %></th>
+      <th class="center"><%= link_to 'Points For', application_alltimestats_path, { :class => 'white alltime-sort', :id => "points_for", :remote => true } %></th>
+      <th class="th-pa center"><%= link_to 'Points Against', application_alltimestats_path, { :class => 'white alltime-sort', :id => "points_against", :remote => true } %></th>
+      <th class="center"><%= link_to 'Point Diff', application_alltimestats_path, { :class => 'white alltime-sort', :id => "point_diff", :remote => true } %></th>
+      <th class="center"><%= link_to 'PPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ppg", :remote => true } %></th>
+      <th class="center"><%= link_to 'PAPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "papg", :remote => true } %></th>
+      <th class="th-ppg-papg center"><%= link_to 'PPG-PAPG', application_alltimestats_path, { :class => 'white alltime-sort', :id => "ppg_diff", :remote => true } %></th>
     </tr>
   </thead>
 

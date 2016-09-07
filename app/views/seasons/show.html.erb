@@ -7,28 +7,28 @@
 <table class="responstable">
   <thead>
     <tr>
-      <th>Place</th>
+      <th class="center">Place</th>
       <th>Team Name</th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Ties</th>
-      <th>Points For</th>
-      <th>Points Against</th>
-      <th>Point Differential</th>
+      <th class="center">Wins</th>
+      <th class="center">Losses</th>
+      <th class="center">Ties</th>
+      <th class="center">Points For</th>
+      <th class="center">Points Against</th>
+      <th class="center">Point Differential</th>
     </tr>
   </thead>
 
   <tbody>
     <% @standings.each do |team| %>
       <tr>
-      <td><%= (@standings.index(team) + 1) %></td>
+      <td class="center"><%= (@standings.index(team) + 1) %></td>
       <td><%= link_to team.name, team %></td>
-      <td><%= team.team_stats("All")[:wins] %></td>
-      <td><%= team.team_stats("All")[:losses] %></td>
-      <td><%= team.team_stats("All")[:ties] %></td>
-      <td><%= team.team_stats("All")[:points_for] %></td>
-      <td><%= team.team_stats("All")[:points_against] %></td>
-      <td><%= team.team_stats("All")[:point_diff] %></td>
+      <td class="center"><%= team.team_stats("All")[:wins] %></td>
+      <td class="center"><%= team.team_stats("All")[:losses] %></td>
+      <td class="center"><%= team.team_stats("All")[:ties] %></td>
+      <td class="center"><%= team.team_stats("All")[:points_for] %></td>
+      <td class="center"><%= team.team_stats("All")[:points_against] %></td>
+      <td class="center"><%= team.team_stats("All")[:point_diff] %></td>
       </tr>
     <% end %>
   </tbody>

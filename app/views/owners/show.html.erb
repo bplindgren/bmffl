@@ -8,13 +8,13 @@
   <thead>
     <tr>
       <th>Team Name</th>
-      <th>Season</th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Ties</th>
-      <th>Points For</th>
-      <th>Points Against</th>
-      <th>Point Differential</th>
+      <th class="center">Season</th>
+      <th class="center">Wins</th>
+      <th class="center">Losses</th>
+      <th class="center">Ties</th>
+      <th class="center">Points For</th>
+      <th class="center">Points Against</th>
+      <th class="center">Point Differential</th>
     </tr>
   </thead>
 
@@ -22,24 +22,24 @@
     <% @owner_teams.each do |team| %>
       <tr>
         <td><%= link_to team.name, team %></td>
-        <td><%= link_to team.season.year, team.season %></td>
-        <td><%= team.team_stats("All")[:wins] %></td>
-        <td><%= team.team_stats("All")[:losses] %></td>
-        <td><%= team.team_stats("All")[:ties] %></td>
-        <td><%= team.team_stats("All")[:points_for] %></td>
-        <td><%= team.team_stats("All")[:points_against] %></td>
-        <td><%= team.team_stats("All")[:point_diff] %></td>
+        <td class="center"><%= link_to team.season.year, team.season %></td>
+        <td class="center"><%= team.team_stats("All")[:wins] %></td>
+        <td class="center"><%= team.team_stats("All")[:losses] %></td>
+        <td class="center"><%= team.team_stats("All")[:ties] %></td>
+        <td class="center"><%= team.team_stats("All")[:points_for] %></td>
+        <td class="center"><%= team.team_stats("All")[:points_against] %></td>
+        <td class="center"><%= team.team_stats("All")[:point_diff] %></td>
       </tr>
     <% end %>
     <tr>
-      <th>Totals</th>
+      <th>Totals  (<%= @owner_teams.length %> Seasons)</th>
       <th></th>
-      <th><%= @stats[:wins] %></th>
-      <th><%= @stats[:losses] %></th>
-      <th><%= @stats[:ties] %></th>
-      <th><%= @stats[:points_for] %></th>
-      <th><%= @stats[:points_against] %></th>
-      <th><%= @stats[:point_diff] %></th>
+      <th class="center"><%= @stats[:wins] %></th>
+      <th class="center"><%= @stats[:losses] %></th>
+      <th class="center"><%= @stats[:ties] %></th>
+      <th class="center"><%= @stats[:points_for] %></th>
+      <th class="center"><%= @stats[:points_against] %></th>
+      <th class="center"><%= @stats[:point_diff] %></th>
     </tr>
   </tbody>
 </table>

@@ -344,6 +344,32 @@ nav {
   width: 360px;
 }
 
+.alltimestats-table {
+  width: 975px;
+}
+
+
+.th-owner {
+  width: 90px;
+}
+
+.th-games-played {
+  width: 70px;
+}
+
+.th-wp {
+  width: 95px;
+}
+
+.th-pa {
+  width: 120px;
+}
+
+.th-ppg-papg {
+  width: 100px;
+}
+
+
 strong {
   font-weight: bold;
 }

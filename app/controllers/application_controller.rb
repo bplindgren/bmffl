@@ -45,10 +45,10 @@ class ApplicationController < ActionController::Base
     respond_to do |format|
       format.js {
         stat = params["stat"].to_sym
+        @sort_field = params["stat"]
         @sorted = League.first.sort_all_time_stats(stat, "All")
-        }
+      }
       format.html { render 'alltimestats' }
-
     end
   end
 

@@ -9,14 +9,6 @@ $(document).ready(function() {
       url: $route,
       data: { stat: $stat }
     });
-
-    $request.done(function(partial) {
-      $('#alltimestats').empty();
-      $('#alltimestats').append(partial);
-      $(this).addClass('sort-field');
-    });
-
-
   });
 
 });

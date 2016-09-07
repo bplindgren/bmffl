@@ -6,11 +6,13 @@ $(document).ready(function() {
     var $stat = $(this).attr('id');
 
     var $request = $.ajax({
-      url: $route,
-      data: { stat: $stat },
-      complete: function (xhr, status) {
-        console.log(xhr.status); // 200
+    url: $route,
+    data: { stat: $stat,
+            reverse: true },
+    complete: function (xhr, status) {
+      console.log(xhr.status); // 200
       }
     });
+
   });
 });
