@@ -7,7 +7,7 @@ RSpec.describe Game, :type => :model do
   let!(:owner2) { Owner.create!(first_name: "Nick", last_name: "D") }
   let!(:home_team) { Team.create!(season_id: season.id, name: "Iowa HerkysHeroes47", abbr: "IHH47",owner_id: owner1.id, division: "Upstairs") }
   let!(:away_team) { Team.create(season_id: season.id, name: "Westside Whales", abbr: "WW", owner_id: owner2.id, division: "Downstairs") }
-  let!(:game) { Game.create!(season_id: season.id, week: 1, away_team_id: away_team.id, away_score: 100, home_team_id: home_team.id, home_score: 106.5, game_type: "Regular Season") }
+  let!(:game) { Game.create!(season_id: season.id, week: 1, away_team_id: away_team.id, away_score: 100, home_team_id: home_team.id, home_score: 106.5, completed?: true, game_type: "Regular Season") }
 
   context 'tests the game model' do
     it 'correctly determines the winner' do

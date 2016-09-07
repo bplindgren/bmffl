@@ -7,7 +7,7 @@
         <%= action_cable_meta_tag %>
         <%= favicon_link_tag 'football.jpeg' %>
 
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application' %>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
         <div id="wrapper">
             <header>
                 <ul class="list-group">
-                    <% Game.all.last(5).each do |game| %>
+                    <% Game.where(completed?: false).first(5).each do |game| %>
                         <li class="list-group-item scoreboard">
                             <p class="game-date">9/8 - 9/12</p>
                             <div class="team-name col-lg-10">
@@ -105,5 +105,4 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="/js/application.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-
 </html>

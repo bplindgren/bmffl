@@ -16,9 +16,9 @@ RSpec.describe Team, :type => :model do
   let!(:owner4) { Owner.create!(first_name: "Brian", last_name: "D") }
   let!(:team4) { Team.create!(season_id: season.id, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: owner4.id, division: "Upstairs") }
 
-  let!(:game1) { Game.create!(season_id: season.id, week: 5, away_team_id: team2.id, away_score: 77, home_team_id: team1.id, home_score: 84, game_type: "Regular Season") }
-  let!(:game2) { Game.create!(season_id: season.id, week: 8, away_team_id: team3.id, away_score: 67.5, home_team_id: team1.id, home_score: 89, game_type: "Regular Season") }
-  let!(:game3) { Game.create!(season_id: season.id, week: 12, away_team_id: team4.id, away_score: 95.5, home_team_id: team1.id, home_score: 49, game_type: "Regular Season") }
+  let!(:game1) { Game.create!(season_id: season.id, week: 5, away_team_id: team2.id, away_score: 77, home_team_id: team1.id, home_score: 84, completed?: true, game_type: "Regular Season") }
+  let!(:game2) { Game.create!(season_id: season.id, week: 8, away_team_id: team3.id, away_score: 67.5, home_team_id: team1.id, home_score: 89, completed?: true, game_type: "Regular Season") }
+  let!(:game3) { Game.create!(season_id: season.id, week: 12, away_team_id: team4.id, away_score: 95.5, home_team_id: team1.id, home_score: 49, completed?: true, game_type: "Regular Season") }
 
   context 'gets team info' do
     it 'tests team_stats method' do

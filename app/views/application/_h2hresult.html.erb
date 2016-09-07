@@ -16,7 +16,7 @@
         <% h2h_games.each do |game| %>
         <% scores = [game.home_score, game.away_score].sort.reverse %>
           <tr>
-            <td><%= game.season.year %></td>
+            <td><%= link_to game.season.year, game.season %></td>
             <td><%= game.week %></td>
             <% if game.winner %>
               <td><%= link_to game.winner.name, game.winner %><span class="small"> (<%= game.winner.owner.full_name %>)</span></td>

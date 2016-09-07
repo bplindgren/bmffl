@@ -199,6 +199,11 @@ ul.list-group:after {
   color: black;
   background-color: #00E500;
   padding: 5px 0px 5px 0px;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .footer-text {
@@ -229,13 +234,9 @@ nav {
   padding-bottom: 120px; /* Height of the footer element */
 }
 
-#footer {
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+/*#footer {
+
+}*/
 
 #contact {
   padding: 0px 100px 0px 100px;

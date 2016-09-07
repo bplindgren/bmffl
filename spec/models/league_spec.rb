@@ -20,14 +20,14 @@ RSpec.describe League, :type => :model do
   let!(:team7) { Team.create!(season_id: season2.id, name: "Balls Tech", abbr: "BT", owner_id: owner3.id, division: "Upstairs") } # 0-1
   let!(:team8) { Team.create!(season_id: season2.id, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: owner4.id, division: "Upstairs") } # 1-0
 
-  let!(:game1) { Game.create!(season_id: season1.id, week: 5, away_team_id: team2.id, away_score: 77, home_team_id: team1.id, home_score: 84, game_type: "Regular Season") }
-  let!(:game2) { Game.create!(season_id: season1.id, week: 8, away_team_id: team3.id, away_score: 67.5, home_team_id: team1.id, home_score: 89, game_type: "Regular Season") }
-  let!(:game3) { Game.create!(season_id: season1.id, week: 12, away_team_id: team4.id, away_score: 95.5, home_team_id: team1.id, home_score: 49, game_type: "Regular Season") }
-  let!(:game4) { Game.create!(season_id: season2.id, week: 1, away_team_id: team5.id, away_score: 71, home_team_id: team6.id, home_score: 67.5, game_type: "Regular Season") }
-  let!(:game5) { Game.create!(season_id: season2.id, week: 4, away_team_id: team5.id, away_score: 87.5, home_team_id: team8.id, home_score: 110.5, game_type: "Regular Season") }
-  let!(:game6) { Game.create!(season_id: season2.id, week: 5, away_team_id: team7.id, away_score: 46.5, home_team_id: team5.id, home_score: 91, game_type: "Regular Season") }
-  let!(:game7) { Game.create!(season_id: season2.id, week: 7, away_team_id: team6.id, away_score: 36.5, home_team_id: team5.id, home_score: 88, game_type: "Regular Season") }
-  let!(:game8) { Game.create!(season_id: season2.id, week: 8, away_team_id: team5.id, away_score: 96.5, home_team_id: team6.id, home_score: 88, game_type: "Regular Season") }
+  let!(:game1) { Game.create!(season_id: season1.id, week: 5, away_team_id: team2.id, away_score: 77, home_team_id: team1.id, home_score: 84, completed?: true, game_type: "Regular Season") }
+  let!(:game2) { Game.create!(season_id: season1.id, week: 8, away_team_id: team3.id, away_score: 67.5, home_team_id: team1.id, home_score: 89, completed?: true, game_type: "Regular Season") }
+  let!(:game3) { Game.create!(season_id: season1.id, week: 12, away_team_id: team4.id, away_score: 95.5, home_team_id: team1.id, home_score: 49, completed?: true, game_type: "Regular Season") }
+  let!(:game4) { Game.create!(season_id: season2.id, week: 1, away_team_id: team5.id, away_score: 71, home_team_id: team6.id, home_score: 67.5, completed?: true, game_type: "Regular Season") }
+  let!(:game5) { Game.create!(season_id: season2.id, week: 4, away_team_id: team5.id, away_score: 87.5, home_team_id: team8.id, home_score: 110.5, completed?: true, game_type: "Regular Season") }
+  let!(:game6) { Game.create!(season_id: season2.id, week: 5, away_team_id: team7.id, away_score: 46.5, home_team_id: team5.id, home_score: 91, completed?: true, game_type: "Regular Season") }
+  let!(:game7) { Game.create!(season_id: season2.id, week: 7, away_team_id: team6.id, away_score: 36.5, home_team_id: team5.id, home_score: 88, completed?: true, game_type: "Regular Season") }
+  let!(:game8) { Game.create!(season_id: season2.id, week: 8, away_team_id: team5.id, away_score: 96.5, home_team_id: team6.id, home_score: 88, completed?: true, game_type: "Regular Season") }
 
   context 'model' do
     it 'returns owner_season_records' do
