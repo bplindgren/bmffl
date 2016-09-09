@@ -30,22 +30,26 @@ class Game < ApplicationRecord
   end
 
   def winner
-    if away_score > home_score
-      Team.find(away_team_id)
-    elsif home_score > away_score
-      Team.find(home_team_id)
-    else
-      nil
+    if completed?
+      if away_score > home_score
+        Team.find(away_team_id)
+      elsif home_score > away_score
+        Team.find(home_team_id)
+      else
+        nil
+      end
     end
   end
 
   def loser
-    if away_score < home_score
-      Team.find(away_team_id)
-    elsif home_score < away_score
-      Team.find(home_team_id)
-    else
-      nil
+    if completed?
+      if away_score < home_score
+        Team.find(away_team_id)
+      elsif home_score < away_score
+        Team.find(home_team_id)
+      else
+        nil
+      end
     end
   end
 

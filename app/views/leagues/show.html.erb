@@ -60,14 +60,13 @@
 <div class="col-lg-4 col-md-4">
   <h3>BMFFL Polls</h3>
   <% if !logged_in?  %>
-    <h5 class="gray">Register or Login to Vote!</h5>
+    <h5 class="gray">Login or Register to Vote!</h5>
   <% end %>
 
   <ul class="list-group" id="polls">
-    <% Game.where(completed?: false).first(5).each do |game| %>
-      <% @game = game %>
-      <% @home_team_stats = game.home_team.team_stats("All") %>
+    <% @first_five.each do |game| %>
       <% @away_team_stats = game.away_team.team_stats("All") %>
+      <% @home_team_stats = game.home_team.team_stats("All") %>
       <li class="list-group-item polls-right">
         <div class="team-name-polls">
           <% if current_user %>

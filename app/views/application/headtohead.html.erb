@@ -7,16 +7,16 @@
 <div class="col-lg-8 center pad-t-20">
   <div class="teams-form">
     <%= bootstrap_form_tag url: "/application/headtoheadresult", :html => {:class => "form-inline"}, :id => "h2h-form", :remote => true do |f| %>
-      <span class="padding-r-20">
+      <span class="pad-r-20 pad-l-10">
         <%= f.collection_select :owner_1, Owner.all, :id, :full_name, {:include_blank => true}, {:style => "width:180px", :required => true} %>
       </span>
-      <span class="padding-r-20">
+      <span class="pad-r-20">
         <%= f.collection_select :owner_2, Owner.all, :id, :full_name, {:include_blank => true}, {:style => "width:180px", :required => true} %>
       </span><br /><br />
-      <span class="padding-r-20">
+      <span class="pad-r-20">
         <%= f.select( :game_type, Game::TYPE ) %>
       </span>
-      <span class="padding-r-20 pad-l-40">
+      <span class="pad-r-20 pad-l-35">
         <%= f.submit "View Head-to-Head Results", class: "btn btn-primary" %>
       </span>
     <% end %>

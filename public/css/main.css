@@ -176,6 +176,7 @@ ul.list-group:after {
   float: right;
   width: 40%;
   font-size: 1.2em;
+  text-align: right;
 }
 
 #polls {
@@ -310,13 +311,17 @@ nav {
   font-style: italic;
 }
 
-.padding-r-20 {
+.pad-l-10 {
+  padding-left: 10px;
+}
+
+.pad-r-20 {
   padding-right: 20px;
   padding-top: 20px;
 }
 
-.pad-l-40 {
-  padding-left: 40px;
+.pad-l-35 {
+  padding-left: 35px;
 }
 
 .pad-r-10 {
@@ -369,6 +374,9 @@ nav {
   width: 100px;
 }
 
+ul:last-child {
+  border-radius: none;
+}
 
 strong {
   font-weight: bold;
