@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".alltime-sort").on("click",function(t){t.preventDefault();var a=$(this).attr("href"),r=$(this).attr("id");$.ajax({url:a,data:{stat:r}})})});
