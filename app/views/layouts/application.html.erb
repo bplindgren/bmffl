@@ -23,7 +23,7 @@
                 <ul class="list-group">
                     <% Game.where(completed?: false).first(5).reverse().each do |game| %>
                         <li class="list-group-item scoreboard">
-                            <p class="game-date">9/8 - 9/12</p>
+                            <p class="game-date">9/22 - 9/26</p>
                             <div class="team-name col-lg-10">
                                 <p><%= game.away_team.abbr %></p>
                                 <p><%= game.home_team.abbr %></p>
@@ -94,11 +94,11 @@
                 </div>
             </div>
 
-            <div id="footer">
+            <footer>
                 <p class="footer-text">© 2016 BMFFL Advanced Media, LP. All rights reserved.</p>
                 <p class="footer-text">817 Bowery St.</p>
                 <p class="footer-text">Iowa City, Iowa, 52240</p>
-            </div>
+            </footer>
         </div>
     </body>
 

@@ -33,7 +33,7 @@
 <table>
   <thead>
     <tr>
-      <th>Week</th>
+      <th class="center">Week</th>
       <th>Away Team</th>
       <th>Home Team</th>
       <th>Game Type</th>
@@ -43,7 +43,7 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= game.week %></td>
+        <td class="center"><%= game.week %></td>
         <td><%= link_to game.away_team.name, game.away_team %></td>
         <td><%= link_to game.home_team.name, game.home_team %></td>
         <td><%= game.game_type %></td>
