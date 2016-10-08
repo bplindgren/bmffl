@@ -17,9 +17,9 @@ class League < ApplicationRecord
     stats_array
   end
 
-  def sort_all_time_stats(stat, game_type)
-    League::ALL_TIME_STATS.sort_by { |hash| hash[stat] }.reverse()
-  end
+  # def sort_all_time_stats(stat, game_type)
+  #   League::ALL_TIME_STATS.sort_by { |hash| hash[stat] }.reverse()
+  # end
 
   def owner_season_records(game_type)
     records = {}
