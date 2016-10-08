@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
   end
 
   def alltimestats
-    @league_stats = League::ALL_TIME_STATS
+    @league_stats = League.first.generate_att_time_stats(:wins, "All")
 
     respond_to do |format|
       format.js {
