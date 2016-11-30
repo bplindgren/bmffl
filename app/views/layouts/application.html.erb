@@ -23,7 +23,7 @@
                 <ul class="list-group">
                     <% Game.where(completed?: false).first(5).reverse().each do |game| %>
                         <li class="list-group-item scoreboard">
-                            <p class="game-date">10/27 - 10/31</p>
+                            <p class="game-date">12/01 - 12/05</p>
                             <div class="team-name col-lg-10">
                                 <p><%= game.away_team.abbr %></p>
                                 <p><%= game.home_team.abbr %></p>
