@@ -5,4 +5,5 @@ class OwnersController < ApplicationController
     @stats = @owner.owner_stats("All")
     @owner_teams = @owner.teams
   end
+
 end

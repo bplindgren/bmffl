@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
   end
 
   def alltimestats
-    @league_stats = League.first.generate_all_time_stats(:wins, "All").sort_by { |hash| hash[:wins] }.reverse()
+    @league_stats = League.first.generate_all_time_stats(:wins, "All").sort_by { |owner| [ owner[:wins], owner[:points_for] ] }.reverse()
 
     respond_to do |format|
       format.js {

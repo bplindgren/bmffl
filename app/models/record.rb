@@ -1,6 +1,0 @@
-class Record < ApplicationRecord
-
-
-
-
-end

@@ -6,9 +6,8 @@ class Season < ApplicationRecord
 
   validates :year, :league_id, :completed?, presence: true
 
-
   def standings(game_type, teams)
-    order = teams.sort { |x,y| y.over_500(game_type) <=> x.over_500(game_type) }
+    teams.sort_by { |team| [ team.team_stats("All")[:wins], team.team_stats("All")[:points_for] ] }.reverse()
   end
 
   def division_standings(game_type)
