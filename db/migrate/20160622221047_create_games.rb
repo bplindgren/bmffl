@@ -8,6 +8,7 @@ class CreateGames < ActiveRecord::Migration[5.0]
       t.integer :home_team_id, { null: false }
       t.float :home_score, { null: false }
       t.string :game_type, { null: false }
+      t.boolean :completed?, { null: false }
 
       t.timestamps
     end
