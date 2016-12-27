@@ -19,66 +19,66 @@ Owner.create!(first_name: "Sean", last_name: "S")
 Owner.create!(first_name: "Isaac", last_name: "S")
 Owner.create!(first_name: "Ryan", last_name: "D")
 
-Team.create!(season_id: 1, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: 1, division: "Upstairs")
-Team.create!(season_id: 1, name: "Westside Whales", abbr: "WW", owner_id: 2, division: "Downstairs")
-Team.create!(season_id: 1, name: "Bustin McNutts", abbr: "BMN", owner_id: 3, division: "Upstairs")
-Team.create!(season_id: 1, name: "The Ricky Stanzis", abbr: "RS", owner_id: 4, division: "Upstairs")
-Team.create!(season_id: 1, name: "Iowa Football", abbr: "IFFFF", owner_id: 5, division: "Downstairs")
-Team.create!(season_id: 1, name: "Orange Crush", abbr: "OC", owner_id: 6, division: "Downstairs")
-Team.create!(season_id: 1, name: "Balls Tech", abbr: "BT", owner_id: 7, division: "Upstairs")
-Team.create!(season_id: 1, name: "The Green Bay Belts", abbr: "GBB", owner_id: 8, division: "Downstairs")
-Team.create!(season_id: 1, name: "Dirty Birds", abbr: "DB", owner_id: 9, division: "Upstairs")
-Team.create!(season_id: 1, name: "The Belt", abbr: "BELT", owner_id: 10, division: "Downstairs")
-Team.create!(season_id: 2, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: 1, division: "Upstairs")
-Team.create!(season_id: 2, name: "Westside Whales", abbr: "WW", owner_id: 2, division: "Downstairs")
-Team.create!(season_id: 2, name: "Dont Diss My Fiedorowicz", abbr: "DDMF", owner_id: 3, division: "Upstairs")
-Team.create!(season_id: 2, name: "The Ricky Stanzis", abbr: "RS", owner_id: 4, division: "Upstairs")
-Team.create!(season_id: 2, name: "Iowa Football", abbr: "IFFFF", owner_id: 5, division: "Downstairs")
-Team.create!(season_id: 2, name: "Orange Crush", abbr: "OC", owner_id: 6, division: "Downstairs")
-Team.create!(season_id: 2, name: "Balls Tech", abbr: "BT", owner_id: 7, division: "Upstairs")
-Team.create!(season_id: 2, name: "The Green Bay Belts", abbr: "GBB", owner_id: 8, division: "Downstairs")
-Team.create!(season_id: 2, name: "Dirty Birds", abbr: "DB", owner_id: 9, division: "Upstairs")
-Team.create!(season_id: 2, name: "Super Cam", abbr: "SC", owner_id: 10, division: "Downstairs")
-Team.create!(season_id: 3, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: 1, division: "Upstairs")
-Team.create!(season_id: 3, name: "Westside Whales", abbr: "WW", owner_id: 2, division: "Downstairs")
-Team.create!(season_id: 3, name: "Kaeptains of Fortetude", abbr: "KOF", owner_id: 3, division: "Upstairs")
-Team.create!(season_id: 3, name: "The Ricky Stanzis", abbr: "RS", owner_id: 4, division: "Upstairs")
-Team.create!(season_id: 3, name: "Iowa Football", abbr: "IFFFF", owner_id: 5, division: "Downstairs")
-Team.create!(season_id: 3, name: "Orange Crush", abbr: "OC", owner_id: 6, division: "Downstairs")
-Team.create!(season_id: 3, name: "Ballz Tech", abbr: "BT", owner_id: 7, division: "Upstairs")
-Team.create!(season_id: 3, name: "The Green Bay Belts", abbr: "GBB", owner_id: 8, division: "Downstairs")
-Team.create!(season_id: 3, name: "Dirty Birds", abbr: "DB", owner_id: 9, division: "Upstairs")
-Team.create!(season_id: 3, name: "Mustache Madness", abbr: "MM", owner_id: 10, division: "Downstairs")
-Team.create!(season_id: 4, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: 1, division: "Upstairs")
-Team.create!(season_id: 4, name: "Westside Whales", abbr: "WW", owner_id: 2, division: "Downstairs")
-Team.create!(season_id: 4, name: "Harbaughs Dad Pants", abbr: "HDP", owner_id: 3, division: "Upstairs")
-Team.create!(season_id: 4, name: "The Ricky Stanzis", abbr: "RS", owner_id: 4, division: "Upstairs")
-Team.create!(season_id: 4, name: "Iowa Football", abbr: "IFFFF", owner_id: 5, division: "Downstairs")
-Team.create!(season_id: 4, name: "Orange Crush", abbr: "OC", owner_id: 6, division: "Downstairs")
-Team.create!(season_id: 4, name: "Ballz Tech", abbr: "BT", owner_id: 7, division: "Upstairs")
-Team.create!(season_id: 4, name: "The Green Bay Belts", abbr: "GBB", owner_id: 8, division: "Downstairs")
-Team.create!(season_id: 4, name: "Dirty Birds", abbr: "DB", owner_id: 9, division: "Upstairs")
-Team.create!(season_id: 4, name: "Mustache Madness", abbr: "MM", owner_id: 10, division: "Downstairs")
-Team.create!(season_id: 5, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: 1, division: "Upstairs")
-Team.create!(season_id: 5, name: "Westside Whales", abbr: "WW", owner_id: 2, division: "Downstairs")
-Team.create!(season_id: 5, name: "Play Ack-Shun Rollout", abbr: "PASR", owner_id: 3, division: "Upstairs")
-Team.create!(season_id: 5, name: "The Ricky Stanzis", abbr: "RS", owner_id: 4, division: "Upstairs")
-Team.create!(season_id: 5, name: "Iowa Football", abbr: "IFFFF", owner_id: 5, division: "Downstairs")
-Team.create!(season_id: 5, name: "Orange Crush", abbr: "OC", owner_id: 6, division: "Downstairs")
-Team.create!(season_id: 5, name: "Ballz Tech", abbr: "BT", owner_id: 7, division: "Upstairs")
-Team.create!(season_id: 5, name: "Mr. Rodgers Neighborhood", abbr: "MRN", owner_id: 8, division: "Downstairs")
-Team.create!(season_id: 5, name: "Mustache Madness", abbr: "MM", owner_id: 10, division: "Downstairs")
-Team.create!(season_id: 5, name: "Team R.F.W.F.G.B.", abbr: "TRFWFGF", owner_id: 11, division: "Downstairs")
-Team.create!(season_id: 6, name: "Iowa HerkysHeroes47", abbr: "IHH47", owner_id: 1, division: "Upstairs")
-Team.create!(season_id: 6, name: "Westside Whales", abbr: "WW", owner_id: 2, division: "Downstairs")
-Team.create!(season_id: 6, name: "Live Free and Beathard", abbr: "LFAB", owner_id: 3, division: "Upstairs")
-Team.create!(season_id: 6, name: "The Ricky Stanzis", abbr: "RS", owner_id: 4, division: "Upstairs")
-Team.create!(season_id: 6, name: "Iowa Football", abbr: "IFFFF", owner_id: 5, division: "Downstairs")
-Team.create!(season_id: 6, name: "Orange Crush", abbr: "OC", owner_id: 6, division: "Downstairs")
-Team.create!(season_id: 6, name: "Ballz Tech", abbr: "BT", owner_id: 7, division: "Upstairs")
-Team.create!(season_id: 6, name: "Mr. Rodgers Neighborhood", abbr: "MRN", owner_id: 8, division: "Downstairs")
-Team.create!(season_id: 6, name: "Mustache Madness", abbr: "MM", owner_id: 10, division: "Downstairs")
-Team.create!(season_id: 6, name: "Team R.F.W.F.G.B.", abbr: "FISH", owner_id: 11, division: "Downstairs")
+Team.create!(season_id: 1, name: "Iowa HerkysHeroes47"
+Team.create!(season_id: 1, name: "Westside Whales"
+Team.create!(season_id: 1, name: "Bustin McNutts"
+Team.create!(season_id: 1, name: "The Ricky Stanzis"
+Team.create!(season_id: 1, name: "Iowa Football"
+Team.create!(season_id: 1, name: "Orange Crush"
+Team.create!(season_id: 1, name: "Balls Tech"
+Team.create!(season_id: 1, name: "The Green Bay Belts"
+Team.create!(season_id: 1, name: "Dirty Birds"
+Team.create!(season_id: 1, name: "The Belt"
+Team.create!(season_id: 2, name: "Iowa HerkysHeroes47"
+Team.create!(season_id: 2, name: "Westside Whales"
+Team.create!(season_id: 2, name: "Dont Diss My Fiedorowicz"
+Team.create!(season_id: 2, name: "The Ricky Stanzis"
+Team.create!(season_id: 2, name: "Iowa Football"
+Team.create!(season_id: 2, name: "Orange Crush"
+Team.create!(season_id: 2, name: "Balls Tech"
+Team.create!(season_id: 2, name: "The Green Bay Belts"
+Team.create!(season_id: 2, name: "Dirty Birds"
+Team.create!(season_id: 2, name: "Super Cam"
+Team.create!(season_id: 3, name: "Iowa HerkysHeroes47"
+Team.create!(season_id: 3, name: "Westside Whales"
+Team.create!(season_id: 3, name: "Kaeptains of Fortetude"
+Team.create!(season_id: 3, name: "The Ricky Stanzis"
+Team.create!(season_id: 3, name: "Iowa Football"
+Team.create!(season_id: 3, name: "Orange Crush"
+Team.create!(season_id: 3, name: "Ballz Tech"
+Team.create!(season_id: 3, name: "The Green Bay Belts"
+Team.create!(season_id: 3, name: "Dirty Birds"
+Team.create!(season_id: 3, name: "Mustache Madness"
+Team.create!(season_id: 4, name: "Iowa HerkysHeroes47"
+Team.create!(season_id: 4, name: "Westside Whales"
+Team.create!(season_id: 4, name: "Harbaughs Dad Pants"
+Team.create!(season_id: 4, name: "The Ricky Stanzis"
+Team.create!(season_id: 4, name: "Iowa Football"
+Team.create!(season_id: 4, name: "Orange Crush"
+Team.create!(season_id: 4, name: "Ballz Tech"
+Team.create!(season_id: 4, name: "The Green Bay Belts"
+Team.create!(season_id: 4, name: "Dirty Birds"
+Team.create!(season_id: 4, name: "Mustache Madness"
+Team.create!(season_id: 5, name: "Iowa HerkysHeroes47"
+Team.create!(season_id: 5, name: "Westside Whales"
+Team.create!(season_id: 5, name: "Play Ack-Shun Rollout"
+Team.create!(season_id: 5, name: "The Ricky Stanzis"
+Team.create!(season_id: 5, name: "Iowa Football"
+Team.create!(season_id: 5, name: "Orange Crush"
+Team.create!(season_id: 5, name: "Ballz Tech"
+Team.create!(season_id: 5, name: "Mr. Rodgers Neighborhood"
+Team.create!(season_id: 5, name: "Mustache Madness"
+Team.create!(season_id: 5, name: "Team R.F.W.F.G.B."
+Team.create!(season_id: 6, name: "Iowa HerkysHeroes47"
+Team.create!(season_id: 6, name: "Westside Whales"
+Team.create!(season_id: 6, name: "Live Free and Beathard"
+Team.create!(season_id: 6, name: "The Ricky Stanzis"
+Team.create!(season_id: 6, name: "Iowa Football"
+Team.create!(season_id: 6, name: "Orange Crush"
+Team.create!(season_id: 6, name: "Ballz Tech"
+Team.create!(season_id: 6, name: "Mr. Rodgers Neighborhood"
+Team.create!(season_id: 6, name: "Mustache Madness"
+Team.create!(season_id: 6, name: "Team R.F.W.F.G.B."
 
 Game.create!(season_id: 1, week: 1, away_team_id: 4, away_score: 100, home_team_id: 2, home_score: 106.5, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 1, week: 1, away_team_id: 6, away_score: 66, home_team_id: 10, home_score: 77.5, completed?: true, game_type: "Regular Season")
@@ -538,8 +538,22 @@ Game.create!(season_id: 6, week: 12, away_team_id: 52, away_score: 60.5, home_te
 Game.create!(season_id: 6, week: 12, away_team_id: 55, away_score: 97.5, home_team_id: 56, home_score: 52, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 6, week: 12, away_team_id: 51, away_score: 105, home_team_id: 53, home_score: 53, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 6, week: 12, away_team_id: 58, away_score: 127, home_team_id: 57, home_score: 107, completed?: true, game_type: "Regular Season")
-Game.create!(season_id: 6, week: 13, away_team_id: 54, away_score: 0, home_team_id: 53, home_score: 0, completed?: false, game_type: "Regular Season")
-Game.create!(season_id: 6, week: 13, away_team_id: 55, away_score: 0, home_team_id: 59, home_score: 0, completed?: false, game_type: "Regular Season")
-Game.create!(season_id: 6, week: 13, away_team_id: 56, away_score: 0, home_team_id: 51, home_score: 0, completed?: false, game_type: "Regular Season")
-Game.create!(season_id: 6, week: 13, away_team_id: 52, away_score: 0, home_team_id: 58, home_score: 0, completed?: false, game_type: "Regular Season")
-Game.create!(season_id: 6, week: 13, away_team_id: 60, away_score: 0, home_team_id: 57, home_score: 0, completed?: false, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 13, away_team_id: 54, away_score: 100, home_team_id: 53, home_score: 105, completed?: true, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 13, away_team_id: 55, away_score: 97, home_team_id: 59, home_score: 76.5, completed?: true, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 13, away_team_id: 56, away_score: 87.5, home_team_id: 51, home_score: 97.5, completed?: true, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 13, away_team_id: 52, away_score: 89, home_team_id: 58, home_score: 69, completed?: true, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 13, away_team_id: 60, away_score: 87, home_team_id: 57, home_score: 92, completed?: true, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 14, away_team_id: 57, away_score: 94.5, home_team_id: 51, home_score: 95.5, completed?: true, game_type: "Quarter Final")
+Game.create!(season_id: 6, week: 14, away_team_id: 60, away_score: 79.5, home_team_id: 58, home_score: 66.5, completed?: true, game_type: "Quarter Final")
+Game.create!(season_id: 6, week: 14, away_team_id: 53, away_score: 57.5 home_team_id: 59, home_score: 55, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 14, away_team_id: 56, away_score: 40, home_team_id: 52, home_score: 67, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 15, away_team_id: 51, away_score: 70, home_team_id: 54, home_score: 100.5, completed?: true, game_type: "Semi Final")
+Game.create!(season_id: 6, week: 15, away_team_id: 60, away_score: 63.5, home_team_id: 55, home_score: 79, completed?: true, game_type: "Semi Final")
+Game.create!(season_id: 6, week: 15, away_team_id: 57, away_score: 115.5, home_team_id: 58, home_score: 120, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 15, away_team_id: 52, away_score: 93, home_team_id: 53, home_score: 58.5, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 15, away_team_id: 56, away_score: 47, home_team_id: 59, home_score: 60, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 16, away_team_id: 55, away_score: 111.5, home_team_id: 54, home_score: 148, completed?: true, game_type: "Super Bowl")
+Game.create!(season_id: 6, week: 16, away_team_id: 60, away_score: 65, home_team_id: 51, home_score: 127, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 16, away_team_id: 57, away_score: 76, home_team_id: 58, home_score: 91.5, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 16, away_team_id: 52, away_score: 104, home_team_id: 59, home_score: 48, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 16, away_team_id: 56, away_score: 56, home_team_id: 53, home_score: 69, completed?: true, game_type: "Consolation Game")
