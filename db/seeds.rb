@@ -542,7 +542,7 @@ Game.create!(season_id: 6, week: 13, away_team_id: 52, away_score: 89, home_team
 Game.create!(season_id: 6, week: 13, away_team_id: 60, away_score: 87, home_team_id: 57, home_score: 92, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 6, week: 14, away_team_id: 57, away_score: 94.5, home_team_id: 51, home_score: 95.5, completed?: true, game_type: "Quarter Final")
 Game.create!(season_id: 6, week: 14, away_team_id: 60, away_score: 79.5, home_team_id: 58, home_score: 66.5, completed?: true, game_type: "Quarter Final")
-Game.create!(season_id: 6, week: 14, away_team_id: 53, away_score: 57.5 home_team_id: 59, home_score: 55, completed?: true, game_type: "Consolation Game")
+Game.create!(season_id: 6, week: 14, away_team_id: 53, away_score: 57.5, home_team_id: 59, home_score: 55, completed?: true, game_type: "Consolation Game")
 Game.create!(season_id: 6, week: 14, away_team_id: 56, away_score: 40, home_team_id: 52, home_score: 67, completed?: true, game_type: "Consolation Game")
 Game.create!(season_id: 6, week: 15, away_team_id: 51, away_score: 70, home_team_id: 54, home_score: 100.5, completed?: true, game_type: "Semi Final")
 Game.create!(season_id: 6, week: 15, away_team_id: 60, away_score: 63.5, home_team_id: 55, home_score: 79, completed?: true, game_type: "Semi Final")
