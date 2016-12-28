@@ -535,7 +535,7 @@ Game.create!(season_id: 6, week: 12, away_team_id: 52, away_score: 60.5, home_te
 Game.create!(season_id: 6, week: 12, away_team_id: 55, away_score: 97.5, home_team_id: 56, home_score: 52, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 6, week: 12, away_team_id: 51, away_score: 105, home_team_id: 53, home_score: 53, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 6, week: 12, away_team_id: 58, away_score: 127, home_team_id: 57, home_score: 107, completed?: true, game_type: "Regular Season")
-Game.create!(season_id: 6, week: 13, away_team_id: 54, away_score: 100, home_team_id: 53, home_score: 105, completed?: true, game_type: "Regular Season")
+Game.create!(season_id: 6, week: 13, away_team_id: 54, away_score: 110, home_team_id: 53, home_score: 105, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 6, week: 13, away_team_id: 55, away_score: 97, home_team_id: 59, home_score: 76.5, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 6, week: 13, away_team_id: 56, away_score: 87.5, home_team_id: 51, home_score: 97.5, completed?: true, game_type: "Regular Season")
 Game.create!(season_id: 6, week: 13, away_team_id: 52, away_score: 89, home_team_id: 58, home_score: 69, completed?: true, game_type: "Regular Season")
