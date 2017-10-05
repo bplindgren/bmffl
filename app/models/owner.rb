@@ -37,7 +37,7 @@ class Owner < ApplicationRecord
       stats[:ppg] = (stats[:points_for] / games.count).round(2)
       stats[:papg] = (stats[:points_against] / games.count).round(2)
       stats[:ppg_diff] = (stats[:ppg] - stats[:papg]).round(2)
-      stats[:wp] = (stats[:wins].to_f / games.count).round(3)
+      stats[:wp] = (stats[:wins].to_f / games.count.to_f).round(3)
     end
     stats
   end
